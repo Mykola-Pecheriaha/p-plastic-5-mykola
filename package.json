@@ -1,0 +1,57 @@
+{
+  "name": "p-plastic-5",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Модульний проєкт пластичної хірургії з підтримкою темної/світлої теми",
+  "author": "Your Name",
+  "license": "MIT",
+  "keywords": [
+    "nextjs",
+    "react",
+    "plastic-surgery",
+    "medical",
+    "typescript"
+  ],
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "dev:3001": "next dev --turbopack -p 3001",
+    "dev:3002": "next dev --turbopack -p 3002",
+    "build": "next build",
+    "start": "next start",
+    "start:3001": "next start -p 3001",
+    "start:3002": "next start -p 3002",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "type-check": "tsc --noEmit",
+    "format": "prettier --write .",
+    "clean": "rm -rf .next out dist",
+    "kill-port": "npx kill-port 3000"
+  },
+  "dependencies": {
+    "@radix-ui/react-slot": "^1.2.2",
+    "clsx": "^2.1.1",
+    "leaflet": "^1.9.4",
+    "lucide-react": "^0.511.0",
+    "next": "15.3.2",
+    "next-themes": "^0.4.6",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-icons": "^5.5.0",
+    "react-leaflet": "^5.0.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@types/leaflet": "^1.9.12",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.2",
+    "prettier": "^3.5.3",
+    "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  }
+}

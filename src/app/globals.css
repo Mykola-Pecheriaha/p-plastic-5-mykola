@@ -1,0 +1,187 @@
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --border-color: #e2e8f0;
+  --card-bg: #ffffff;
+}
+
+.dark {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+  --border-color: #2d3748;
+  --card-bg: #1a202c;
+}
+
+/* 🎯 ЗАПОБІГАННЯ ГОРИЗОНТАЛЬНОГО СКРОЛІНГУ БЕЗ ПОРУШЕННЯ STICKY */
+html {
+  overflow-x: hidden; /* 👈 Тільки на html */
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  /* 👈 Прибрано overflow-x: hidden з body */
+}
+
+/* 🎯 ЗЕЛЕНА КОЛЬОРОВА СХЕМА ДЛЯ СВІТЛОЇ ТЕМИ */
+:root {
+  --bigbord-primary: #d5f9b8; /* 👈 Світло-зелений фон */
+  --bigbord-primary-dark: #52a40e; /* 👈 Темно-зелений */
+  --bigbord-primary-hover: #4a9309; /* 👈 Ще темніший зелений при наведенні */
+  --bigbord-text-primary: #1e3a8a;
+  --bigbord-text-secondary: #1e40af;
+  --bigbord-text-accent: #0f766e;
+  --bigbord-text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+
+  /* 🎯 КОЛЬОРИ КНОПКИ ДЛЯ СВІТЛОЇ ТЕМИ */
+  --consultation-button-bg: #d5f9b8; /* 👈 Світло-зелений */
+  --consultation-button-hover: #c1f299; /* 👈 Трохи темніший зелений */
+  --consultation-button-text: #2d5016; /* 👈 Темно-зелений текст */
+  --consultation-button-shadow: rgba(213, 249, 184, 0.4);
+
+  /* 🎯 КОЛЬОРИ ХЕДЕРА ТА ФУТЕРА ДЛЯ СВІТЛОЇ ТЕМИ */
+  --header-footer-bg: #d5f9b8; /* 👈 Світло-зелений */
+  --header-footer-text: #2d5016; /* 👈 Темно-зелений текст */
+  --header-footer-text-hover: #3d6b1e; /* 👈 При наведенні */
+  --header-footer-border: rgba(45, 80, 22, 0.2);
+  --header-footer-accent: #52a40e; /* 👈 Темно-зелений акцент */
+
+  /* 🎯 ЗМІННІ ДЛЯ DOCTOR КОМПОНЕНТА - ТАКІ Ж ЯК У GALLERY */
+  --doctor-bg: #e8f5e8; /* 👈 Дуже світло-зелений як у Gallery */
+  --doctor-text-primary: #2d3748; /* 👈 Темний текст як у Gallery */
+  --doctor-text-secondary: #4a5568; /* 👈 Сірий текст як у Gallery */
+  --doctor-name-color: #2d3748; /* 👈 Темний колір імені */
+  --doctor-text-shadow: none; /* 👈 Прибираємо тінь для світлого фону */
+  --doctor-button-bg: #52a40e; /* 👈 Зелена кнопка */
+  --doctor-button-hover: #4a9309;
+  --doctor-button-text: #ffffff; /* 👈 Білий текст на зеленій кнопці */
+  --doctor-button-shadow: rgba(82, 164, 14, 0.3);
+
+  /* 🎯 НОВІ ЗМІННІ ДЛЯ GALLERY КОМПОНЕНТА */
+  --gallery-bg: #e8f5e8; /* 👈 Дуже світло-зелений */
+  --gallery-text-primary: #2d3748;
+  --gallery-text-secondary: #4a5568;
+  --gallery-accent: #52a40e; /* 👈 Темно-зелений акцент */
+  --gallery-button-bg: #52a40e; /* 👈 Темно-зелена кнопка */
+  --gallery-button-hover: #4a9309; /* 👈 При наведенні */
+  --gallery-button-text: #ffffff;
+
+  /* 🎯 НОВІ ЗМІННІ ДЛЯ BIGBORDFACE КОМПОНЕНТА - ТАКІ Ж ЯК У GALLERY */
+  --bigbordface-bg: #e8f5e8; /* 👈 Дуже світло-зелений як у Gallery */
+  --bigbordface-text-primary: #2d3748; /* 👈 Темний текст як у Gallery */
+  --bigbordface-text-secondary: #4a5568; /* 👈 Сірий текст як у Gallery */
+  --bigbordface-accent: #52a40e; /* 👈 Зелений акцент */
+  --bigbordface-button-bg: #52a40e; /* 👈 Зелена кнопка */
+  --bigbordface-button-hover: #4a9309;
+  --bigbordface-button-text: #ffffff; /* 👈 Білий текст на зеленій кнопці */
+}
+
+/* 🎯 ЗЕЛЕНА КОЛЬОРОВА СХЕМА ДЛЯ ТЕМНОЇ ТЕМИ */
+.dark {
+  --bigbord-primary: #d5f9b8; /* 👈 Світло-зелений фон */
+  --bigbord-primary-dark: #52a40e; /* 👈 Темно-зелений */
+  --bigbord-primary-hover: #5cb211; /* 👈 Світліший зелений при наведенні */
+  --bigbord-text-primary: #1e3a8a;
+  --bigbord-text-secondary: #1e40af;
+  --bigbord-text-accent: #0f766e;
+  --bigbord-text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+
+  /* 🎯 КОЛЬОРИ КНОПКИ ДЛЯ ТЕМНОЇ ТЕМИ */
+  --consultation-button-bg: #52a40e; /* 👈 Темно-зелений */
+  --consultation-button-hover: #5cb211; /* 👈 Світліший при наведенні */
+  --consultation-button-text: #ffffff;
+  --consultation-button-shadow: rgba(82, 164, 14, 0.4);
+
+  /* 🎯 КОЛЬОРИ ХЕДЕРА ТА ФУТЕРА ДЛЯ ТЕМНОЇ ТЕМИ */
+  --header-footer-bg: #52a40e; /* 👈 Темно-зелений */
+  --header-footer-text: #ffffff;
+  --header-footer-text-hover: #d5f9b8; /* 👈 Світло-зелений при наведенні */
+  --header-footer-border: rgba(213, 249, 184, 0.2);
+  --header-footer-accent: #d5f9b8; /* 👈 Світло-зелений акцент */
+
+  /* 🎯 ЗМІННІ ДЛЯ DOCTOR КОМПОНЕНТА В ТЕМНІЙ ТЕМІ - ТАКІ Ж ЯК У GALLERY */
+  --doctor-bg: #e8f5e8; /* 👈 Дуже світло-зелений як у Gallery */
+  --doctor-text-primary: #2d3748; /* 👈 Темний текст як у Gallery */
+  --doctor-text-secondary: #4a5568; /* 👈 Сірий текст як у Gallery */
+  --doctor-name-color: #2d3748; /* 👈 Темний колір імені */
+  --doctor-text-shadow: none; /* 👈 Прибираємо тінь для світлого фону */
+  --doctor-button-bg: #52a40e; /* 👈 Зелена кнопка */
+  --doctor-button-hover: #5cb211;
+  --doctor-button-text: #ffffff; /* 👈 Білий текст на зеленій кнопці */
+  --doctor-button-shadow: rgba(82, 164, 14, 0.3);
+
+  /* 🎯 ЗМІННІ ДЛЯ GALLERY КОМПОНЕНТА В ТЕМНІЙ ТЕМІ */
+  --gallery-bg: #e8f5e8; /* 👈 Дуже світло-зелений */
+  --gallery-text-primary: #2d3748;
+  --gallery-text-secondary: #4a5568;
+  --gallery-accent: #52a40e; /* 👈 Темно-зелений акцент */
+  --gallery-button-bg: #52a40e; /* 👈 Темно-зелена кнопка */
+  --gallery-button-hover: #5cb211; /* 👈 Світліший при наведенні */
+  --gallery-button-text: #ffffff;
+
+  /* 🎯 ЗМІННІ ДЛЯ BIGBORDFACE КОМПОНЕНТА В ТЕМНІЙ ТЕМІ - ТАКІ Ж ЯК У GALLERY */
+  --bigbordface-bg: #e8f5e8; /* 👈 Дуже світло-зелений як у Gallery */
+  --bigbordface-text-primary: #2d3748; /* 👈 Темний текст як у Gallery */
+  --bigbordface-text-secondary: #4a5568; /* 👈 Сірий текст як у Gallery */
+  --bigbordface-accent: #52a40e; /* 👈 Зелений акцент */
+  --bigbordface-button-bg: #52a40e; /* 👈 Зелена кнопка */
+  --bigbordface-button-hover: #5cb211;
+  --bigbordface-button-text: #ffffff; /* 👈 Білий текст на зеленій кнопці */
+}
+
+/* Утилітарні класи */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+/* Скринрідер */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
