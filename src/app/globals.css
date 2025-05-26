@@ -79,6 +79,25 @@ body {
   --bigbordface-button-bg: #52a40e; /* 👈 Зелена кнопка */
   --bigbordface-button-hover: #4a9309;
   --bigbordface-button-text: #ffffff; /* 👈 Білий текст на зеленій кнопці */
+
+  /* 🎯 НОВІ ЗМІННІ ДЛЯ TESTIMONIALS КОМПОНЕНТА */
+  --testimonials-bg: #e8f5e8; /* 👈 Дуже світло-зелений як у Gallery */
+  --testimonials-text-primary: #2d3748; /* 👈 Темний текст */
+  --testimonials-text-secondary: #4a5568; /* 👈 Сірий текст */
+  --testimonials-accent: #52a40e; /* 👈 Зелений акцент */
+
+  /* 🎯 НОВІ ЗМІННІ ДЛЯ CONSULTATION CTA КОМПОНЕНТА */
+  --consultation-cta-bg: #f0fdf4; /* 👈 Дуже світло-зелений фон */
+  --consultation-cta-card-bg: #ffffff; /* 👈 Білий фон карточки */
+  --consultation-cta-text-primary: #1f2937; /* 👈 Темний текст */
+  --consultation-cta-text-secondary: #4b5563; /* 👈 Сірий текст */
+  --consultation-cta-accent: #52a40e; /* 👈 Зелений акцент */
+  --consultation-cta-button-bg: #52a40e; /* 👈 Зелена кнопка */
+  --consultation-cta-button-hover: #4a9309; /* 👈 При наведенні */
+  --consultation-cta-button-text: #ffffff; /* 👈 Білий текст */
+  --consultation-cta-button-shadow: rgba(82, 164, 14, 0.3);
+  --consultation-cta-border: rgba(82, 164, 14, 0.1);
+  --consultation-cta-shadow: rgba(0, 0, 0, 0.1);
 }
 
 /* 🎯 ЗЕЛЕНА КОЛЬОРОВА СХЕМА ДЛЯ ТЕМНОЇ ТЕМИ */
@@ -132,6 +151,25 @@ body {
   --bigbordface-button-bg: #52a40e; /* 👈 Зелена кнопка */
   --bigbordface-button-hover: #5cb211;
   --bigbordface-button-text: #ffffff; /* 👈 Білий текст на зеленій кнопці */
+
+  /* 🎯 TESTIMONIALS КОЛЬОРИ ДЛЯ ТЕМНОЇ ТЕМИ */
+  --testimonials-bg: #e8f5e8; /* 👈 Дуже світло-зелений як у Gallery */
+  --testimonials-text-primary: #2d3748; /* 👈 Темний текст */
+  --testimonials-text-secondary: #4a5568; /* 👈 Сірий текст */
+  --testimonials-accent: #52a40e; /* 👈 Зелений акцент */
+
+  /* 🎯 CONSULTATION CTA КОЛЬОРИ ДЛЯ ТЕМНОЇ ТЕМИ */
+  --consultation-cta-bg: #1f2937; /* 👈 Темний фон */
+  --consultation-cta-card-bg: #374151; /* 👈 Темно-сірий фон карточки */
+  --consultation-cta-text-primary: #f9fafb; /* 👈 Світлий текст */
+  --consultation-cta-text-secondary: #d1d5db; /* 👈 Світло-сірий текст */
+  --consultation-cta-accent: #52a40e; /* 👈 Зелений акцент */
+  --consultation-cta-button-bg: #52a40e; /* 👈 Зелена кнопка */
+  --consultation-cta-button-hover: #5cb211; /* 👈 При наведенні */
+  --consultation-cta-button-text: #ffffff; /* 👈 Білий текст */
+  --consultation-cta-button-shadow: rgba(82, 164, 14, 0.4);
+  --consultation-cta-border: rgba(82, 164, 14, 0.2);
+  --consultation-cta-shadow: rgba(0, 0, 0, 0.3);
 }
 
 /* Утилітарні класи */
