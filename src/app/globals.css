@@ -98,6 +98,19 @@ body {
   --consultation-cta-button-shadow: rgba(82, 164, 14, 0.3);
   --consultation-cta-border: rgba(82, 164, 14, 0.1);
   --consultation-cta-shadow: rgba(0, 0, 0, 0.1);
+
+  /* 🎯 НОВІ ЗМІННІ ДЛЯ SERVICES КОМПОНЕНТА */
+  --services-bg: #e8f5e8; /* 👈 Дуже світло-зелений як у Gallery */
+  --services-text-primary: #2d3748; /* 👈 Темний текст */
+  --services-text-secondary: #4a5568; /* 👈 Сірий текст */
+  --services-accent: #52a40e; /* 👈 Зелений акцент */
+  --services-accent-hover: #4a9309; /* 👈 При наведенні */
+  --services-card-bg: #ffffff; /* 👈 Білий фон карточок */
+  --services-card-border: rgba(82, 164, 14, 0.1);
+  --services-card-shadow: rgba(0, 0, 0, 0.1);
+  --services-card-shadow-hover: rgba(82, 164, 14, 0.15);
+  --services-icon-bg: rgba(82, 164, 14, 0.1);
+  --services-info-bg: rgba(82, 164, 14, 0.05);
 }
 
 /* 🎯 ЗЕЛЕНА КОЛЬОРОВА СХЕМА ДЛЯ ТЕМНОЇ ТЕМИ */
@@ -170,6 +183,19 @@ body {
   --consultation-cta-button-shadow: rgba(82, 164, 14, 0.4);
   --consultation-cta-border: rgba(82, 164, 14, 0.2);
   --consultation-cta-shadow: rgba(0, 0, 0, 0.3);
+
+  /* 🎯 SERVICES КОЛЬОРИ ДЛЯ ТЕМНОЇ ТЕМИ */
+  --services-bg: #1f2937; /* 👈 Темний фон */
+  --services-text-primary: #f9fafb; /* 👈 Світлий текст */
+  --services-text-secondary: #d1d5db; /* 👈 Світло-сірий текст */
+  --services-accent: #52a40e; /* 👈 Зелений акцент */
+  --services-accent-hover: #5cb211; /* 👈 При наведенні */
+  --services-card-bg: #374151; /* 👈 Темно-сірий фон карточок */
+  --services-card-border: rgba(82, 164, 14, 0.2);
+  --services-card-shadow: rgba(0, 0, 0, 0.3);
+  --services-card-shadow-hover: rgba(82, 164, 14, 0.25);
+  --services-icon-bg: rgba(82, 164, 14, 0.2);
+  --services-info-bg: rgba(82, 164, 14, 0.1);
 }
 
 /* Утилітарні класи */

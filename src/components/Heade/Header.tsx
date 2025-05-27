@@ -9,10 +9,10 @@ import { ThemeToggle } from "@/components/ThemeToggle/ThemeToggle"
 
 const navItems = [
   { name: "Головна", path: "/" },
-  { name: "Про нас", path: "/about" },
+
   {
     name: "Послуги",
-    path: "/services",
+    path: "/services", // 👈 Основне посилання на загальну сторінку послуг
     hasSubmenu: true,
     submenu: [
       {
@@ -60,8 +60,11 @@ const navItems = [
       },
     ],
   },
+  { name: "Про нас", path: "/about" },
   { name: "Портфоліо", path: "/portfolio" },
   { name: "Контакти", path: "/contacts" },
+  { name: "Блог", path: "/blog" },
+  { name: "Відгуки", path: "/reviews" },
 ]
 
 export default function Header() {
@@ -97,14 +100,15 @@ export default function Header() {
                 <li key={item.path} className={styles.navItem}>
                   {item.hasSubmenu ? (
                     <div className={styles.submenuContainer}>
-                      <button
+                      {/* 👈 Змінено button на Link для основного посилання */}
+                      <Link
+                        href={item.path}
                         className={`${styles.navLink} ${pathname.startsWith("/services") ? styles.active : ""}`}
-                        onClick={toggleSubmenu}
                         onMouseEnter={() => setSubmenuOpen(true)}
                       >
                         {item.name}
                         <ChevronDown size={16} className={styles.chevron} />
-                      </button>
+                      </Link>
 
                       {submenuOpen && (
                         <div className={styles.submenu} onMouseLeave={() => setSubmenuOpen(false)}>
@@ -157,11 +161,20 @@ export default function Header() {
                 <li key={item.path}>
                   {item.hasSubmenu ? (
                     <div>
-                      <button
+                      {/* 👈 Змінено button на Link для мобільного меню */}
+                      <Link
+                        href={item.path}
                         className={`${styles.mobileNavLink} ${pathname.startsWith("/services") ? styles.active : ""}`}
-                        onClick={toggleSubmenu}
+                        onClick={() => {
+                          // Закриваємо меню при переході на основну сторінку послуг
+                          closeMenus()
+                        }}
                       >
                         {item.name}
+                      </Link>
+
+                      {/* 👈 Додаткова кнопка для розгортання підменю */}
+                      <button className={styles.submenuToggle} onClick={toggleSubmenu} aria-label="Розгорнути підменю">
                         <ChevronDown size={16} className={styles.chevron} />
                       </button>
 

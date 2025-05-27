@@ -1,0 +1,377 @@
+/* 🎯 SERVICES КОМПОНЕНТ */
+.services {
+  width: 100%;
+  background-color: var(--services-bg); /* 👈 Використовує змінну */
+  padding: 4rem 0;
+  margin: 0;
+  position: relative;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* 🎯 ЗАГОЛОВОК */
+.header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--services-text-primary); /* 👈 Темний колір тексту */
+  margin: 0 0 1rem 0;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--services-text-secondary); /* 👈 Сірий колір тексту */
+  margin: 0;
+}
+
+/* 🎯 СІТКА ПОСЛУГ */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem; /* 👈 Збільшено з 2.5rem до 3rem */
+  margin-bottom: 3rem;
+  align-items: start; /* 👈 Змінено з stretch на start */
+}
+
+/* 🎯 КАРТОЧКА ПОСЛУГИ */
+.card {
+  background-color: var(--services-card-bg);
+  border-radius: 1rem;
+  padding: 2.5rem;
+  box-shadow: 0 4px 12px var(--services-card-shadow);
+  border: 1px solid var(--services-card-border);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 500px; /* 👈 Змінено з auto на фіксовану висоту */
+  margin-bottom: 1rem;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px var(--services-card-shadow-hover);
+  border-color: var(--services-accent);
+}
+
+/* 🎯 ЗАГОЛОВОК КАРТОЧКИ */
+.cardHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.imageWrapper {
+  width: 5rem; /* 👈 Збільшено з 4rem до 5rem */
+  height: 5rem;
+  background-color: var(--services-icon-bg);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+  padding: 0.75rem; /* 👈 Додано padding для зображення */
+  overflow: hidden;
+  position: relative; /* 👈 Для позиціонування елементів */
+}
+
+/* 👈 СТИЛІ ДЛЯ ЗОБРАЖЕННЯ (В СПОКОЇ) */
+.serviceImage {
+  width: 110px; /* 👈 Фіксована ширина */
+  height: 100px; /* 👈 Фіксована висота */
+  object-fit: contain;
+  transition: all 0.3s ease;
+  opacity: 1; /* 👈 Видиме в спокої */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 👈 СТИЛІ ДЛЯ ІКОНКИ (ПРИ НАВЕДЕННІ) */
+.serviceIcon {
+  color: white; /* 👈 Білий колір іконки */
+  transition: all 0.3s ease;
+  opacity: 0; /* 👈 Приховане в спокої */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+}
+
+/* 👈 ЕФЕКТИ ПРИ НАВЕДЕННІ НА КАРТОЧКУ */
+.card:hover .imageWrapper {
+  background-color: var(--services-accent);
+  transform: scale(1.1);
+}
+
+/* 👈 При наведенні: приховуємо зображення, показуємо іконку */
+.card:hover .serviceImage {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.8);
+}
+
+.card:hover .serviceIcon {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* 👈 ЗАГОЛОВОК ТЕПЕР Є ПОСИЛАННЯМ */
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--services-text-primary);
+  margin: 0;
+  line-height: 1.3;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.cardTitle:hover {
+  color: var(--services-accent);
+}
+
+/* 🎯 КОНТЕНТ КАРТОЧКИ */
+.cardContent {
+  flex-grow: 1;
+}
+
+.servicesList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.serviceItem {
+  margin-bottom: 0.75rem;
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+.serviceItem::before {
+  content: "•";
+  color: var(--services-accent);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
+}
+
+/* 👈 АКТИВНІ ПОСИЛАННЯ НА ПОСЛУГИ */
+.serviceLink {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--services-text-secondary);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: block;
+  padding: 0.25rem 0;
+}
+
+.serviceLink:hover {
+  color: var(--services-accent);
+  padding-left: 0.5rem;
+  transform: translateX(5px);
+}
+
+/* 🎯 ДОДАТКОВА ІНФОРМАЦІЯ */
+.additionalInfo {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: var(--services-info-bg);
+  border-radius: 1rem;
+  border: 1px solid var(--services-card-border);
+}
+
+.infoText {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--services-text-secondary);
+  margin: 0;
+}
+
+/* 🎯 АДАПТИВНІСТЬ ДЛЯ ПЛАНШЕТІВ */
+@media (max-width: 992px) {
+  .services {
+    padding: 3rem 0;
+  }
+
+  .header {
+    margin: 0 auto 2.5rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .grid {
+    gap: 2.5rem; /* 👈 Збільшено gap для планшетів */
+    margin-bottom: 2.5rem;
+  }
+
+  .card {
+    padding: 2rem;
+    height: 450px; /* 👈 Фіксована висота для планшетів */
+    margin-bottom: 1rem;
+  }
+
+  .imageWrapper {
+    width: 4.5rem; /* 👈 Трохи менше на планшетах */
+    height: 4.5rem;
+  }
+
+  .serviceImage {
+    width: 70px;
+    height: 70px;
+  }
+
+  .serviceIcon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .cardTitle {
+    font-size: 1.25rem;
+  }
+}
+
+/* 🎯 АДАПТИВНІСТЬ ДЛЯ МОБІЛЬНИХ */
+@media (max-width: 768px) {
+  .services {
+    padding: 2.5rem 0;
+  }
+
+  .container {
+    padding: 0 0.75rem;
+  }
+
+  .header {
+    margin: 0 auto 2rem;
+  }
+
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 2rem; /* 👈 Збільшено gap для мобільних */
+    margin-bottom: 2rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+    height: 400px; /* 👈 Фіксована висота для мобільних */
+    margin-bottom: 1.5rem;
+  }
+
+  .imageWrapper {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .serviceImage {
+    width: 60px;
+    height: 60px;
+  }
+
+  .serviceIcon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .cardTitle {
+    font-size: 1.125rem;
+  }
+
+  .serviceLink {
+    font-size: 0.9rem;
+  }
+
+  .additionalInfo {
+    padding: 1.5rem;
+  }
+
+  .infoText {
+    font-size: 0.9rem;
+  }
+}
+
+/* 🎯 ДУЖЕ МАЛІ ЕКРАНИ */
+@media (max-width: 480px) {
+  .services {
+    padding: 2rem 0;
+  }
+
+  .container {
+    padding: 0 0.5rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+
+  .card {
+    padding: 1rem;
+    height: 350px; /* 👈 Фіксована висота для малих екранів */
+  }
+
+  .imageWrapper {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .serviceImage {
+    width: 50px;
+    height: 50px;
+  }
+
+  .serviceIcon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .cardTitle {
+    font-size: 1rem;
+  }
+
+  .serviceLink {
+    font-size: 0.85rem;
+  }
+
+  .additionalInfo {
+    padding: 1.25rem;
+  }
+
+  .infoText {
+    font-size: 0.85rem;
+  }
+}
