@@ -1,0 +1,172 @@
+.wrapper {
+  width: 100%;
+  background-color: var(--breast-problem-bg);
+  padding: 4rem 0;
+  position: relative;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+}
+
+.mainTitle {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--breast-problem-text-primary);
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.mainTitle::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: var(--breast-problem-accent);
+}
+
+.accordionContainer {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.accordionItem {
+  margin-bottom: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px var(--breast-problem-card-shadow);
+  border: 1px solid var(--breast-problem-card-border);
+}
+
+.accordionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--breast-problem-card-bg);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.accordionHeader:hover {
+  background-color: var(--breast-problem-header-hover);
+}
+
+.accordionTitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--breast-problem-text-primary);
+  margin: 0;
+}
+
+.accordionArrow {
+  font-size: 1.5rem;
+  color: var(--breast-problem-accent);
+  transition: transform 0.3s ease;
+}
+
+.arrowUp {
+  transform: rotate(180deg);
+}
+
+.accordionContent {
+  display: flex;
+  padding: 20px;
+  background-color: var(--breast-problem-content-bg);
+  border-top: 1px solid var(--breast-problem-card-border);
+  gap: 30px;
+}
+
+.textColumn {
+  flex: 2;
+}
+
+.galleryColumn {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.problemSection,
+.solutionSection {
+  margin-bottom: 20px;
+}
+
+.sectionSubtitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--breast-problem-accent);
+  margin-bottom: 10px;
+}
+
+.sectionText {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--breast-problem-text-secondary);
+  margin: 0;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 3rem 0;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .mainTitle {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .accordionContent {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .textColumn {
+    flex: none;
+    width: 100%;
+  }
+
+  .galleryColumn {
+    flex: none;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    padding: 2rem 0;
+  }
+
+  .container {
+    padding: 0 0.75rem;
+  }
+
+  .mainTitle {
+    font-size: 1.8rem;
+  }
+
+  .accordionTitle {
+    font-size: 1.1rem;
+  }
+
+  .accordionHeader {
+    padding: 15px;
+  }
+
+  .accordionContent {
+    padding: 15px;
+  }
+}

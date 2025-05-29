@@ -1,0 +1,384 @@
+.galleryContainer {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.gallery {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.imageContainer {
+  position: relative;
+  width: calc(100% - 8px);
+  height: calc(100% - 48px);
+  margin: 4px 4px 44px 4px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.imageLoader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #333;
+  font-size: 1rem;
+  z-index: 1;
+}
+
+.noImages {
+  width: 100%;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  color: #666;
+  font-size: 1.2rem;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.image:hover {
+  transform: scale(1.02);
+}
+
+.imageCaption {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  text-align: center;
+  z-index: 2;
+}
+
+/* Навігаційні кнопки поверх зображення */
+.navButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 35px;
+  height: 35px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 3;
+  color: #1e3a8a;
+  left: 15px;
+}
+
+.navButtonNext {
+  left: auto;
+  right: 15px;
+}
+
+.navButton:hover {
+  background-color: rgba(255, 255, 255, 1);
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* Нижня панель з індикаторами та кнопкою fullscreen */
+.bottomPanel {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 44px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  z-index: 2;
+}
+
+.indicators {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.activeIndicator {
+  background-color: #1e3a8a;
+  transform: scale(1.2);
+}
+
+.fullscreenButton {
+  width: 28px;
+  height: 28px;
+  background-color: transparent;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #1e3a8a;
+  font-weight: bold;
+}
+
+.fullscreenButton:hover {
+  background-color: #1e3a8a;
+  color: white;
+  border-color: #1e3a8a;
+}
+
+/* Повноекранний режим */
+.fullscreenOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.fullscreenContent {
+  position: relative;
+  width: 90%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fullscreenImageContainer {
+  position: relative;
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.fullscreenImage {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.fullscreenImageTitle {
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  border-radius: 0 0 8px 8px;
+}
+
+.closeButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.closeButton:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.fullscreenNavButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  left: 20px;
+}
+
+.fullscreenNavButtonNext {
+  left: auto;
+  right: 20px;
+}
+
+.fullscreenNavButton:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.fullscreenIndicators {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  z-index: 5;
+}
+
+.fullscreenIndicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 0 3px;
+}
+
+.activeFullscreenIndicator {
+  background-color: white;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+  .gallery {
+    height: 280px;
+  }
+
+  .imageContainer {
+    height: calc(100% - 40px);
+    margin: 3px 3px 37px 3px;
+  }
+
+  .bottomPanel {
+    height: 37px;
+    padding: 0 10px;
+  }
+
+  .indicator {
+    width: 6px;
+    height: 6px;
+  }
+
+  .fullscreenButton {
+    width: 24px;
+    height: 24px;
+    font-size: 14px;
+  }
+
+  .navButton {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+
+  .fullscreenContent {
+    width: 95%;
+    height: 95%;
+  }
+
+  .fullscreenImageContainer {
+    width: 90%;
+    height: 70%;
+  }
+
+  .fullscreenIndicator {
+    width: 6px;
+    height: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    height: 220px;
+  }
+
+  .imageContainer {
+    height: calc(100% - 35px);
+    margin: 2px 2px 33px 2px;
+  }
+
+  .bottomPanel {
+    height: 33px;
+    padding: 0 8px;
+  }
+
+  .indicator {
+    width: 5px;
+    height: 5px;
+  }
+
+  .fullscreenButton {
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+  }
+
+  .navButton {
+    width: 25px;
+    height: 25px;
+    font-size: 14px;
+  }
+
+  .imageCaption {
+    font-size: 0.8rem;
+    padding: 6px 8px;
+  }
+
+  .fullscreenIndicator {
+    width: 5px;
+    height: 5px;
+  }
+}

@@ -111,6 +111,28 @@ body {
   --services-card-shadow-hover: rgba(82, 164, 14, 0.15);
   --services-icon-bg: rgba(82, 164, 14, 0.1);
   --services-info-bg: rgba(82, 164, 14, 0.05);
+
+  /* 🎯 НОВІ ЗМІННІ ДЛЯ BREAST AUGMENTATION КОМПОНЕНТА */
+  --breast-augmentation-bg: #e8f5e8; /* 👈 Дуже світло-зелений як у Gallery */
+  --breast-augmentation-text-primary: #2d3748; /* 👈 Темний текст */
+  --breast-augmentation-text-secondary: #4a5568; /* 👈 Сірий текст */
+  --breast-augmentation-accent: #52a40e; /* 👈 Зелений акцент */
+
+  /* 🎯 НОВІ ЗМІННІ ДЛЯ PROBLEM SECTION КОМПОНЕНТА */
+  --problem-section-bg: #e8f5e8; /* 👈 Дуже світло-зелений як у Gallery */
+  --problem-section-text-primary: #2d3748; /* 👈 Темний текст */
+  --problem-section-text-secondary: #4a5568; /* 👈 Сірий текст */
+  --problem-section-accent: #52a40e; /* 👈 Зелений акцент */
+  --problem-section-card-bg: #ffffff; /* 👈 Білий фон карточок */
+  --problem-section-card-border: rgba(82, 164, 14, 0.1);
+  --problem-section-card-shadow: rgba(0, 0, 0, 0.1);
+  --problem-section-button-bg: #ffffff;
+  --problem-section-button-text: #4a5568;
+  --problem-section-button-border: rgba(82, 164, 14, 0.2);
+  --problem-section-button-hover: rgba(82, 164, 14, 0.05);
+  --problem-section-header-hover: rgba(82, 164, 14, 0.03);
+  --problem-section-content-bg: rgba(82, 164, 14, 0.02);
+  --problem-section-solution-bg: rgba(82, 164, 14, 0.05);
 }
 
 /* 🎯 ЗЕЛЕНА КОЛЬОРОВА СХЕМА ДЛЯ ТЕМНОЇ ТЕМИ */
@@ -196,6 +218,28 @@ body {
   --services-card-shadow-hover: rgba(82, 164, 14, 0.25);
   --services-icon-bg: rgba(82, 164, 14, 0.2);
   --services-info-bg: rgba(82, 164, 14, 0.1);
+
+  /* 🎯 BREAST AUGMENTATION КОЛЬОРИ ДЛЯ ТЕМНОЇ ТЕМИ */
+  --breast-augmentation-bg: #1f2937; /* 👈 Темний фон */
+  --breast-augmentation-text-primary: #f9fafb; /* 👈 Світлий текст */
+  --breast-augmentation-text-secondary: #e7ebf1; /* 👈 Світло-сірий текст */
+  --breast-augmentation-accent: #52a40e; /* 👈 Зелений акцент */
+
+  /* 🎯 PROBLEM SECTION КОЛЬОРИ ДЛЯ ТЕМНОЇ ТЕМИ */
+  --problem-section-bg: #3e4206; /* 👈 Темний фон */
+  --problem-section-text-primary: #f9fafb; /* 👈 Світлий текст */
+  --problem-section-text-secondary: #d1d5db; /* 👈 Світло-сірий текст */
+  --problem-section-accent: #52a40e; /* 👈 Зелений акцент */
+  --problem-section-card-bg: #374151; /* 👈 Темно-сірий фон карточок */
+  --problem-section-card-border: rgba(82, 164, 14, 0.2);
+  --problem-section-card-shadow: rgba(0, 0, 0, 0.3);
+  --problem-section-button-bg: #4b5563;
+  --problem-section-button-text: #d1d5db;
+  --problem-section-button-border: rgba(82, 164, 14, 0.3);
+  --problem-section-button-hover: rgba(82, 164, 14, 0.1);
+  --problem-section-header-hover: rgba(82, 164, 14, 0.05);
+  --problem-section-content-bg: rgba(82, 164, 14, 0.03);
+  --problem-section-solution-bg: rgba(82, 164, 14, 0.08);
 }
 
 /* Утилітарні класи */
