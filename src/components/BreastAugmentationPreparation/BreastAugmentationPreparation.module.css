@@ -1,0 +1,83 @@
+.wrapper {
+  width: 100%;
+  padding: 60px 0;
+  background-color: #e8f5e8;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.mainTitle {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.mainTitle::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: #52a40e;
+}
+
+.contentBlock {
+  display: flex;
+  margin-bottom: 60px;
+  gap: 30px;
+}
+
+.textColumn {
+  flex: 1;
+}
+
+.textContent {
+  color: #2d3748;
+  white-space: pre-line;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.galleryColumn {
+  flex: 1;
+}
+
+/* Адаптивність для мобільних пристроїв */
+@media (max-width: 768px) {
+  .contentBlock {
+    flex-direction: column;
+  }
+
+  .textColumn,
+  .galleryColumn {
+    flex: 1;
+    width: 100%;
+  }
+
+  .mainTitle {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    padding: 40px 0;
+  }
+
+  .mainTitle {
+    font-size: 1.8rem;
+  }
+
+  .contentBlock {
+    margin-bottom: 40px;
+  }
+}

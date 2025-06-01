@@ -1,0 +1,61 @@
+.textBlock {
+  background-color: var(--breast-preparation-textblock-bg);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px var(--breast-preparation-textblock-shadow);
+  border: 1px solid var(--breast-preparation-textblock-border);
+  height: 100%;
+}
+
+.textContent {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--breast-preparation-text-primary);
+  white-space: pre-wrap;
+}
+
+.paragraph {
+  margin-bottom: 15px;
+  color: var(--breast-preparation-text-primary);
+}
+
+.toggleButton {
+  background: none;
+  border: none;
+  color: var(--breast-preparation-textblock-toggle);
+  font-weight: 600;
+  cursor: pointer;
+  padding: 5px 0;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.toggleButton:hover {
+  color: var(--breast-preparation-textblock-toggle-hover);
+}
+
+@media (max-width: 768px) {
+  .textBlock {
+    padding: 15px;
+  }
+
+  .textContent {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .textBlock {
+    padding: 12px;
+  }
+
+  .textContent {
+    font-size: 0.9rem;
+  }
+
+  .toggleButton {
+    font-size: 0.85rem;
+  }
+}

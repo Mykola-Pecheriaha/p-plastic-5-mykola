@@ -1,13 +1,18 @@
 import type React from "react"
-import Image from "next/image"
 import styles from "./BreastAugmentation.module.css"
+import BeforeAfterSlider from "../BeforeAfterSlider/BeforeAfterSlider"
 
 interface BreastAugmentationProps {
   backgroundColor?: string
   backgroundImage?: string
+  textColor?: "white" | "dark" | "auto" // 👈 Додаємо можливість вибору кольору тексту
 }
 
-const BreastAugmentation: React.FC<BreastAugmentationProps> = ({ backgroundColor, backgroundImage }) => {
+const BreastAugmentation: React.FC<BreastAugmentationProps> = ({
+  backgroundColor,
+  backgroundImage,
+  textColor = "auto", // 👈 За замовчуванням 'auto'
+}) => {
   // Створюємо стиль для секції
   const sectionStyle: React.CSSProperties = {}
 
@@ -20,8 +25,15 @@ const BreastAugmentation: React.FC<BreastAugmentationProps> = ({ backgroundColor
     sectionStyle.backgroundColor = backgroundColor
   }
 
+  // 👈 Додаємо клас для кольору тексту
+  const getTextColorClass = () => {
+    if (textColor === "white") return styles.whiteText
+    if (textColor === "dark") return styles.darkText
+    return "" // auto - використовує CSS змінні
+  }
+
   return (
-    <section className={styles.breastAugmentation} style={sectionStyle}>
+    <section className={`${styles.breastAugmentation} ${getTextColorClass()}`} style={sectionStyle}>
       <div className={styles.container}>
         {/* Заголовок */}
         <div className={styles.titleSection}>
@@ -50,16 +62,14 @@ const BreastAugmentation: React.FC<BreastAugmentationProps> = ({ backgroundColor
 
           {/* Права частина - зображення */}
           <div className={styles.imageSection}>
-            <div className={styles.imageWrapper}>
-              <Image
-                src="/images/breast-augmento/cartca5-removebg-preview.png"
-                alt="Результат збільшення грудей"
-                width={500}
-                height={600}
-                className={styles.mainImage}
-                priority
-              />
-            </div>
+            <BeforeAfterSlider
+              beforeImage="/images/before-after/breast/breast-augmentation-before..png"
+              afterImage="/images/before-after/breast/breastbreast-augmentation-after.png"
+              beforeAlt="До збільшення грудей"
+              afterAlt="Після збільшення грудей"
+              width={500}
+              height={600}
+            />
           </div>
         </div>
 

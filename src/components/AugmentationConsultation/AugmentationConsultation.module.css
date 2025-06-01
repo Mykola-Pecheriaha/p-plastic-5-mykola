@@ -1,0 +1,332 @@
+/* CSS змінні для ConsultationGallery */
+.wrapper {
+  --consultation-gallery-bg: var(--card-background);
+  --consultation-loader-bg: var(--loader-background);
+  --consultation-loader-text: var(--text-secondary);
+  --consultation-no-images-bg: var(--background-muted);
+  --consultation-no-images-text: var(--text-muted);
+  --consultation-nav-bg: var(--nav-button-background);
+  --consultation-nav-hover: var(--nav-button-hover);
+  --consultation-accent: var(--accent-color);
+  --consultation-panel-bg: var(--panel-background);
+  --consultation-indicator: var(--indicator-color);
+  --consultation-border: var(--border-color);
+  --consultation-button-text: var(--button-text);
+}
+
+/* Для білого тексту */
+.whiteText {
+  --consultation-gallery-bg: rgba(255, 255, 255, 0.1);
+  --consultation-loader-bg: rgba(255, 255, 255, 0.2);
+  --consultation-loader-text: #ffffff;
+  --consultation-no-images-bg: rgba(255, 255, 255, 0.1);
+  --consultation-no-images-text: #ffffff;
+  --consultation-nav-bg: rgba(255, 255, 255, 0.9);
+  --consultation-nav-hover: rgba(255, 255, 255, 1);
+  --consultation-accent: #ffd700;
+  --consultation-panel-bg: rgba(255, 255, 255, 0.95);
+  --consultation-indicator: rgba(255, 255, 255, 0.6);
+  --consultation-border: rgba(255, 255, 255, 0.3);
+  --consultation-button-text: #333333;
+}
+
+/* Для темного тексту */
+.darkText {
+  --consultation-gallery-bg: #ffffff;
+  --consultation-loader-bg: rgba(0, 0, 0, 0.1);
+  --consultation-loader-text: #333333;
+  --consultation-no-images-bg: #f0f0f0;
+  --consultation-no-images-text: #666666;
+  --consultation-nav-bg: rgba(255, 255, 255, 0.9);
+  --consultation-nav-hover: rgba(255, 255, 255, 1);
+  --consultation-accent: #2d8f47;
+  --consultation-panel-bg: #ffffff;
+  --consultation-indicator: #cccccc;
+  --consultation-border: #cccccc;
+  --consultation-button-text: #ffffff;
+}
+
+/* 🎯 AUGMENTATION CONSULTATION КОМПОНЕНТ */
+.wrapper {
+  width: 100%;
+  padding: 4rem 0;
+  position: relative;
+  /* 👈 Використовуємо ту саму змінну що й у Gallery/ProblemSection */
+  background-color: var(--gallery-bg); /* #e8f5e8 для обох тем */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+}
+
+/* 🎯 ЗАГОЛОВОК */
+.mainTitle {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  /* 👈 Використовуємо змінну як у Gallery */
+  color: var(--gallery-text-primary); /* #2d3748 для обох тем */
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.mainTitle::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  /* 👈 Використовуємо акцент як у Gallery */
+  background-color: var(--gallery-accent); /* #52a40e для обох тем */
+}
+
+/* 🎯 АККОРДЕОН */
+.accordionContainer {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.accordionItem {
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  /* 👈 Білий фон для обох тем */
+  background-color: #ffffff;
+  border: 1px solid rgba(82, 164, 14, 0.1);
+  transition: all 0.3s ease;
+}
+
+.accordionItem:hover {
+  box-shadow: 0 6px 20px rgba(82, 164, 14, 0.15);
+  border-color: var(--gallery-accent);
+}
+
+.accordionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  /* 👈 Білий фон для обох тем */
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: none;
+}
+
+.accordionHeader:hover {
+  background-color: rgba(82, 164, 14, 0.05);
+}
+
+.titleContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sectionIcon {
+  font-size: 1.5rem;
+}
+
+.accordionTitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  /* 👈 Використовуємо змінну як у Gallery */
+  color: var(--gallery-text-primary); /* #2d3748 для обох тем */
+  margin: 0;
+}
+
+.accordionArrow {
+  font-size: 1.5rem;
+  /* 👈 Використовуємо акцент як у Gallery */
+  color: var(--gallery-accent); /* #52a40e для обох тем */
+  transition: transform 0.3s ease;
+}
+
+.arrowUp {
+  transform: rotate(180deg);
+}
+
+/* 🎯 КОНТЕНТ АККОРДЕОНУ */
+.accordionContent {
+  display: flex;
+  padding: 2rem;
+  background-color: rgba(82, 164, 14, 0.02);
+  border-top: 1px solid rgba(82, 164, 14, 0.1);
+  gap: 2rem;
+}
+
+.textColumn {
+  flex: 2;
+}
+
+.contentParagraph {
+  font-size: 1rem;
+  line-height: 1.7;
+  /* 👈 Використовуємо змінну як у Gallery */
+  color: var(--gallery-text-secondary); /* #4a5568 для обох тем */
+  margin-bottom: 1rem;
+}
+
+.contentParagraph:last-child {
+  margin-bottom: 0;
+}
+
+.contentParagraph:empty {
+  margin-bottom: 0.5rem;
+}
+
+.galleryColumn {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* 🎯 КЛАСИ ДЛЯ КОЛЬОРУ ТЕКСТУ */
+.whiteText .mainTitle,
+.whiteText .accordionTitle,
+.whiteText .contentParagraph {
+  color: #ffffff !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7) !important;
+}
+
+.darkText .mainTitle,
+.darkText .accordionTitle,
+.darkText .contentParagraph {
+  color: #1f2937 !important;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7) !important;
+}
+
+.whiteText .accordionHeader {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.whiteText .accordionHeader:hover {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.whiteText .accordionContent {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+.whiteText .accordionItem {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.darkText .accordionHeader {
+  background-color: rgba(0, 0, 0, 0.05) !important;
+}
+
+.darkText .accordionHeader:hover {
+  background-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+.darkText .accordionContent {
+  background-color: rgba(0, 0, 0, 0.02) !important;
+}
+
+.darkText .accordionItem {
+  background-color: rgba(0, 0, 0, 0.05) !important;
+}
+
+/* 🎯 АДАПТИВНІСТЬ ДЛЯ ПЛАНШЕТІВ */
+@media (max-width: 992px) {
+  .wrapper {
+    padding: 3rem 0;
+  }
+  .mainTitle {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+  }
+  .accordionContent {
+    gap: 1.5rem;
+  }
+  .galleryColumn {
+    min-width: 250px;
+  }
+}
+
+/* 🎯 АДАПТИВНІСТЬ ДЛЯ МОБІЛЬНИХ */
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 2.5rem 0;
+  }
+  .container {
+    padding: 0 1rem;
+  }
+  .mainTitle {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+  }
+  .accordionContent {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+  .textColumn {
+    flex: none;
+    width: 100%;
+  }
+  .galleryColumn {
+    flex: none;
+    width: 100%;
+    min-width: auto;
+  }
+  .accordionHeader {
+    padding: 1.25rem;
+  }
+  .accordionTitle {
+    font-size: 1.1rem;
+  }
+  .sectionIcon {
+    font-size: 1.2rem;
+  }
+}
+
+/* 🎯 ДУЖЕ МАЛІ ЕКРАНИ */
+@media (max-width: 480px) {
+  .wrapper {
+    padding: 2rem 0;
+  }
+  .container {
+    padding: 0 0.75rem;
+  }
+  .mainTitle {
+    font-size: 1.5rem;
+  }
+  .accordionHeader {
+    padding: 1rem;
+  }
+  .accordionContent {
+    padding: 1rem;
+  }
+  .accordionTitle {
+    font-size: 1rem;
+  }
+  .contentParagraph {
+    font-size: 0.9rem;
+  }
+}
+
+/* 🎯 ЕКСТРА МАЛІ ЕКРАНИ */
+@media (max-width: 375px) {
+  .container {
+    padding: 0 0.5rem;
+  }
+  .mainTitle {
+    font-size: 1.25rem;
+  }
+  .accordionHeader {
+    padding: 0.75rem;
+  }
+  .accordionContent {
+    padding: 0.75rem;
+  }
+  .contentParagraph {
+    font-size: 0.85rem;
+  }
+}

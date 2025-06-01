@@ -277,3 +277,37 @@
     font-size: 0.85rem;
   }
 }
+
+/* 🎯 КЛАСИ ДЛЯ КОЛЬОРУ ТЕКСТУ */
+.whiteText .mainTitle,
+.whiteText .benefitText,
+.whiteText .descriptionParagraph {
+  color: #ffffff !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7) !important;
+}
+
+.darkText .mainTitle,
+.darkText .benefitText,
+.darkText .descriptionParagraph {
+  color: #1f2937 !important;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7) !important;
+}
+
+/* 🎯 ПОКРАЩЕННЯ ЧИТАБЕЛЬНОСТІ НА ФОНОВИХ ЗОБРАЖЕННЯХ */
+.whiteText .benefitBullet {
+  color: #fbbf24 !important; /* 👈 Жовтий колір для кращої видимості */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8) !important;
+}
+
+.darkText .benefitBullet {
+  color: var(--breast-augmentation-accent) !important;
+}
+
+/* 🎯 ПОКРАЩЕННЯ ОВЕРЛЕЮ ДЛЯ КРАЩОЇ ЧИТАБЕЛЬНОСТІ */
+.whiteText::before {
+  background-color: rgba(0, 0, 0, 0.4) !important; /* 👈 Темніший оверлей для білого тексту */
+}
+
+.darkText::before {
+  background-color: rgba(255, 255, 255, 0.6) !important; /* 👈 Світліший оверлей для темного тексту */
+}

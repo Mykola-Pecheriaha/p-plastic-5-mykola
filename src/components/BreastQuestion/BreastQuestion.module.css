@@ -1,0 +1,400 @@
+/* 🎯 BREAST QUESTION КОМПОНЕНТ */
+.breastQuestionSection {
+  width: 100%;
+  background-color: var(--breast-question-bg);
+  padding: 4rem 0;
+  margin: 0;
+  position: relative;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* 🎯 ЗАГОЛОВОК */
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--breast-question-title-color);
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* 🎯 АКОРДЕОН */
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.accordionItem {
+  background-color: var(--breast-question-container-bg);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 4px 12px var(--breast-question-container-shadow);
+  border: 1px solid var(--breast-question-container-border);
+  transition: all 0.3s ease;
+}
+
+.accordionItem:hover {
+  box-shadow: 0 6px 20px var(--breast-question-container-shadow-hover);
+  border-color: var(--breast-question-accent);
+}
+
+/* 🎯 ЗАГОЛОВОК АКОРДЕОНА */
+.accordionHeader {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  transition: background-color 0.3s ease;
+}
+
+.accordionHeader:hover {
+  background-color: var(--breast-question-title-hover);
+}
+
+.accordionTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--breast-question-title-text);
+  margin: 0;
+  line-height: 1.3;
+  flex: 1;
+}
+
+.accordionIcon {
+  color: var(--breast-question-accent);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+  margin-left: 1rem;
+}
+
+/* 🎯 КОНТЕНТ АКОРДЕОНА */
+.accordionContent {
+  padding: 0 1.5rem 1.5rem;
+  border-top: 1px solid var(--breast-question-content-border);
+  background-color: var(--breast-question-content-bg);
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+/* 🎯 ЛІВА ЧАСТИНА - ТЕКСТ */
+.textSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* 🎯 БЛОК ПИТАННЯ (як у ProblemSection) */
+.problemBlock {
+  background-color: var(--breast-question-problem-bg, #fff9e6); /* Світло-жовтий фон */
+  border: 2px solid var(--breast-question-problem-border, #ffd166); /* Жовта рамка */
+  border-radius: 0.75rem;
+  padding: 1.75rem;
+  box-shadow: 0 2px 8px var(--breast-question-problem-shadow, rgba(255, 209, 102, 0.2));
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.problemBlock::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  height: 6px;
+  background-color: var(--breast-question-problem-border, #ffd166); /* Жовта лінія зверху */
+  border-radius: 0.75rem 0.75rem 0 0;
+}
+
+/* 🎯 БЛОК ВІДПОВІДІ (як у ProblemSection) */
+.solutionBlock {
+  background-color: var(--breast-question-solution-bg, #e6f9e6); /* Світло-зелений фон */
+  border: 2px solid var(--breast-question-solution-border, #52a40e); /* Зелена рамка */
+  border-radius: 0.75rem;
+  padding: 1.75rem;
+  box-shadow: 0 2px 8px var(--breast-question-solution-shadow, rgba(82, 164, 14, 0.2));
+  position: relative;
+}
+
+.solutionBlock::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  height: 6px;
+  background-color: var(--breast-question-solution-border, #52a40e); /* Зелена лінія зверху */
+  border-radius: 0.75rem 0.75rem 0 0;
+}
+
+.blockTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--breast-question-block-title);
+  margin: 0 0 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.problemBlock .blockTitle {
+  color: var(--breast-question-problem-title, #b45309); /* Темно-жовтий/коричневий колір */
+}
+
+.solutionBlock .blockTitle {
+  color: var(--breast-question-solution-title, #166534); /* Темно-зелений колір */
+}
+
+/* Оновлюю стилі для тексту в блоках */
+.blockText {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--breast-question-text-color);
+  padding: 0.5rem 0;
+}
+
+.paragraph {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--breast-question-text-color);
+  margin: 0 0 1rem 0;
+  white-space: pre-line;
+}
+
+.blockText p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--breast-question-text-color);
+  margin: 0 0 1rem 0;
+}
+
+.blockText h4 {
+  font-size: 1.1rem;
+  color: var(--breast-question-heading-color);
+  margin: 1.5rem 0 0.75rem 0;
+  font-weight: 600;
+}
+
+.contraindicationsList {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 1rem 0;
+}
+
+.contraindicationsList li {
+  margin-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  position: relative;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--breast-question-list-text);
+}
+
+.contraindicationsList li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--breast-question-list-bullet);
+  font-size: 1.2em;
+  line-height: 1;
+}
+
+/* 🎯 ПРАВА ЧАСТИНА - ЗОБРАЖЕННЯ */
+.gallerySection {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.imageWrapper {
+  width: 100%;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 4px 12px var(--breast-question-image-shadow);
+  border: 1px solid var(--breast-question-image-border);
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* 🎯 CTA СЕКЦІЯ */
+.ctaSection {
+  margin-top: 3rem;
+  text-align: center;
+  padding: 2.5rem;
+  background-color: var(--breast-question-cta-bg);
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px var(--breast-question-cta-shadow);
+}
+
+.ctaText {
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+  color: var(--breast-question-cta-text);
+  line-height: 1.6;
+}
+
+.contactButton {
+  background-color: var(--breast-question-button-bg);
+  color: var(--breast-question-button-text);
+  border: none;
+  padding: 0.875rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px var(--breast-question-button-shadow);
+}
+
+.contactButton:hover {
+  background-color: var(--breast-question-button-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px var(--breast-question-button-shadow-hover);
+}
+
+/* 🎯 АДАПТИВНІСТЬ ДЛЯ ПЛАНШЕТІВ */
+@media (max-width: 992px) {
+  .breastQuestionSection {
+    padding: 3rem 0;
+  }
+
+  .header {
+    margin-bottom: 2.5rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .contentGrid {
+    gap: 2rem;
+  }
+
+  .accordionTitle {
+    font-size: 1.125rem;
+  }
+
+  .problemBlock,
+  .solutionBlock {
+    padding: 1.5rem;
+  }
+}
+
+/* 🎯 АДАПТИВНІСТЬ ДЛЯ МОБІЛЬНИХ */
+@media (max-width: 768px) {
+  .breastQuestionSection {
+    padding: 2.5rem 0;
+  }
+
+  .container {
+    padding: 0 0.75rem;
+  }
+
+  .header {
+    margin-bottom: 2rem;
+  }
+
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .contentGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .accordionHeader {
+    padding: 1rem;
+  }
+
+  .accordionContent {
+    padding: 0 1rem 1rem;
+  }
+
+  .accordionTitle {
+    font-size: 1rem;
+  }
+
+  .blockTitle {
+    font-size: 1.125rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .problemBlock,
+  .solutionBlock {
+    padding: 1.25rem;
+  }
+
+  .ctaSection {
+    margin-top: 2rem;
+    padding: 2rem;
+  }
+}
+
+/* 🎯 ДУЖЕ МАЛІ ЕКРАНИ */
+@media (max-width: 480px) {
+  .breastQuestionSection {
+    padding: 2rem 0;
+  }
+
+  .container {
+    padding: 0 0.5rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .accordionHeader {
+    padding: 0.75rem;
+  }
+
+  .accordionContent {
+    padding: 0 0.75rem 0.75rem;
+  }
+
+  .accordionTitle {
+    font-size: 0.95rem;
+  }
+
+  .blockTitle {
+    font-size: 0.95rem;
+  }
+
+  .problemBlock,
+  .solutionBlock {
+    padding: 0.875rem;
+  }
+
+  .ctaSection {
+    padding: 1.5rem;
+  }
+}

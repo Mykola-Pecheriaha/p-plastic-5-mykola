@@ -1,17 +1,662 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* ========================================
+   🌟 БАЗОВІ СИСТЕМНІ ЗМІННІ
+======================================== */
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-  --border-color: #e2e8f0;
-  --card-bg: #ffffff;
+  --foreground-rgb: 0, 0, 0; /* Основний колір тексту */
+  --background-start-rgb: 214, 219, 220; /* Початковий колір градієнта */
+  --background-end-rgb: 255, 255, 255; /* Кінцевий колір градієнта */
+  --border-color: #e2e8f0; /* Колір рамок */
+  --card-bg: #ffffff; /* Фон карточок */
 }
 
 .dark {
-  --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 0, 0, 0;
-  --background-end-rgb: 0, 0, 0;
-  --border-color: #2d3748;
-  --card-bg: #1a202c;
+  --foreground-rgb: 255, 255, 255; /* Світлий текст для темної теми */
+  --background-start-rgb: 0, 0, 0; /* Темний градієнт початок */
+  --background-end-rgb: 0, 0, 0; /* Темний градієнт кінець */
+  --border-color: #2d3748; /* Темні рамки */
+  --card-bg: #1a202c; /* Темний фон карточок */
+}
+
+/* ========================================
+   🩺 AUGMENTATION CONSULTATION КОМПОНЕНТ
+======================================== */
+
+/* 🌞 СВІТЛА ТЕМА */
+:root {
+  --augmentation-consultation-bg: #e8f5e8; /* Світло-зелений фон секції як у problem-section */
+  --augmentation-consultation-text-primary: #2d3748; /* Темний основний текст */
+  --augmentation-consultation-text-secondary: #4a5568; /* Сірий вторинний текст */
+  --augmentation-consultation-accent: #52a40e; /* Зелений акцент */
+  --augmentation-consultation-card-bg: #ffffff; /* Білий фон карточок */
+  --augmentation-consultation-header-bg: #ffffff; /* Білий фон заголовків */
+  --augmentation-consultation-header-hover: rgba(82, 164, 14, 0.03); /* Легкий зелений при наведенні */
+  --augmentation-consultation-content-bg: rgba(82, 164, 14, 0.02); /* Фон розгорнутого контенту */
+  --augmentation-consultation-border: rgba(82, 164, 14, 0.1); /* Прозора зелена рамка */
+  --augmentation-consultation-shadow: rgba(0, 0, 0, 0.1); /* Легка тінь карточок */
+}
+
+/* 🌙 ТЕМНА ТЕМА */
+.dark {
+  --augmentation-consultation-bg: #1f2937; /* Темний фон секції як у problem-section */
+  --augmentation-consultation-text-primary: #f9fafb; /* Світлий основний текст */
+  --augmentation-consultation-text-secondary: #d1d5db; /* Світло-сірий вторинний текст */
+  --augmentation-consultation-accent: #52a40e; /* Зелений акцент */
+  --augmentation-consultation-card-bg: #374151; /* Темно-сірий фон карточок */
+  --augmentation-consultation-header-bg: #374151; /* Темно-сірий фон заголовків */
+  --augmentation-consultation-header-hover: rgba(82, 164, 14, 0.05); /* Зелений при наведенні */
+  --augmentation-consultation-content-bg: rgba(82, 164, 14, 0.03); /* Фон контенту */
+  --augmentation-consultation-border: rgba(82, 164, 14, 0.2); /* Яскравіша зелена рамка */
+  --augmentation-consultation-shadow: rgba(0, 0, 0, 0.3); /* Сильніша тінь */
+}
+
+/* ========================================
+   🔧 BREAST AUGMENTATION КОМПОНЕНТ
+======================================== */
+
+/* 🌞 СВІТЛА ТЕМА */
+:root {
+  --breast-augmentation-bg: #e8f5e8; /* Світло-зелений фон */
+  --breast-augmentation-text-primary: #2d3748; /* Темний основний текст */
+  --breast-augmentation-text-secondary: #4a5568; /* Сірий вторинний текст */
+  --breast-augmentation-accent: #52a40e; /* Зелений акцент */
+}
+
+/* 🌙 ТЕМНА ТЕМА */
+.dark {
+  --breast-augmentation-bg: #1f2937; /* Темний фон */
+  --breast-augmentation-text-primary: #f9fafb; /* Світлий основний текст */
+  --breast-augmentation-text-secondary: #d1d5db; /* Світло-сірий вторинний текст */
+  --breast-augmentation-accent: #52a40e; /* Зелений акцент залишається */
+}
+
+/* ========================================
+   🔧 BREAST AUGMENTATION PREPARATION КОМПОНЕНТ
+======================================== */
+
+/* 🌞 СВІТЛА ТЕМА */
+:root {
+  /* Основні кольори компонента */
+  --breast-preparation-bg: #f8fafc; /* Світло-сірий фон секції */
+  --breast-preparation-text-primary: #1e293b; /* Темний основний текст */
+  --breast-preparation-text-secondary: #475569; /* Сірий вторинний текст */
+  --breast-preparation-accent: #8b5cf6; /* Фіолетовий акцент */
+  --breast-preparation-card-bg: #ffffff; /* Білий фон карточок */
+  --breast-preparation-border: #e2e8f0; /* Світло-сірі рамки */
+  --breast-preparation-shadow: rgba(0, 0, 0, 0.1); /* Легка тінь */
+
+  /* Заголовки - використовуються в BreastAugmentationPreparation.tsx для .mainTitle */
+  --breast-preparation-title-color: #1e293b; /* Колір заголовків */
+  --breast-preparation-title-underline: #8b5cf6; /* Колір підкреслення заголовків */
+
+  /* Кнопки - використовуються в PreparationGallery.tsx та TextBlock.tsx */
+  --breast-preparation-button-bg: #8b5cf6; /* Фіолетова кнопка */
+  --breast-preparation-button-hover: #7c3aed; /* Темніший фіолетовий при наведенні */
+  --breast-preparation-button-text: #ffffff; /* Білий текст на кнопці */
+
+  /* Галерея - використовується в PreparationGallery.tsx */
+  --breast-preparation-gallery-bg: #ffffff; /* Фон галереї */
+  --breast-preparation-gallery-border: #e2e8f0; /* Рамка галереї */
+  --breast-preparation-gallery-shadow: rgba(0, 0, 0, 0.1); /* Тінь галереї */
+  --breast-preparation-gallery-accent: #8b5cf6; /* Фіолетовий акцент галереї */
+  --breast-preparation-gallery-indicator: #d1d5db; /* Колір індикаторів */
+  --breast-preparation-gallery-active-indicator: #8b5cf6; /* Колір активного індикатора */
+  --breast-preparation-gallery-nav-bg: rgba(255, 255, 255, 0.9); /* Фон навігаційних кнопок */
+  --breast-preparation-gallery-nav-color: #8b5cf6; /* Колір навігаційних кнопок */
+  --breast-preparation-gallery-fullscreen-bg: rgba(0, 0, 0, 0.9); /* Фон повноекранного режиму */
+  --breast-preparation-gallery-fullscreen-text: #ffffff; /* Текст у повноекранному режимі */
+
+  /* Текстовий блок - використовується в TextBlock.tsx */
+  --breast-preparation-textblock-bg: #ffffff; /* Фон текстового блоку */
+  --breast-preparation-textblock-border: #e2e8f0; /* Рамка текстового блоку */
+  --breast-preparation-textblock-shadow: rgba(0, 0, 0, 0.1); /* Тінь текстового блоку */
+  --breast-preparation-textblock-toggle: #8b5cf6; /* Колір кнопки "Показати більше" */
+  --breast-preparation-textblock-toggle-hover: #7c3aed; /* Колір кнопки при наведенні */
+}
+
+/* 🌙 ТЕМНА ТЕМА */
+.dark {
+  /* Основні кольори компонента */
+  --breast-preparation-bg: #0f172a; /* Темний фон секції */
+  --breast-preparation-text-primary: #f1f5f9; /* Світлий основний текст */
+  --breast-preparation-text-secondary: #cbd5e1; /* Світло-сірий вторинний текст */
+  --breast-preparation-accent: #a78bfa; /* Світліший фіолетовий акцент */
+  --breast-preparation-card-bg: #1e293b; /* Темний фон карточок */
+  --breast-preparation-border: #475569; /* Темні рамки */
+  --breast-preparation-shadow: rgba(0, 0, 0, 0.3); /* Сильніша тінь */
+
+  /* Заголовки - використовуються в BreastAugmentationPreparation.tsx для .mainTitle */
+  --breast-preparation-title-color: #f1f5f9; /* Світлий колір заголовків */
+  --breast-preparation-title-underline: #a78bfa; /* Світліший фіолетовий для підкреслення */
+
+  /* Кнопки - використовуються в PreparationGallery.tsx та TextBlock.tsx */
+  --breast-preparation-button-bg: #8b5cf6; /* Фіолетова кнопка */
+  --breast-preparation-button-hover: #a78bfa; /* Світліший фіолетовий при наведенні */
+  --breast-preparation-button-text: #ffffff; /* Білий текст */
+
+  /* Галерея - використовується в PreparationGallery.tsx */
+  --breast-preparation-gallery-bg: #1e293b; /* Темний фон галереї */
+  --breast-preparation-gallery-border: #475569; /* Темна рамка галереї */
+  --breast-preparation-gallery-shadow: rgba(0, 0, 0, 0.3); /* Сильніша тінь галереї */
+  --breast-preparation-gallery-accent: #a78bfa; /* Світліший фіолетовий акцент галереї */
+  --breast-preparation-gallery-indicator: #64748b; /* Темніший колір індикаторів */
+  --breast-preparation-gallery-active-indicator: #a78bfa; /* Колір активного індикатора */
+  --breast-preparation-gallery-nav-bg: rgba(30, 41, 59, 0.9); /* Темний фон навігаційних кнопок */
+  --breast-preparation-gallery-nav-color: #a78bfa; /* Колір навігаційних кнопок */
+  --breast-preparation-gallery-fullscreen-bg: rgba(0, 0, 0, 0.95); /* Темніший фон повноекранного режиму */
+  --breast-preparation-gallery-fullscreen-text: #f1f5f9; /* Світлий текст у повноекранному режимі */
+
+  /* Текстовий блок - використовується в TextBlock.tsx */
+  --breast-preparation-textblock-bg: #1e293b; /* Темний фон текстового блоку */
+  --breast-preparation-textblock-border: #475569; /* Темна рамка текстового блоку */
+  --breast-preparation-textblock-shadow: rgba(0, 0, 0, 0.3); /* Сильніша тінь текстового блоку */
+  --breast-preparation-textblock-toggle: #a78bfa; /* Світліший фіолетовий для кнопки "Показати більше" */
+  --breast-preparation-textblock-toggle-hover: #c4b5fd; /* Ще світліший фіолетовий при наведенні */
+}
+
+/* ========================================
+  ❓ BREAST QUESTION КОМПОНЕНТ
+======================================== */
+
+/* 🌞 СВІТЛА ТЕМА */
+:root {
+  /* Фон секції */
+  --breast-question-bg: #f8fafc; /* Світло-сірий фон секції */
+
+  /* Заголовки */
+  --breast-question-title-color: #1e293b; /* Темно-сірий колір основного заголовка */
+  --breast-question-title-text: #1e293b; /* Темно-сірий колір заголовків питань */
+  --breast-question-heading-color: #1e3a8a; /* Синій колір підзаголовків */
+
+  /* Акцентний колір */
+  --breast-question-accent: #52a40e; /* Зелений акцентний колір (як у ProblemSection) */
+
+  /* Контейнери */
+  --breast-question-container-bg: #ffffff; /* Білий фон контейнерів питань */
+  --breast-question-container-border: rgba(82, 164, 14, 0.1); /* Зелена рамка контейнерів */
+  --breast-question-container-shadow: rgba(0, 0, 0, 0.1); /* Тінь контейнерів */
+  --breast-question-container-shadow-hover: rgba(82, 164, 14, 0.15); /* Тінь при hover */
+
+  /* Заголовки питань */
+  --breast-question-title-hover: rgba(82, 164, 14, 0.05); /* Фон при hover заголовка */
+
+  /* Контент */
+  --breast-question-content-bg: rgba(82, 164, 14, 0.02); /* Світло-зелений фон контенту */
+  --breast-question-content-border: rgba(82, 164, 14, 0.1); /* Зелена рамка контенту */
+  --breast-question-text-color: #64748b; /* Сірий колір основного тексту */
+
+  /* Блок питання (problemBlock) */
+  --breast-question-problem-bg: #fef3c7; /* Жовтий фон для питання */
+  --breast-question-problem-border: #f59e0b; /* Жовта рамка */
+  --breast-question-problem-shadow: rgba(245, 158, 11, 0.1); /* Жовта тінь */
+  --breast-question-problem-title: #92400e; /* Темно-жовтий заголовок */
+
+  /* Блок відповіді (solutionBlock) */
+  --breast-question-solution-bg: #dcfce7; /* Зелений фон для відповіді */
+  --breast-question-solution-border: #22c55e; /* Зелена рамка */
+  --breast-question-solution-shadow: rgba(34, 197, 94, 0.1); /* Зелена тінь */
+  --breast-question-solution-title: #166534; /* Темно-зелений заголовок */
+
+  /* Списки */
+  --breast-question-list-text: #64748b; /* Текст списків */
+  --breast-question-list-bullet: #52a40e; /* Колір маркерів */
+
+  /* Зображення */
+  --breast-question-image-border: #e2e8f0; /* Рамка зображень */
+  --breast-question-image-shadow: rgba(0, 0, 0, 0.1); /* Тінь зображень */
+
+  /* CTA секція */
+  --breast-question-cta-bg: rgba(255, 255, 255, 0.9); /* Фон CTA */
+  --breast-question-cta-shadow: rgba(0, 0, 0, 0.05); /* Тінь CTA */
+  --breast-question-cta-text: #64748b; /* Текст CTA */
+
+  /* Кнопки */
+  --breast-question-button-bg: #52a40e; /* Фон кнопки */
+  --breast-question-button-text: #ffffff; /* Текст кнопки */
+  --breast-question-button-hover: #3d7c0a; /* Фон кнопки при hover */
+  --breast-question-button-shadow: rgba(82, 164, 14, 0.2); /* Тінь кнопки */
+  --breast-question-button-shadow-hover: rgba(82, 164, 14, 0.3); /* Тінь при hover */
+}
+
+.dark {
+  /* Фон секції */
+  --breast-question-bg: #0f172a; /* Темно-синій фон секції */
+
+  /* Заголовки */
+  --breast-question-title-color: #f1f5f9; /* Світло-сірий колір основного заголовка */
+  --breast-question-title-text: #f1f5f9; /* Світло-сірий колір заголовків питань */
+  --breast-question-heading-color: #60a5fa; /* Світло-синій колір підзаголовків */
+
+  /* Акцентний колір */
+  --breast-question-accent: #84cc16; /* Світло-зелений акцентний колір */
+
+  /* Контейнери */
+  --breast-question-container-bg: #1e293b; /* Темно-сірий фон контейнерів питань */
+  --breast-question-container-border: rgba(132, 204, 22, 0.2); /* Світло-зелена рамка контейнерів */
+  --breast-question-container-shadow: rgba(0, 0, 0, 0.3); /* Темна тінь контейнерів */
+  --breast-question-container-shadow-hover: rgba(132, 204, 22, 0.2); /* Зелена тінь при hover */
+
+  /* Заголовки питань */
+  --breast-question-title-hover: rgba(132, 204, 22, 0.1); /* Зелений фон при hover заголовка */
+
+  /* Контент */
+  --breast-question-content-bg: rgba(132, 204, 22, 0.05); /* Темно-зелений фон контенту */
+  --breast-question-content-border: rgba(132, 204, 22, 0.2); /* Світло-зелена рамка контенту */
+  --breast-question-text-color: #cbd5e1; /* Світло-сірий колір основного тексту */
+
+  /* Блок питання (problemBlock) */
+  --breast-question-problem-bg: #451a03; /* Темно-коричневий фон */
+  --breast-question-problem-border: #ea580c; /* Помаранчева рамка */
+  --breast-question-problem-shadow: rgba(234, 88, 12, 0.2); /* Помаранчева тінь */
+  --breast-question-problem-title: #fed7aa; /* Світло-помаранчевий заголовок */
+
+  /* Блок відповіді (solutionBlock) */
+  --breast-question-solution-bg: #14532d; /* Темно-зелений фон */
+  --breast-question-solution-border: #22c55e; /* Зелена рамка */
+  --breast-question-solution-shadow: rgba(34, 197, 94, 0.2); /* Зелена тінь */
+  --breast-question-solution-title: #bbf7d0; /* Світло-зелений заголовок */
+
+  /* Списки */
+  --breast-question-list-text: #cbd5e1; /* Світлий текст списків */
+  --breast-question-list-bullet: #84cc16; /* Зелені маркери */
+
+  /* Зображення */
+  --breast-question-image-border: #334155; /* Темна рамка зображень */
+  --breast-question-image-shadow: rgba(0, 0, 0, 0.4); /* Темна тінь зображень */
+
+  /* CTA секція */
+  --breast-question-cta-bg: rgba(30, 41, 59, 0.9); /* Темний фон CTA */
+  --breast-question-cta-shadow: rgba(0, 0, 0, 0.3); /* Темна тінь CTA */
+  --breast-question-cta-text: #cbd5e1; /* Світлий текст CTA */
+
+  /* Кнопки */
+  --breast-question-button-bg: #84cc16; /* Зелений фон кнопки */
+  --breast-question-button-text: #0f172a; /* Темний текст кнопки */
+  --breast-question-button-hover: #65a30d; /* Темніший зелений hover */
+  --breast-question-button-shadow: rgba(132, 204, 22, 0.3); /* Зелена тінь */
+  --breast-question-button-shadow-hover: rgba(132, 204, 22, 0.4); /* Зелена тінь hover */
+}
+
+/* ========================================
+  🖼️ GALLERY КОМПОНЕНТ
+======================================== */
+
+/* 🌞 СВІТЛА ТЕМА */
+:root {
+  --gallery-bg: #e8f5e8; /* Світло-зелений фон галереї */
+  --gallery-text-primary: #2d3748; /* Темний текст */
+  --gallery-text-secondary: #4a5568; /* Сірий текст */
+  --gallery-accent: #52a40e; /* Зелений акцент (кнопки, індикатори) */
+  --gallery-button-bg: #52a40e; /* Фон кнопок навігації */
+  --gallery-button-hover: #4a9309; /* Фон кнопок при наведенні */
+  --gallery-button-text: #ffffff; /* Текст на кнопках */
+}
+
+/* 🌙 ТЕМНА ТЕМА */
+.dark {
+  --gallery-bg: #e8f5e8; /* Фон залишається світлим */
+  --gallery-text-primary: #2d3748; /* Текст залишається темним */
+  --gallery-text-secondary: #4a5568; /* Сірий текст */
+  --gallery-accent: #60a5fa; /* Синій акцент для темної теми */
+  --gallery-button-bg: #52a40e; /* Зелені кнопки */
+  --gallery-button-hover: #5cb211; /* Світліший зелений при наведенні */
+  --gallery-button-text: #ffffff; /* Білий текст */
+}
+
+/* ========================================
+  🖼️ BIGBORDFACE КОМПОНЕНТ
+======================================== */
+
+/* 🌞 СВІТЛА ТЕМА */
+:root {
+  --bigbordface-bg: #e8f5e8; /* Світло-зелений фон галереї як у SideBySideGallery */
+  --bigbordface-text-primary: #2d3748; /* Темний текст */
+  --bigbordface-text-secondary: #4a5568; /* Сірий текст */
+  --bigbordface-accent: #52a40e; /* Зелений акцент (кнопки, індикатори) */
+  --bigbordface-button-bg: #52a40e; /* Фон кнопок навігації */
+  --bigbordface-button-hover: #4a9309; /* Фон кнопок при наведенні */
+  --bigbordface-button-text: #ffffff; /* Текст на кнопках */
+  --bigbordface-card-bg: #ffffff; /* Білий фон карточок */
+  --bigbordface-card-border: rgba(82, 164, 14, 0.1); /* Прозора зелена рамка */
+  --bigbordface-card-shadow: rgba(0, 0, 0, 0.1); /* Легка тінь карточок */
+  --bigbordface-header-color: #2d3748; /* Колір заголовків */
+  --bigbordface-description-color: #4a5568; /* Колір описів */
+}
+
+/* 🌙 ТЕМНА ТЕМА */
+.dark {
+  --bigbordface-bg: #e8f5e8; /* Фон залишається світлим як у SideBySideGallery */
+  --bigbordface-text-primary: #2d3748; /* Текст залишається темним */
+  --bigbordface-text-secondary: #4a5568; /* Сірий текст */
+  --bigbordface-accent: #60a5fa; /* Синій акцент для темної теми */
+  --bigbordface-button-bg: #52a40e; /* Зелені кнопки */
+  --bigbordface-button-hover: #5cb211; /* Світліший зелений при наведенні */
+  --bigbordface-button-text: #ffffff; /* Білий текст */
+  --bigbordface-card-bg: #1e293b; /* Темний фон карточок */
+  --bigbordface-card-border: rgba(82, 164, 14, 0.2); /* Яскравіша зелена рамка */
+  --bigbordface-card-shadow: rgba(0, 0, 0, 0.3); /* Сильніша тінь */
+  --bigbordface-header-color: #2d3748; /* Колір заголовків залишається темним */
+  --bigbordface-description-color: #4a5568; /* Колір описів залишається сірим */
+}
+
+/* ========================================
+   👨‍⚕️ DOCTOR КОМПОНЕНТ
+======================================== */
+
+/* 🌞 СВІТЛА ТЕМА */
+:root {
+  --doctor-bg: #e8f5e8; /* Світло-зелений фон */
+  --doctor-text-primary: #2d3748; /* Темний основний текст */
+  --doctor-text-secondary: #4a5568; /* Сірий вторинний текст */
+  --doctor-name-color: #2d3748; /* Колір імені лікаря */
+  --doctor-text-shadow: none; /* Без тіні для світлого фону */
+  --doctor-button-bg: #52a40e; /* Зелена кнопка */
+  --doctor-button-hover: #4a9309; /* Темніший зелений при наведенні */
+  --doctor-button-text: #ffffff; /* Білий текст на кнопці */
+  --doctor-button-shadow: rgba(82, 164, 14, 0.3); /* Тінь кнопки */
+}
+
+/* 🌙 ТЕМНА ТЕМА */
+.dark {
+  --doctor-bg: #e8f5e8; /* Фон залишається світлим */
+  --doctor-text-primary: #2d3748; /* Текст залишається темним */
+  --doctor-text-secondary: #4a5568; /* Сірий текст */
+  --doctor-name-color: #2d3748; /* Темне ім'я */
+  --doctor-text-shadow: none; /* Без тіні */
+  --doctor-button-bg: #52a40e; /* Зелена кнопка */
+  --doctor-button-hover: #5cb211; /* Світліший зелений */
+  --doctor-button-text: #ffffff; /* Білий текст */
+  --doctor-button-shadow: rgba(82, 164, 14, 0.3); /* Тінь кнопки */
+}
+
+/* ========================================
+  🏥 SERVICES КОМПОНЕНТ
+======================================== */
+
+/* 🌞 СВІТЛА ТЕМА */
+:root {
+  --services-bg: #e8f5e8; /* Світло-зелений фон секції */
+  --services-text-primary: #2d3748; /* Темний основний текст */
+  --services-text-secondary: #4a5568; /* Сірий вторинний текст */
+  --services-accent: #52a40e; /* Зелений акцент */
+  --services-accent-hover: #4a9309; /* Темніший зелений при наведенні */
+  --services-card-bg: #ffffff; /* Білий фон карточок послуг */
+  --services-card-border: rgba(82, 164, 14, 0.1); /* Прозора зелена рамка */
+  --services-card-shadow: rgba(0, 0, 0, 0.1); /* Легка тінь карточок */
+  --services-card-shadow-hover: rgba(82, 164, 14, 0.15); /* Зелена тінь при наведенні */
+  --services-icon-bg: rgba(82, 164, 14, 0.1); /* Фон іконок послуг */
+  --services-info-bg: rgba(82, 164, 14, 0.05); /* Фон інформаційних блоків */
+}
+
+/* 🌙 ТЕМНА ТЕМА */
+.dark {
+  --services-bg: #1f2937; /* Темний фон секції */
+  --services-text-primary: #f9fafb; /* Світлий основний текст */
+  --services-text-secondary: #d1d5db; /* Світло-сірий вторинний текст */
+  --services-accent: #52a40e; /* Зелений акцент */
+  --services-accent-hover: #5cb211; /* Світліший зелений при наведенні */
+  --services-card-bg: #374151; /* Темно-сірий фон карточок */
+  --services-card-border: rgba(82, 164, 14, 0.2); /* Яскравіша зелена рамка */
+  --services-card-shadow: rgba(0, 0, 0, 0.3); /* Сильніша тінь */
+  --services-card-shadow-hover: rgba(82, 164, 14, 0.25); /* Зелена тінь при наведенні */
+  --services-icon-bg: rgba(82, 164, 14, 0.2); /* Яскравіший фон іконок */
+  --services-info-bg: rgba(82, 164, 14, 0.1); /* Яскравіший фон інфо-блоків */
+}
+
+/* ========================================
+  🗣️ TESTIMONIALS КОМПОНЕНТ
+======================================== */
+
+/* 🌞 СВІТЛА ТЕМА */
+:root {
+  --testimonials-bg: #e8f5e8; /* Світло-зелений фон */
+  --testimonials-text-primary: #2d3748; /* Темний основний текст */
+  --testimonials-text-secondary: #4a5568; /* Сірий вторинний текст */
+  --testimonials-accent: #52a40e; /* Зелений акцент */
+}
+
+/* 🌙 ТЕМНА ТЕМА */
+.dark {
+  --testimonials-bg: #e8f5e8; /* Фон залишається світлим */
+  --testimonials-text-primary: #2d3748; /* Текст залишається темним */
+  --testimonials-text-secondary: #4a5568; /* Сірий текст */
+  --testimonials-accent: #52a40e; /* Зелений акцент */
+}
+
+/* ========================================
+   📞 CONSULTATION CTA КОМПОНЕНТ
+======================================== */
+
+/* 🌞 СВІТЛА ТЕМА */
+:root {
+  --consultation-cta-bg: #f0fdf4; /* Дуже світло-зелений фон секції */
+  --consultation-cta-card-bg: #ffffff; /* Білий фон карточки */
+  --consultation-cta-text-primary: #1f2937; /* Темний основний текст */
+  --consultation-cta-text-secondary: #4b5563; /* Сірий вторинний текст */
+  --consultation-cta-accent: #52a40e; /* Зелений акцент */
+  --consultation-cta-button-bg: #52a40e; /* Зелена кнопка */
+  --consultation-cta-button-hover: #4a9309; /* Темніший зелений при наведенні */
+  --consultation-cta-button-text: #ffffff; /* Білий текст на кнопці */
+  --consultation-cta-button-shadow: rgba(82, 164, 14, 0.3); /* Тінь кнопки */
+  --consultation-cta-border: rgba(82, 164, 14, 0.1); /* Прозора зелена рамка */
+  --consultation-cta-shadow: rgba(0, 0, 0, 0.1); /* Легка тінь */
+}
+
+/* 🌙 ТЕМНА ТЕМА */
+.dark {
+  --consultation-cta-bg: #1f2937; /* Темний фон секції */
+  --consultation-cta-card-bg: #374151; /* Темно-сірий фон карточки */
+  --consultation-cta-text-primary: #f9fafb; /* Світлий основний текст */
+  --consultation-cta-text-secondary: #d1d5db; /* Світло-сірий вторинний текст */
+  --consultation-cta-accent: #52a40e; /* Зелений акцент */
+  --consultation-cta-button-bg: #52a40e; /* Зелена кнопка */
+  --consultation-cta-button-hover: #5cb211; /* Світліший зелений при наведенні */
+  --consultation-cta-button-text: #ffffff; /* Білий текст */
+  --consultation-cta-button-shadow: rgba(82, 164, 14, 0.4); /* Сильніша тінь кнопки */
+  --consultation-cta-border: rgba(82, 164, 14, 0.2); /* Яскравіша рамка */
+  --consultation-cta-shadow: rgba(0, 0, 0, 0.3); /* Сильніша тінь */
+}
+
+/* ========================================
+  🔧 PROBLEM SECTION КОМПОНЕНТ
+======================================== */
+
+/* 🌞 СВІТЛА ТЕМА */
+:root {
+  --problem-section-bg: #e8f5e8; /* Світло-зелений фон секції */
+  --problem-section-text-primary: #2d3748; /* Темний основний текст */
+  --problem-section-text-secondary: #4a5568; /* Сірий вторинний текст */
+  --problem-section-accent: #52a40e; /* Зелений акцент */
+  --problem-section-card-bg: #ffffff; /* Білий фон карточок */
+  --problem-section-card-border: rgba(82, 164, 14, 0.1); /* Прозора зелена рамка */
+  --problem-section-card-shadow: rgba(0, 0, 0, 0.1); /* Легка тінь карточок */
+  --problem-section-button-bg: #ffffff; /* Білий фон кнопок */
+  --problem-section-button-text: #4a5568; /* Сірий текст кнопок */
+  --problem-section-button-border: rgba(82, 164, 14, 0.2); /* Зелена рамка кнопок */
+  --problem-section-button-hover: rgba(82, 164, 14, 0.05); /* Легкий зелений при наведенні */
+  --problem-section-header-hover: rgba(82, 164, 14, 0.03); /* Фон заголовків при наведенні */
+  --problem-section-content-bg: rgba(82, 164, 14, 0.02); /* Фон розгорнутого контенту */
+  --problem-section-solution-bg: rgba(82, 164, 14, 0.05); /* Фон блоків рішень */
+}
+
+/* 🌙 ТЕМНА ТЕМА */
+.dark {
+  --problem-section-bg: #1f2937; /* Темний фон секції */
+  --problem-section-text-primary: #f9fafb; /* Світлий основний текст */
+  --problem-section-text-secondary: #d1d5db; /* Світло-сірий вторинний текст */
+  --problem-section-accent: #52a40e; /* Зелений акцент */
+  --problem-section-card-bg: #374151; /* Темно-сірий фон карточок */
+  --problem-section-card-border: rgba(82, 164, 14, 0.2); /* Яскравіша зелена рамка */
+  --problem-section-card-shadow: rgba(0, 0, 0, 0.3); /* Сильніша тінь */
+  --problem-section-button-bg: #4b5563; /* Темно-сірий фон кнопок */
+  --problem-section-button-text: #d1d5db; /* Світлий текст кнопок */
+  --problem-section-button-border: rgba(82, 164, 14, 0.3); /* Яскравіша рамка кнопок */
+  --problem-section-button-hover: rgba(82, 164, 14, 0.1); /* Зелений при наведенні */
+  --problem-section-header-hover: rgba(82, 164, 14, 0.05); /* Фон заголовків при наведенні */
+  --problem-section-content-bg: rgba(82, 164, 14, 0.03); /* Фон контенту */
+  --problem-section-solution-bg: rgba(82, 164, 14, 0.08); /* Фон рішень */
+}
+
+/* ========================================
+   🎨 BIGBORD КОМПОНЕНТ
+======================================== */
+
+/* 🌞 СВІТЛА ТЕМА */
+:root {
+  --bigbord-primary: #d5f9b8; /* Світло-зелений основний фон */
+  --bigbord-primary-dark: #52a40e; /* Темно-зелений */
+  --bigbord-primary-hover: #4a9309; /* Темніший зелений при наведенні */
+  --bigbord-text-primary: #1e3a8a; /* Синій основний текст */
+  --bigbord-text-secondary: #1e40af; /* Синій вторинний текст */
+  --bigbord-text-accent: #0f766e; /* Бірюзовий акцент */
+  --bigbord-text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8); /* Біла тінь тексту */
+}
+
+/* 🌙 ТЕМНА ТЕМА */
+.dark {
+  --bigbord-primary: #d5f9b8; /* Світло-зелений залишається */
+  --bigbord-primary-dark: #52a40e; /* Темно-зелений */
+  --bigbord-primary-hover: #5cb211; /* Світліший зелений при наведенні */
+  --bigbord-text-primary: #1e3a8a; /* Синій текст */
+  --bigbord-text-secondary: #1e40af; /* Синій вторинний */
+  --bigbord-text-accent: #0f766e; /* Бірюзовий акцент */
+  --bigbord-text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8); /* Біла тінь */
+}
+
+/* ========================================
+   🎯 HEADER & FOOTER КОМПОНЕНТИ
+======================================== */
+
+/* 🌞 СВІТЛА ТЕМА */
+:root {
+  --header-footer-bg: #d5f9b8; /* Світло-зелений фон */
+  --header-footer-text: #2d5016; /* Темно-зелений текст */
+  --header-footer-text-hover: #3d6b1e; /* Темніший зелений при наведенні */
+  --header-footer-border: rgba(45, 80, 22, 0.2); /* Прозора темно-зелена рамка */
+  --header-footer-accent: #52a40e; /* Темно-зелений акцент */
+}
+
+/* 🌙 ТЕМНА ТЕМА */
+.dark {
+  --header-footer-bg: #52a40e; /* Темно-зелений фон */
+  --header-footer-text: #ffffff; /* Білий текст */
+  --header-footer-text-hover: #d5f9b8; /* Світло-зелений при наведенні */
+  --header-footer-border: rgba(213, 249, 184, 0.2); /* Прозора світло-зелена рамка */
+  --header-footer-accent: #d5f9b8; /* Світло-зелений акцент */
+}
+
+/* ========================================
+   🔘 CONSULTATION BUTTON КОМПОНЕНТ
+======================================== */
+
+/* 🌞 СВІТЛА ТЕМА */
+:root {
+  --consultation-button-bg: #d5f9b8; /* Світло-зелений фон кнопки */
+  --consultation-button-hover: #c1f299; /* Трохи темніший зелений при наведенні */
+  --consultation-button-text: #2d5016; /* Темно-зелений текст */
+  --consultation-button-shadow: rgba(213, 249, 184, 0.4); /* Світло-зелена тінь */
+}
+
+/* 🌙 ТЕМНА ТЕМА */
+.dark {
+  --consultation-button-bg: #52a40e; /* Темно-зелений фон */
+  --consultation-button-hover: #5cb211; /* Світліший зелений при наведенні */
+  --consultation-button-text: #ffffff; /* Білий текст */
+  --consultation-button-shadow: rgba(82, 164, 14, 0.4); /* Темно-зелена тінь */
 }
 
 /* 🎯 ЗАПОБІГАННЯ ГОРИЗОНТАЛЬНОГО СКРОЛІНГУ БЕЗ ПОРУШЕННЯ STICKY */
@@ -26,220 +671,6 @@ body {
   margin: 0;
   padding: 0;
   /* 👈 Прибрано overflow-x: hidden з body */
-}
-
-/* 🎯 ЗЕЛЕНА КОЛЬОРОВА СХЕМА ДЛЯ СВІТЛОЇ ТЕМИ */
-:root {
-  --bigbord-primary: #d5f9b8; /* 👈 Світло-зелений фон */
-  --bigbord-primary-dark: #52a40e; /* 👈 Темно-зелений */
-  --bigbord-primary-hover: #4a9309; /* 👈 Ще темніший зелений при наведенні */
-  --bigbord-text-primary: #1e3a8a;
-  --bigbord-text-secondary: #1e40af;
-  --bigbord-text-accent: #0f766e;
-  --bigbord-text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
-
-  /* 🎯 КОЛЬОРИ КНОПКИ ДЛЯ СВІТЛОЇ ТЕМИ */
-  --consultation-button-bg: #d5f9b8; /* 👈 Світло-зелений */
-  --consultation-button-hover: #c1f299; /* 👈 Трохи темніший зелений */
-  --consultation-button-text: #2d5016; /* 👈 Темно-зелений текст */
-  --consultation-button-shadow: rgba(213, 249, 184, 0.4);
-
-  /* 🎯 КОЛЬОРИ ХЕДЕРА ТА ФУТЕРА ДЛЯ СВІТЛОЇ ТЕМИ */
-  --header-footer-bg: #d5f9b8; /* 👈 Світло-зелений */
-  --header-footer-text: #2d5016; /* 👈 Темно-зелений текст */
-  --header-footer-text-hover: #3d6b1e; /* 👈 При наведенні */
-  --header-footer-border: rgba(45, 80, 22, 0.2);
-  --header-footer-accent: #52a40e; /* 👈 Темно-зелений акцент */
-
-  /* 🎯 ЗМІННІ ДЛЯ DOCTOR КОМПОНЕНТА - ТАКІ Ж ЯК У GALLERY */
-  --doctor-bg: #e8f5e8; /* 👈 Дуже світло-зелений як у Gallery */
-  --doctor-text-primary: #2d3748; /* 👈 Темний текст як у Gallery */
-  --doctor-text-secondary: #4a5568; /* 👈 Сірий текст як у Gallery */
-  --doctor-name-color: #2d3748; /* 👈 Темний колір імені */
-  --doctor-text-shadow: none; /* 👈 Прибираємо тінь для світлого фону */
-  --doctor-button-bg: #52a40e; /* 👈 Зелена кнопка */
-  --doctor-button-hover: #4a9309;
-  --doctor-button-text: #ffffff; /* 👈 Білий текст на зеленій кнопці */
-  --doctor-button-shadow: rgba(82, 164, 14, 0.3);
-
-  /* 🎯 НОВІ ЗМІННІ ДЛЯ GALLERY КОМПОНЕНТА */
-  --gallery-bg: #e8f5e8; /* 👈 Дуже світло-зелений */
-  --gallery-text-primary: #2d3748;
-  --gallery-text-secondary: #4a5568;
-  --gallery-accent: #52a40e; /* 👈 Темно-зелений акцент */
-  --gallery-button-bg: #52a40e; /* 👈 Темно-зелена кнопка */
-  --gallery-button-hover: #4a9309; /* 👈 При наведенні */
-  --gallery-button-text: #ffffff;
-
-  /* 🎯 НОВІ ЗМІННІ ДЛЯ BIGBORDFACE КОМПОНЕНТА - ТАКІ Ж ЯК У GALLERY */
-  --bigbordface-bg: #e8f5e8; /* 👈 Дуже світло-зелений як у Gallery */
-  --bigbordface-text-primary: #2d3748; /* 👈 Темний текст як у Gallery */
-  --bigbordface-text-secondary: #4a5568; /* 👈 Сірий текст як у Gallery */
-  --bigbordface-accent: #52a40e; /* 👈 Зелений акцент */
-  --bigbordface-button-bg: #52a40e; /* 👈 Зелена кнопка */
-  --bigbordface-button-hover: #4a9309;
-  --bigbordface-button-text: #ffffff; /* 👈 Білий текст на зеленій кнопці */
-
-  /* 🎯 НОВІ ЗМІННІ ДЛЯ TESTIMONIALS КОМПОНЕНТА */
-  --testimonials-bg: #e8f5e8; /* 👈 Дуже світло-зелений як у Gallery */
-  --testimonials-text-primary: #2d3748; /* 👈 Темний текст */
-  --testimonials-text-secondary: #4a5568; /* 👈 Сірий текст */
-  --testimonials-accent: #52a40e; /* 👈 Зелений акцент */
-
-  /* 🎯 НОВІ ЗМІННІ ДЛЯ CONSULTATION CTA КОМПОНЕНТА */
-  --consultation-cta-bg: #f0fdf4; /* 👈 Дуже світло-зелений фон */
-  --consultation-cta-card-bg: #ffffff; /* 👈 Білий фон карточки */
-  --consultation-cta-text-primary: #1f2937; /* 👈 Темний текст */
-  --consultation-cta-text-secondary: #4b5563; /* 👈 Сірий текст */
-  --consultation-cta-accent: #52a40e; /* 👈 Зелений акцент */
-  --consultation-cta-button-bg: #52a40e; /* 👈 Зелена кнопка */
-  --consultation-cta-button-hover: #4a9309; /* 👈 При наведенні */
-  --consultation-cta-button-text: #ffffff; /* 👈 Білий текст */
-  --consultation-cta-button-shadow: rgba(82, 164, 14, 0.3);
-  --consultation-cta-border: rgba(82, 164, 14, 0.1);
-  --consultation-cta-shadow: rgba(0, 0, 0, 0.1);
-
-  /* 🎯 НОВІ ЗМІННІ ДЛЯ SERVICES КОМПОНЕНТА */
-  --services-bg: #e8f5e8; /* 👈 Дуже світло-зелений як у Gallery */
-  --services-text-primary: #2d3748; /* 👈 Темний текст */
-  --services-text-secondary: #4a5568; /* 👈 Сірий текст */
-  --services-accent: #52a40e; /* 👈 Зелений акцент */
-  --services-accent-hover: #4a9309; /* 👈 При наведенні */
-  --services-card-bg: #ffffff; /* 👈 Білий фон карточок */
-  --services-card-border: rgba(82, 164, 14, 0.1);
-  --services-card-shadow: rgba(0, 0, 0, 0.1);
-  --services-card-shadow-hover: rgba(82, 164, 14, 0.15);
-  --services-icon-bg: rgba(82, 164, 14, 0.1);
-  --services-info-bg: rgba(82, 164, 14, 0.05);
-
-  /* 🎯 НОВІ ЗМІННІ ДЛЯ BREAST AUGMENTATION КОМПОНЕНТА */
-  --breast-augmentation-bg: #e8f5e8; /* 👈 Дуже світло-зелений як у Gallery */
-  --breast-augmentation-text-primary: #2d3748; /* 👈 Темний текст */
-  --breast-augmentation-text-secondary: #4a5568; /* 👈 Сірий текст */
-  --breast-augmentation-accent: #52a40e; /* 👈 Зелений акцент */
-
-  /* 🎯 НОВІ ЗМІННІ ДЛЯ PROBLEM SECTION КОМПОНЕНТА */
-  --problem-section-bg: #e8f5e8; /* 👈 Дуже світло-зелений як у Gallery */
-  --problem-section-text-primary: #2d3748; /* 👈 Темний текст */
-  --problem-section-text-secondary: #4a5568; /* 👈 Сірий текст */
-  --problem-section-accent: #52a40e; /* 👈 Зелений акцент */
-  --problem-section-card-bg: #ffffff; /* 👈 Білий фон карточок */
-  --problem-section-card-border: rgba(82, 164, 14, 0.1);
-  --problem-section-card-shadow: rgba(0, 0, 0, 0.1);
-  --problem-section-button-bg: #ffffff;
-  --problem-section-button-text: #4a5568;
-  --problem-section-button-border: rgba(82, 164, 14, 0.2);
-  --problem-section-button-hover: rgba(82, 164, 14, 0.05);
-  --problem-section-header-hover: rgba(82, 164, 14, 0.03);
-  --problem-section-content-bg: rgba(82, 164, 14, 0.02);
-  --problem-section-solution-bg: rgba(82, 164, 14, 0.05);
-}
-
-/* 🎯 ЗЕЛЕНА КОЛЬОРОВА СХЕМА ДЛЯ ТЕМНОЇ ТЕМИ */
-.dark {
-  --bigbord-primary: #d5f9b8; /* 👈 Світло-зелений фон */
-  --bigbord-primary-dark: #52a40e; /* 👈 Темно-зелений */
-  --bigbord-primary-hover: #5cb211; /* 👈 Світліший зелений при наведенні */
-  --bigbord-text-primary: #1e3a8a;
-  --bigbord-text-secondary: #1e40af;
-  --bigbord-text-accent: #0f766e;
-  --bigbord-text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
-
-  /* 🎯 КОЛЬОРИ КНОПКИ ДЛЯ ТЕМНОЇ ТЕМИ */
-  --consultation-button-bg: #52a40e; /* 👈 Темно-зелений */
-  --consultation-button-hover: #5cb211; /* 👈 Світліший при наведенні */
-  --consultation-button-text: #ffffff;
-  --consultation-button-shadow: rgba(82, 164, 14, 0.4);
-
-  /* 🎯 КОЛЬОРИ ХЕДЕРА ТА ФУТЕРА ДЛЯ ТЕМНОЇ ТЕМИ */
-  --header-footer-bg: #52a40e; /* 👈 Темно-зелений */
-  --header-footer-text: #ffffff;
-  --header-footer-text-hover: #d5f9b8; /* 👈 Світло-зелений при наведенні */
-  --header-footer-border: rgba(213, 249, 184, 0.2);
-  --header-footer-accent: #d5f9b8; /* 👈 Світло-зелений акцент */
-
-  /* 🎯 ЗМІННІ ДЛЯ DOCTOR КОМПОНЕНТА В ТЕМНІЙ ТЕМІ - ТАКІ Ж ЯК У GALLERY */
-  --doctor-bg: #e8f5e8; /* 👈 Дуже світло-зелений як у Gallery */
-  --doctor-text-primary: #2d3748; /* 👈 Темний текст як у Gallery */
-  --doctor-text-secondary: #4a5568; /* 👈 Сірий текст як у Gallery */
-  --doctor-name-color: #2d3748; /* 👈 Темний колір імені */
-  --doctor-text-shadow: none; /* 👈 Прибираємо тінь для світлого фону */
-  --doctor-button-bg: #52a40e; /* 👈 Зелена кнопка */
-  --doctor-button-hover: #5cb211;
-  --doctor-button-text: #ffffff; /* 👈 Білий текст на зеленій кнопці */
-  --doctor-button-shadow: rgba(82, 164, 14, 0.3);
-
-  /* 🎯 ЗМІННІ ДЛЯ GALLERY КОМПОНЕНТА В ТЕМНІЙ ТЕМІ */
-  --gallery-bg: #e8f5e8; /* 👈 Дуже світло-зелений */
-  --gallery-text-primary: #2d3748;
-  --gallery-text-secondary: #4a5568;
-  --gallery-accent: #52a40e; /* 👈 Темно-зелений акцент */
-  --gallery-button-bg: #52a40e; /* 👈 Темно-зелена кнопка */
-  --gallery-button-hover: #5cb211; /* 👈 Світліший при наведенні */
-  --gallery-button-text: #ffffff;
-
-  /* 🎯 ЗМІННІ ДЛЯ BIGBORDFACE КОМПОНЕНТА В ТЕМНІЙ ТЕМІ - ТАКІ Ж ЯК У GALLERY */
-  --bigbordface-bg: #e8f5e8; /* 👈 Дуже світло-зелений як у Gallery */
-  --bigbordface-text-primary: #2d3748; /* 👈 Темний текст як у Gallery */
-  --bigbordface-text-secondary: #4a5568; /* 👈 Сірий текст як у Gallery */
-  --bigbordface-accent: #52a40e; /* 👈 Зелений акцент */
-  --bigbordface-button-bg: #52a40e; /* 👈 Зелена кнопка */
-  --bigbordface-button-hover: #5cb211;
-  --bigbordface-button-text: #ffffff; /* 👈 Білий текст на зеленій кнопці */
-
-  /* 🎯 TESTIMONIALS КОЛЬОРИ ДЛЯ ТЕМНОЇ ТЕМИ */
-  --testimonials-bg: #e8f5e8; /* 👈 Дуже світло-зелений як у Gallery */
-  --testimonials-text-primary: #2d3748; /* 👈 Темний текст */
-  --testimonials-text-secondary: #4a5568; /* 👈 Сірий текст */
-  --testimonials-accent: #52a40e; /* 👈 Зелений акцент */
-
-  /* 🎯 CONSULTATION CTA КОЛЬОРИ ДЛЯ ТЕМНОЇ ТЕМИ */
-  --consultation-cta-bg: #1f2937; /* 👈 Темний фон */
-  --consultation-cta-card-bg: #374151; /* 👈 Темно-сірий фон карточки */
-  --consultation-cta-text-primary: #f9fafb; /* 👈 Світлий текст */
-  --consultation-cta-text-secondary: #d1d5db; /* 👈 Світло-сірий текст */
-  --consultation-cta-accent: #52a40e; /* 👈 Зелений акцент */
-  --consultation-cta-button-bg: #52a40e; /* 👈 Зелена кнопка */
-  --consultation-cta-button-hover: #5cb211; /* 👈 При наведенні */
-  --consultation-cta-button-text: #ffffff; /* 👈 Білий текст */
-  --consultation-cta-button-shadow: rgba(82, 164, 14, 0.4);
-  --consultation-cta-border: rgba(82, 164, 14, 0.2);
-  --consultation-cta-shadow: rgba(0, 0, 0, 0.3);
-
-  /* 🎯 SERVICES КОЛЬОРИ ДЛЯ ТЕМНОЇ ТЕМИ */
-  --services-bg: #1f2937; /* 👈 Темний фон */
-  --services-text-primary: #f9fafb; /* 👈 Світлий текст */
-  --services-text-secondary: #d1d5db; /* 👈 Світло-сірий текст */
-  --services-accent: #52a40e; /* 👈 Зелений акцент */
-  --services-accent-hover: #5cb211; /* 👈 При наведенні */
-  --services-card-bg: #374151; /* 👈 Темно-сірий фон карточок */
-  --services-card-border: rgba(82, 164, 14, 0.2);
-  --services-card-shadow: rgba(0, 0, 0, 0.3);
-  --services-card-shadow-hover: rgba(82, 164, 14, 0.25);
-  --services-icon-bg: rgba(82, 164, 14, 0.2);
-  --services-info-bg: rgba(82, 164, 14, 0.1);
-
-  /* 🎯 BREAST AUGMENTATION КОЛЬОРИ ДЛЯ ТЕМНОЇ ТЕМИ */
-  --breast-augmentation-bg: #1f2937; /* 👈 Темний фон */
-  --breast-augmentation-text-primary: #f9fafb; /* 👈 Світлий текст */
-  --breast-augmentation-text-secondary: #e7ebf1; /* 👈 Світло-сірий текст */
-  --breast-augmentation-accent: #52a40e; /* 👈 Зелений акцент */
-
-  /* 🎯 PROBLEM SECTION КОЛЬОРИ ДЛЯ ТЕМНОЇ ТЕМИ */
-  --problem-section-bg: #3e4206; /* 👈 Темний фон */
-  --problem-section-text-primary: #f9fafb; /* 👈 Світлий текст */
-  --problem-section-text-secondary: #d1d5db; /* 👈 Світло-сірий текст */
-  --problem-section-accent: #52a40e; /* 👈 Зелений акцент */
-  --problem-section-card-bg: #374151; /* 👈 Темно-сірий фон карточок */
-  --problem-section-card-border: rgba(82, 164, 14, 0.2);
-  --problem-section-card-shadow: rgba(0, 0, 0, 0.3);
-  --problem-section-button-bg: #4b5563;
-  --problem-section-button-text: #d1d5db;
-  --problem-section-button-border: rgba(82, 164, 14, 0.3);
-  --problem-section-button-hover: rgba(82, 164, 14, 0.1);
-  --problem-section-header-hover: rgba(82, 164, 14, 0.05);
-  --problem-section-content-bg: rgba(82, 164, 14, 0.03);
-  --problem-section-solution-bg: rgba(82, 164, 14, 0.08);
 }
 
 /* Утилітарні класи */
