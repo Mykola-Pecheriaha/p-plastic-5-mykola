@@ -32,8 +32,8 @@ const Services: React.FC<ServicesProps> = ({ backgroundColor }) => {
       icon: Heart, // 👈 Іконка для наведення
       services: [
         { name: "Збільшення грудей", path: "/services/breast-surgery" },
-        { name: "Видалення імплантів", path: "/services/implant-removal" },
-        { name: "Підтяжка грудей", path: "/services/breast-lift" },
+        { name: "Заміна або видалення імплантів", path: "/services/implant-removal-replacement" },
+        { name: "Підтяжка грудей, корекція соска та ареоли ", path: "/services/mastopexy-with-nipple-correction" },
         { name: "Корекція соска та ареоли", path: "/services/nipple-correction" },
         { name: "Заміна імплантів грудей", path: "/services/implant-replacement" },
         { name: "Гінекомастія", path: "/services/gynecomastia" },

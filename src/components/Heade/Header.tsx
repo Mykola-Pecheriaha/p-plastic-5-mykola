@@ -31,10 +31,9 @@ const navItems = [
         path: "/services/breast",
         services: [
           { name: "Збільшення грудей", path: "/services/breast-surgery" },
-          { name: "Видалення імплантів", path: "/services/implant-removal" },
-          { name: "Підтяжка грудей", path: "/services/breast-lift" },
-          { name: "Корекція соска та ареоли", path: "/services/nipple-correction" },
-          { name: "Заміна імплантів грудей", path: "/services/implant-replacement" },
+          { name: "Заміна або видалення імплантів", path: "/services/implant-removal-replacement" },
+          { name: "Підтяжка грудей, корекція соска та ареоли", path: "/services/mastopexy-with-nipple-correction" },
+
           { name: "Гінекомастія", path: "/services/gynecomastia" },
         ],
       },

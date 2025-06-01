@@ -36,7 +36,7 @@ const defaultImages: BeforeAfterImage[] = [
   {
     id: "3",
     before: {
-      src: "/images/gallerybreast/implant15.jpg",
+      src: "/images/gallerybreast/implant26.jpg",
       alt: "До операції - пацієнт 3",
     },
     after: {

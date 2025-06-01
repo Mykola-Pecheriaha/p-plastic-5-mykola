@@ -1,0 +1,398 @@
+/* Wrapper на всю ширину екрану */
+.wrapper {
+  width: 100%;
+  padding: 60px 0;
+  background-color: #f0f9ff; /* Світло-блакитний фон */
+  color: #2d3748; /* Темний текст для контрастності */
+}
+
+/* Контейнер з обмеженою шириною */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.content {
+  width: 100%;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #2d3748;
+  margin-bottom: 50px;
+  font-weight: 700;
+  line-height: 1.2;
+  position: relative;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: #52a40e;
+}
+
+.contentBox {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(82, 164, 14, 0.1);
+  border: 1px solid rgba(82, 164, 14, 0.1);
+  margin-bottom: 40px;
+  transition: all 0.3s ease;
+}
+
+.contentBox:hover {
+  box-shadow: 0 12px 30px rgba(82, 164, 14, 0.15);
+  border-color: rgba(82, 164, 14, 0.2);
+}
+
+.sectionTitle {
+  font-size: 1.75rem;
+  color: #52a40e;
+  margin-bottom: 30px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.titleIcon {
+  font-size: 2rem;
+}
+
+.contentLayout {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.textContent {
+  flex: 0.6;
+}
+
+.textBlock p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #2d3748;
+  margin-bottom: 20px;
+  white-space: pre-line;
+  text-align: justify;
+}
+
+.readMoreButton {
+  background: linear-gradient(135deg, #52a40e 0%, #4a9209 100%);
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 25px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(82, 164, 14, 0.2);
+}
+
+.readMoreButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(82, 164, 14, 0.3);
+  background: linear-gradient(135deg, #4a9209 0%, #3d7a07 100%);
+}
+
+.buttonIcon {
+  font-size: 0.875rem;
+  transition: transform 0.3s ease;
+}
+
+.readMoreButton:hover .buttonIcon {
+  transform: scale(1.1);
+}
+
+.imageContainer {
+  flex: 0.4;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.imageWrapper {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(82, 164, 14, 0.1);
+  border: 1px solid rgba(82, 164, 14, 0.1);
+  transition: all 0.3s ease;
+}
+
+.imageWrapper:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(82, 164, 14, 0.2);
+}
+
+.mainImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.mainImage:hover {
+  transform: scale(1.02);
+}
+
+/* CTA секція */
+.ctaSection {
+  background: linear-gradient(135deg, rgba(82, 164, 14, 0.08) 0%, rgba(82, 164, 14, 0.05) 100%);
+  border-radius: 20px;
+  padding: 50px 40px;
+  text-align: center;
+  border: 1px solid rgba(82, 164, 14, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.ctaSection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #52a40e 0%, #4a9209 100%);
+}
+
+.ctaContent {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.ctaTitle {
+  font-size: 1.75rem;
+  color: #2d3748;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.ctaText {
+  font-size: 1.125rem;
+  margin-bottom: 30px;
+  color: #2d3748;
+  line-height: 1.7;
+}
+
+.contactLink {
+  text-decoration: none;
+}
+
+.contactButton {
+  background: linear-gradient(135deg, #52a40e 0%, #4a9209 100%);
+  color: #ffffff;
+  border: none;
+  padding: 16px 32px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(82, 164, 14, 0.2);
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.contactButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(82, 164, 14, 0.3);
+  background: linear-gradient(135deg, #4a9209 0%, #3d7a07 100%);
+}
+
+.buttonText {
+  font-weight: 600;
+}
+
+.buttonArrow {
+  font-size: 1.25rem;
+  transition: transform 0.3s ease;
+}
+
+.contactButton:hover .buttonArrow {
+  transform: translateX(4px);
+}
+
+/* Адаптивність для планшетів */
+@media (max-width: 992px) {
+  .wrapper {
+    padding: 40px 0;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  .contentBox {
+    padding: 30px;
+  }
+
+  .contentLayout {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .textContent,
+  .imageContainer {
+    flex: none;
+    width: 100%;
+  }
+
+  .sectionTitle {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+  }
+
+  .ctaSection {
+    padding: 40px 30px;
+  }
+
+  .ctaTitle {
+    font-size: 1.5rem;
+  }
+}
+
+/* Адаптивність для мобільних */
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 30px 0;
+  }
+
+  .container {
+    padding: 0 12px;
+  }
+
+  .title {
+    font-size: 1.75rem;
+    margin-bottom: 30px;
+  }
+
+  .title::after {
+    width: 60px;
+    height: 2px;
+    bottom: -12px;
+  }
+
+  .contentBox {
+    padding: 25px 20px;
+    border-radius: 12px;
+  }
+
+  .sectionTitle {
+    font-size: 1.375rem;
+    margin-bottom: 20px;
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .titleIcon {
+    font-size: 1.75rem;
+  }
+
+  .contentLayout {
+    gap: 25px;
+  }
+
+  .textBlock p {
+    font-size: 1rem;
+    line-height: 1.7;
+    text-align: left;
+  }
+
+  .readMoreButton {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+
+  .ctaSection {
+    padding: 30px 20px;
+    border-radius: 16px;
+  }
+
+  .ctaTitle {
+    font-size: 1.375rem;
+  }
+
+  .ctaText {
+    font-size: 1rem;
+    margin-bottom: 25px;
+  }
+
+  .contactButton {
+    padding: 14px 28px;
+    font-size: 1rem;
+  }
+}
+
+/* Адаптивність для дуже маленьких екранів */
+@media (max-width: 480px) {
+  .wrapper {
+    padding: 20px 0;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .contentBox {
+    padding: 20px 16px;
+  }
+
+  .sectionTitle {
+    font-size: 1.25rem;
+  }
+
+  .textBlock p {
+    font-size: 0.9rem;
+  }
+
+  .readMoreButton {
+    padding: 8px 16px;
+    font-size: 0.875rem;
+  }
+
+  .ctaSection {
+    padding: 25px 16px;
+  }
+
+  .ctaTitle {
+    font-size: 1.25rem;
+  }
+
+  .ctaText {
+    font-size: 0.9rem;
+  }
+
+  .contactButton {
+    padding: 12px 24px;
+    font-size: 0.95rem;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .buttonArrow {
+    font-size: 1rem;
+  }
+}
