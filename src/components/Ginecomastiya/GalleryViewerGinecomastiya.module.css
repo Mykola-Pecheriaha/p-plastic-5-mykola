@@ -1,14 +1,11 @@
 /* Основні CSS змінні для кольорової схеми */
-:root {
+.galleryWrapper {
   --gallery-accent: #52a40e;
   --gallery-text-primary: #2d3748;
   --gallery-text-secondary: #718096;
   --gallery-bg-primary: #ffffff;
   --gallery-bg-secondary: #f8f9fa;
-}
 
-/* Wrapper галереї */
-.galleryWrapper {
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
