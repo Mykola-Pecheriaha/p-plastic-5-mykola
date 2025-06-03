@@ -1,0 +1,357 @@
+.container {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contentWrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.mainTitle {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #52a40e;
+}
+
+.fullWidthSection {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.introText {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #2d3748;
+}
+
+.mainContentSection {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.textColumn {
+  flex: 1;
+}
+
+.galleryColumn {
+  flex: 1;
+}
+
+.consultationSection {
+  margin-bottom: 1.5rem;
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #52a40e;
+}
+
+.subTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #2d3748;
+}
+
+.bulletList {
+  list-style-type: none;
+  padding-left: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.bulletList li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+  color: #2d3748;
+}
+
+.bulletList li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #52a40e;
+  font-weight: bold;
+}
+
+.highlightedText {
+  font-weight: 600;
+  color: #52a40e;
+  margin-bottom: 1.5rem;
+  padding-left: 1rem;
+}
+
+.redText {
+  color: #e74c3c;
+  margin-right: 0.5rem;
+}
+
+.importantNote {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 1rem;
+  background-color: rgba(82, 164, 14, 0.1);
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  color: #52a40e;
+  border: 1px solid rgba(82, 164, 14, 0.2);
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(82, 164, 14, 0.2);
+  margin: 2rem 0;
+}
+
+.typesTitle {
+  font-size: 1.8rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #52a40e;
+}
+
+.typesDescription {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #2d3748;
+}
+
+.accordionSection {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.accordionItem {
+  margin-bottom: 1rem;
+  border: 1px solid rgba(82, 164, 14, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.accordionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: rgba(82, 164, 14, 0.05);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.accordionHeader:hover {
+  background-color: rgba(82, 164, 14, 0.1);
+}
+
+.accordionTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+  color: #2d3748;
+}
+
+.arrow {
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
+  color: #52a40e;
+}
+
+.arrowDown {
+  transform: rotate(90deg);
+}
+
+.accordionContent {
+  display: flex;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-top: 1px solid rgba(82, 164, 14, 0.1);
+}
+
+.accordionTextColumn {
+  flex: 2;
+  padding-right: 1.5rem;
+}
+
+.accordionGalleryColumn {
+  flex: 1;
+}
+
+.indicationTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #52a40e;
+}
+
+.indicationText {
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  color: #2d3748;
+}
+
+.conclusionText {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  color: #52a40e;
+}
+
+.icon {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+/* Адаптивність */
+@media (max-width: 992px) {
+  .mainContentSection {
+    flex-direction: column;
+  }
+
+  .textColumn,
+  .galleryColumn {
+    width: 100%;
+  }
+
+  .accordionContent {
+    flex-direction: column;
+  }
+
+  .accordionTextColumn,
+  .accordionGalleryColumn {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .accordionGalleryColumn {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainTitle {
+    font-size: 1.8rem;
+  }
+
+  .typesTitle {
+    font-size: 1.6rem;
+  }
+
+  .accordionTitle {
+    font-size: 1.1rem;
+  }
+
+  .introText {
+    font-size: 1rem;
+  }
+
+  .subTitle {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .contentWrapper {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .mainTitle {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .introText {
+    font-size: 1rem;
+  }
+
+  .importantNote {
+    font-size: 1.1rem;
+    padding: 0.75rem;
+  }
+
+  .typesTitle {
+    font-size: 1.4rem;
+  }
+
+  .typesDescription {
+    font-size: 1rem;
+  }
+
+  .accordionHeader {
+    padding: 0.75rem;
+  }
+
+  .accordionTitle {
+    font-size: 1rem;
+  }
+
+  .accordionContent {
+    padding: 1rem;
+  }
+
+  .indicationTitle {
+    font-size: 1rem;
+  }
+
+  .conclusionText {
+    font-size: 1.1rem;
+    padding: 0.75rem;
+  }
+
+  .subTitle {
+    font-size: 1rem;
+  }
+
+  .bulletList li {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contentWrapper {
+    padding: 1rem 0.5rem;
+  }
+
+  .mainTitle {
+    font-size: 1.4rem;
+  }
+
+  .typesTitle {
+    font-size: 1.3rem;
+  }
+
+  .accordionHeader {
+    padding: 0.6rem;
+  }
+
+  .accordionContent {
+    padding: 0.8rem;
+  }
+
+  .importantNote {
+    font-size: 1rem;
+    padding: 0.6rem;
+  }
+}

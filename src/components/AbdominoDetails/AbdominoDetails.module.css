@@ -1,0 +1,290 @@
+.container {
+  width: 100%;
+  padding: 3rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #52a40e;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Секції з 50/50 розподілом */
+.section {
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 4rem;
+  align-items: flex-start;
+}
+
+.textColumn {
+  flex: 1;
+  min-width: 0;
+}
+
+.galleryColumn {
+  flex: 1;
+  min-width: 0;
+}
+
+.doctorIcon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.sectionText {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  color: #2d3748;
+}
+
+.indicationsList,
+.contraindicationsList {
+  background-color: rgba(240, 249, 255, 0.8);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(82, 164, 14, 0.1);
+  border: 1px solid rgba(82, 164, 14, 0.2);
+}
+
+.listTitle {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  color: #52a40e;
+  font-weight: 600;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list li {
+  margin-bottom: 1.2rem;
+  line-height: 1.6;
+  color: #2d3748;
+}
+
+.bulletPoint {
+  margin-right: 0.5rem;
+  font-weight: bold;
+}
+
+.subList {
+  list-style-type: disc;
+  margin-left: 2rem;
+  margin-top: 0.5rem;
+}
+
+.subList li {
+  margin-bottom: 0.5rem;
+  color: #4a5568;
+}
+
+/* Секції на повну ширину */
+.fullWidthSection {
+  margin-bottom: 4rem;
+}
+
+.infoBlock {
+  margin-bottom: 2rem;
+  background-color: rgba(232, 245, 232, 0.6);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(82, 164, 14, 0.1);
+  border: 1px solid rgba(82, 164, 14, 0.15);
+}
+
+.infoTitle {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #52a40e;
+  font-weight: 600;
+}
+
+.infoText {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #2d3748;
+}
+
+.infoList {
+  list-style-type: disc;
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+.infoList li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+  color: #4a5568;
+}
+
+.contraindicationsTitle {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  color: #52a40e;
+  font-weight: 700;
+}
+
+.contraindicationsIntro {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  color: #2d3748;
+}
+
+.note {
+  font-size: 1rem;
+  font-style: italic;
+  margin-top: 0.5rem;
+  color: #718096;
+  padding-left: 1rem;
+  border-left: 3px solid #52a40e;
+}
+
+.individualApproach {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid rgba(82, 164, 14, 0.2);
+}
+
+.approachTitle {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #52a40e;
+  font-weight: 600;
+}
+
+.approachText {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #2d3748;
+}
+
+.approachList {
+  list-style-type: disc;
+  margin-left: 2rem;
+}
+
+.approachList li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+  color: #4a5568;
+}
+
+.conclusion {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 2rem;
+  background-color: rgba(82, 164, 14, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(82, 164, 14, 0.1);
+  border: 2px solid rgba(82, 164, 14, 0.2);
+}
+
+.conclusionText {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #2d3748;
+  margin: 0;
+}
+
+/* Адаптивність */
+@media (max-width: 992px) {
+  .section {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .textColumn,
+  .galleryColumn {
+    flex: 1;
+    width: 100%;
+  }
+
+  .title,
+  .contraindicationsTitle {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 0 1rem;
+  }
+
+  .title,
+  .contraindicationsTitle {
+    font-size: 1.8rem;
+  }
+
+  .listTitle,
+  .infoTitle,
+  .approachTitle {
+    font-size: 1.2rem;
+  }
+
+  .sectionText,
+  .infoText,
+  .approachText,
+  .contraindicationsIntro,
+  .conclusionText {
+    font-size: 1rem;
+  }
+
+  .indicationsList,
+  .contraindicationsList,
+  .infoBlock,
+  .conclusion {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 2rem 0;
+  }
+
+  .content {
+    padding: 0 0.5rem;
+  }
+
+  .title,
+  .contraindicationsTitle {
+    font-size: 1.5rem;
+  }
+
+  .section {
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .indicationsList,
+  .contraindicationsList,
+  .infoBlock,
+  .conclusion {
+    padding: 1rem;
+  }
+}

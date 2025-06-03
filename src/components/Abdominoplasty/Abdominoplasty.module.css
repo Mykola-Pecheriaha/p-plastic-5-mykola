@@ -1,0 +1,159 @@
+.container {
+  width: 100%;
+  padding: 3rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.innerContainer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.topSection {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  align-items: center;
+}
+
+.textContent {
+  flex: 1;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #52a40e;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.benefitsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.benefitItem {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  line-height: 1.5;
+  color: #2d3748;
+}
+
+.emoji {
+  margin-right: 0.75rem;
+  font-size: 1.4rem;
+}
+
+.imageContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainImage {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 14px 12px rgba(81, 164, 14, 0.685);
+  transition: transform 0.3s ease;
+}
+
+.mainImage:hover {
+  transform: scale(1.02);
+}
+
+.bottomSection {
+  width: 100%;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #2d3748;
+  text-align: justify;
+  background-color: rgba(240, 249, 255, 0.5);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #52a40e;
+}
+
+/* Адаптивність для планшетів */
+@media (max-width: 992px) {
+  .topSection {
+    flex-direction: column;
+  }
+
+  .textContent,
+  .imageContainer {
+    width: 100%;
+  }
+
+  .title {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+
+  .imageContainer {
+    margin-top: 1.5rem;
+  }
+}
+
+/* Адаптивність для мобільних */
+@media (max-width: 576px) {
+  .container {
+    padding: 2rem 0;
+  }
+
+  .innerContainer {
+    padding: 0 1rem;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .benefitItem {
+    font-size: 1rem;
+  }
+
+  .description {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  .topSection {
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+}
+
+/* Додаткова адаптивність для дуже маленьких екранів */
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.6rem;
+  }
+
+  .benefitItem {
+    font-size: 0.9rem;
+  }
+
+  .emoji {
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+    text-align: left;
+  }
+}
