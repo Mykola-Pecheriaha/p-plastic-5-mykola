@@ -36,7 +36,7 @@ const Services: React.FC<ServicesProps> = ({ backgroundColor }) => {
         { name: "Підтяжка грудей, корекція соска та ареоли ", path: "/services/mastopexy-with-nipple-correction" },
         { name: "Корекція соска та ареоли", path: "/services/nipple-correction" },
         { name: "Заміна імплантів грудей", path: "/services/implant-replacement" },
-        { name: "Гінекомастія", path: "/services/gynecomastia" },
+        { name: "Гінекомастія", path: "/services/ginecomastiya" },
       ],
       link: "/services/breast",
     },

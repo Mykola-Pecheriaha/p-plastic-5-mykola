@@ -34,7 +34,7 @@ const navItems = [
           { name: "Заміна або видалення імплантів", path: "/services/implant-removal-replacement" },
           { name: "Підтяжка грудей, корекція соска та ареоли", path: "/services/mastopexy-with-nipple-correction" },
 
-          { name: "Гінекомастія", path: "/services/gynecomastia" },
+          { name: "Гінекомастія", path: "/services/ginecomastiya" },
         ],
       },
       {

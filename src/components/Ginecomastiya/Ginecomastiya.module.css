@@ -1,0 +1,316 @@
+/* Wrapper на всю ширину екрану */
+.wrapper {
+  width: 100%;
+  padding: 70px 0;
+  background-color: #e8f5e8; /* Світло-зелений фон */
+  color: #2d3748; /* Темний текст для контрастності */
+  position: relative;
+}
+
+/* Контейнер з обмеженою шириною */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.mainTitle {
+  text-align: center;
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 60px;
+  position: relative;
+  line-height: 1.2;
+}
+
+.mainTitle::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #52a40e 0%, #4a9209 100%);
+  border-radius: 2px;
+}
+
+.heroSection {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 60px;
+  align-items: center;
+}
+
+.benefitsColumn {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageColumn {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.benefitsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  max-width: 400px;
+}
+
+.benefitItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.benefitItem:hover {
+  transform: translateX(10px);
+}
+
+.bulletPoint {
+  color: #52a40e;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: 20px;
+  width: 35px;
+  height: 35px;
+  background-color: rgba(82, 164, 14, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.benefitText {
+  color: #2d3748;
+  line-height: 1.4;
+}
+
+.imageContainer {
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroImage {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.heroImage:hover {
+  transform: scale(1.02);
+}
+
+.descriptionSection {
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+.description {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #2d3748;
+  text-align: justify;
+  max-width: 1000px;
+  margin: 0 auto;
+  /* Видаляємо всі рамочки та фони */
+}
+
+.galleryMainTitle {
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.galleryMainTitle::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #52a40e 0%, #4a9209 100%);
+  border-radius: 2px;
+}
+
+.gallerySection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Адаптивність для планшетів */
+@media (max-width: 992px) {
+  .wrapper {
+    padding: 50px 0;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .mainTitle {
+    font-size: 2.25rem;
+    margin-bottom: 50px;
+  }
+
+  .heroSection {
+    gap: 40px;
+    margin-bottom: 50px;
+  }
+
+  .benefitItem {
+    font-size: 1.375rem;
+    margin-bottom: 20px;
+  }
+
+  .bulletPoint {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+  }
+
+  .description {
+    font-size: 1.125rem;
+    padding: 25px;
+  }
+
+  .galleryMainTitle {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+}
+
+/* Адаптивність для мобільних */
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 40px 0;
+  }
+
+  .container {
+    padding: 0 12px;
+  }
+
+  .mainTitle {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  .mainTitle::after {
+    width: 80px;
+    height: 3px;
+    bottom: -15px;
+  }
+
+  .heroSection {
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+
+  .benefitsColumn,
+  .imageColumn {
+    flex: none;
+    width: 100%;
+  }
+
+  .benefitItem {
+    font-size: 1.25rem;
+    margin-bottom: 18px;
+  }
+
+  .bulletPoint {
+    width: 28px;
+    height: 28px;
+    margin-right: 12px;
+    font-size: 1.25rem;
+  }
+
+  .description {
+    font-size: 1rem;
+    line-height: 1.7;
+    padding: 20px;
+    text-align: left;
+  }
+
+  .galleryMainTitle {
+    font-size: 1.75rem;
+    margin-bottom: 30px;
+  }
+
+  .galleryMainTitle::after {
+    width: 60px;
+    height: 2px;
+    bottom: -12px;
+  }
+}
+
+/* Адаптивність для дуже маленьких екранів */
+@media (max-width: 480px) {
+  .wrapper {
+    padding: 30px 0;
+  }
+
+  .mainTitle {
+    font-size: 1.75rem;
+  }
+
+  .benefitItem {
+    font-size: 1.125rem;
+    margin-bottom: 16px;
+  }
+
+  .bulletPoint {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    font-size: 1.125rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+    padding: 18px;
+  }
+
+  .galleryMainTitle {
+    font-size: 1.5rem;
+  }
+}
+
+/* Додаткова адаптивність для дуже маленьких екранів */
+@media (max-width: 320px) {
+  .mainTitle {
+    font-size: 1.5rem;
+  }
+
+  .benefitItem {
+    font-size: 1rem;
+  }
+
+  .description {
+    font-size: 0.85rem;
+  }
+}
