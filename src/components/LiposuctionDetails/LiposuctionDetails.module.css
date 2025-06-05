@@ -1,0 +1,375 @@
+/* Обгортка на всю ширину сторінки */
+.wrapper {
+  width: 100%;
+  padding: 60px 0;
+  background: linear-gradient(135deg, #f0f9ff 0%, #e8f5e8 100%);
+  transition: background-color 0.3s ease;
+}
+
+/* Контейнер з обмеженою шириною */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Головна секція */
+.mainSection {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  margin-bottom: 50px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.textColumn {
+  flex: 1;
+}
+
+.galleryColumn {
+  flex: 1;
+}
+
+.mainTitle {
+  font-size: 36px;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.mainTitle::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #52a40e, transparent);
+  border-radius: 2px;
+}
+
+.titleIcon {
+  color: #52a40e;
+  margin-right: 10px;
+  font-size: 0.9em;
+}
+
+.subTitle {
+  font-size: 28px;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 15px;
+}
+
+.subtitleIcon {
+  color: #52a40e;
+  margin-right: 8px;
+}
+
+.mainText {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #4a5568;
+  margin-bottom: 15px;
+}
+
+.boldText {
+  font-weight: 700;
+  color: #2d3748;
+}
+
+.highlightText {
+  font-weight: 600;
+  color: #52a40e;
+}
+
+.bulletList {
+  list-style-type: none;
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+
+.bulletList li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #4a5568;
+}
+
+.bulletList li:before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  color: #52a40e;
+  font-weight: bold;
+}
+
+.importantNote {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #d97706;
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.1), rgba(251, 191, 36, 0.05));
+  padding: 20px;
+  border-radius: 12px;
+  margin: 20px 0;
+  font-weight: 500;
+  border-left: 4px solid #f59e0b;
+  box-shadow: 0 4px 12px rgba(251, 191, 36, 0.1);
+}
+
+.noteIcon {
+  margin-right: 8px;
+}
+
+/* Розділювач */
+.divider {
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #52a40e, transparent);
+  margin: 50px 0;
+  width: 100%;
+  border-radius: 2px;
+}
+
+/* Сегменти */
+.segment {
+  margin-bottom: 50px;
+}
+
+/* Секція на всю ширину */
+.fullWidthSection {
+  margin-bottom: 40px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Секція з двома колонками */
+.twoColumnSection {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.segmentTitle {
+  font-size: 32px;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.segmentTitle::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, #52a40e, transparent);
+  border-radius: 2px;
+}
+
+.segmentSubtitle {
+  font-size: 26px;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 25px 0 15px;
+}
+
+.methodTitle {
+  font-size: 24px;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 25px 0 15px;
+}
+
+.methodIcon {
+  margin-right: 8px;
+  color: #52a40e;
+}
+
+.segmentText {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #4a5568;
+  margin-bottom: 15px;
+}
+
+.statisticBox {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #52a40e;
+  background: linear-gradient(135deg, rgba(82, 164, 14, 0.1), rgba(82, 164, 14, 0.05));
+  padding: 20px;
+  border-radius: 12px;
+  margin: 20px 0;
+  border-left: 4px solid #52a40e;
+  box-shadow: 0 4px 12px rgba(82, 164, 14, 0.1);
+}
+
+.warningBox {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #dc2626;
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(239, 68, 68, 0.05));
+  padding: 20px;
+  border-radius: 12px;
+  margin: 20px 0;
+  border-left: 4px solid #ef4444;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.1);
+}
+
+.quoteBox {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #059669;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(16, 185, 129, 0.05));
+  padding: 20px;
+  border-radius: 12px;
+  margin: 20px 0;
+  font-style: italic;
+  border-left: 4px solid #10b981;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.1);
+}
+
+.benefitBox {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #059669;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(16, 185, 129, 0.05));
+  padding: 20px;
+  border-radius: 12px;
+  margin: 20px 0;
+  border-left: 4px solid #10b981;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.1);
+}
+
+.boxIcon {
+  margin-right: 8px;
+}
+
+.keyPoints {
+  margin-top: 25px;
+  padding: 20px;
+  background: linear-gradient(135deg, rgba(82, 164, 14, 0.05), rgba(82, 164, 14, 0.02));
+  border-radius: 12px;
+  border: 1px solid rgba(82, 164, 14, 0.2);
+}
+
+.keyPoints p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #2d3748;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+/* Адаптивність для планшетів */
+@media (max-width: 992px) {
+  .mainSection,
+  .twoColumnSection {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .galleryColumn {
+    margin-top: 0;
+  }
+
+  .mainTitle {
+    font-size: 32px;
+  }
+
+  .subTitle {
+    font-size: 26px;
+  }
+
+  .segmentTitle {
+    font-size: 28px;
+  }
+
+  .segmentSubtitle {
+    font-size: 24px;
+  }
+
+  .methodTitle {
+    font-size: 22px;
+  }
+
+  .mainSection,
+  .twoColumnSection,
+  .fullWidthSection {
+    padding: 30px;
+  }
+}
+
+/* Адаптивність для мобільних */
+@media (max-width: 576px) {
+  .wrapper {
+    padding: 40px 0;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+
+  .mainTitle {
+    font-size: 28px;
+  }
+
+  .subTitle {
+    font-size: 24px;
+  }
+
+  .segmentTitle {
+    font-size: 26px;
+  }
+
+  .segmentSubtitle {
+    font-size: 22px;
+  }
+
+  .methodTitle {
+    font-size: 20px;
+  }
+
+  .mainText,
+  .segmentText,
+  .statisticBox,
+  .warningBox,
+  .quoteBox,
+  .benefitBox,
+  .keyPoints p,
+  .bulletList li,
+  .importantNote {
+    font-size: 16px;
+  }
+
+  .mainSection,
+  .twoColumnSection,
+  .fullWidthSection {
+    padding: 20px;
+  }
+
+  .titleIcon,
+  .subtitleIcon,
+  .methodIcon,
+  .boxIcon,
+  .noteIcon {
+    font-size: 0.9em;
+  }
+}

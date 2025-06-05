@@ -1,0 +1,182 @@
+.liposuctionContainer {
+  width: 100%;
+  padding: 60px 0;
+  color: #2d3748;
+}
+
+.contentContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Верхня секція з двома колонками */
+.topSection {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  margin-bottom: 60px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.textColumn {
+  flex: 1;
+}
+
+.imageColumn {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.mainHeading {
+  font-size: 32px;
+  color: #2d3748;
+  margin-bottom: 30px;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.mainHeading::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 3px;
+  background-color: #52a40e;
+}
+
+.benefitsList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.benefitsList li {
+  font-size: 18px;
+  color: #2d3748;
+  margin-bottom: 15px;
+  line-height: 1.5;
+  display: flex;
+  align-items: flex-start;
+}
+
+.bulletPoint {
+  color: #52a40e;
+  margin-right: 8px;
+  font-size: 1.2em;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.mainImage {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.mainImage:hover {
+  transform: scale(1.02);
+}
+
+/* Нижня секція з повним текстом */
+.bottomSection {
+  margin-top: 40px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.fullWidthText {
+  width: 100%;
+}
+
+.subHeading {
+  font-size: 24px;
+  color: #2d3748;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.accentIcon {
+  color: #52a40e;
+  margin-right: 10px;
+  font-size: 1.1em;
+}
+
+.paragraph {
+  font-size: 16px;
+  color: #2d3748;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Адаптивність для планшетів */
+@media (max-width: 992px) {
+  .topSection {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .textColumn,
+  .imageColumn {
+    flex: none;
+    width: 100%;
+  }
+
+  .imageColumn {
+    margin-top: 30px;
+  }
+}
+
+/* Адаптивність для мобільних */
+@media (max-width: 576px) {
+  .liposuctionContainer {
+    padding: 40px 0;
+  }
+
+  .topSection,
+  .bottomSection {
+    padding: 15px;
+  }
+
+  .mainHeading {
+    font-size: 28px;
+  }
+
+  .benefitsList li {
+    font-size: 16px;
+  }
+
+  .subHeading {
+    font-size: 22px;
+  }
+
+  .paragraph {
+    font-size: 15px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .topSection,
+  .bottomSection {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+}
