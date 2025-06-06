@@ -1,0 +1,145 @@
+.wrapper {
+  width: 100%;
+  padding: 60px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #2d3748;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section {
+  margin-bottom: 50px;
+}
+
+.sectionTitle {
+  margin-bottom: 20px;
+}
+
+.sectionTitle h3 {
+  font-size: 1.8rem;
+  color: #52a40e;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sectionContent {
+  display: flex;
+  gap: 40px;
+}
+
+.textContent {
+  flex: 1;
+}
+
+.textContent p {
+  font-size: 1.1rem;
+  color: #2d3748 !important;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.bulletList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.bulletList li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+  color: #2d3748 !important;
+  line-height: 1.5;
+}
+
+.bulletList li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 10px;
+  height: 10px;
+  background-color: #52a40e;
+  border-radius: 50%;
+}
+
+.galleryContent {
+  flex: 1;
+}
+
+.fullWidthText {
+  background-color: rgba(82, 164, 14, 0.05);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 50px;
+}
+
+.fullWidthText p {
+  font-size: 1.1rem;
+  color: #2d3748 !important;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  color: #666;
+  font-size: 16px;
+}
+
+@media (max-width: 992px) {
+  .title {
+    font-size: 2.2rem;
+  }
+  .sectionTitle h3 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 40px 0;
+  }
+  .title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  .sectionContent {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .sectionTitle h3 {
+    font-size: 1.4rem;
+  }
+  .textContent p,
+  .bulletList li,
+  .fullWidthText p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.8rem;
+  }
+  .sectionTitle h3 {
+    font-size: 1.3rem;
+  }
+}

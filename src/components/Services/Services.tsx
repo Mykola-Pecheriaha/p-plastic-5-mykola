@@ -17,7 +17,7 @@ const Services: React.FC<ServicesProps> = ({ backgroundColor }) => {
       image: "/images/plastic-list/plastic-lift8.jpg",
       icon: User, // 👈 Іконка для наведення
       services: [
-        { name: "Підтяжка обличчя та шиї", path: "/services/facelift" },
+        { name: "Підтяжка обличчя та шиї", path: "/services/facelift-section" },
         { name: "Блефаропластика", path: "/services/blepharoplasty" },
         { name: "Пластика підборіддя", path: "/services/chin-surgery" },
         { name: "Корекція клаповухості", path: "/services/ear-correction" },
@@ -49,7 +49,7 @@ const Services: React.FC<ServicesProps> = ({ backgroundColor }) => {
         { name: "Абдомінопластика", path: "/services/abdominoplasty" },
         { name: "Ліпосакція", path: "/services/liposuction" },
         { name: "Пластика ніг", path: "/services/leg-surgery" },
-        { name: "Видалення шийного горба", path: "/services/neck-hump-removal" },
+        { name: "Видалення шийного горба", path: "/services/liposuction" },
         { name: "Збільшення сідниць", path: "/services/buttock-augmentation" },
       ],
       link: "/services/body",

@@ -12,49 +12,56 @@ const navItems = [
 
   {
     name: "Послуги",
-    path: "/services", // 👈 Основне посилання на загальну сторінку послуг
+    path: "/services",
     hasSubmenu: true,
     submenu: [
       {
         category: "Пластика обличчя",
         path: "/services/face",
         services: [
-          { name: "Підтяжка обличчя та шиї", path: "/services/facelift" },
-          { name: "Блефаропластика", path: "/services/blepharoplasty" },
-          { name: "Пластика підборіддя", path: "/services/chin-surgery" },
-          { name: "Корекція клаповухості", path: "/services/ear-correction" },
-          { name: "Пластика дольки вуха", path: "/services/earlobe-surgery" },
+          { id: "facelift", name: "Підтяжка обличчя та шиї", path: "/services/facelift-section" },
+          { id: "blepharoplasty", name: "Блефаропластика", path: "/services/blepharoplasty" },
+          { id: "chin-surgery", name: "Пластика підборіддя", path: "/services/chin-surgery" },
+          { id: "ear-correction", name: "Корекція клаповухості", path: "/services/ear-correction" },
+          { id: "earlobe-surgery", name: "Пластика дольки вуха", path: "/services/earlobe-surgery" },
         ],
       },
       {
         category: "Пластика грудей",
         path: "/services/breast",
         services: [
-          { name: "Збільшення грудей", path: "/services/breast-surgery" },
-          { name: "Заміна або видалення імплантів", path: "/services/implant-removal-replacement" },
-          { name: "Підтяжка грудей, корекція соска та ареоли", path: "/services/mastopexy-with-nipple-correction" },
-
-          { name: "Гінекомастія", path: "/services/ginecomastiya" },
+          { id: "breast-surgery", name: "Збільшення грудей", path: "/services/breast-surgery" },
+          {
+            id: "implant-removal",
+            name: "Заміна або видалення імплантів",
+            path: "/services/implant-removal-replacement",
+          },
+          {
+            id: "mastopexy",
+            name: "Підтяжка грудей, корекція соска та ареоли",
+            path: "/services/mastopexy-with-nipple-correction",
+          },
+          { id: "ginecomastiya", name: "Гінекомастія", path: "/services/ginecomastiya" },
         ],
       },
       {
         category: "Пластика тіла",
         path: "/services/body",
         services: [
-          { name: "Абдомінопластика", path: "/services/abdominoplasty" },
-          { name: "Ліпосакція", path: "/services/liposuction" },
-          { name: "Пластика ніг", path: "/services/leg-surgery" },
-          { name: "Видалення шийного горба", path: "/services/neck-hump-removal" },
-          { name: "Збільшення сідниць", path: "/services/buttock-augmentation" },
+          { id: "abdominoplasty", name: "Абдомінопластика", path: "/services/abdominoplasty" },
+          { id: "liposuction", name: "Ліпосакція", path: "/services/liposuction" },
+          { id: "leg-surgery", name: "Пластика ніг", path: "/services/leg-surgery" },
+          { id: "neck-hump-removal", name: "Видалення шийного горба", path: "/services/liposuction" },
+          { id: "buttock-augmentation", name: "Збільшення сідниць", path: "/services/buttock-augmentation" },
         ],
       },
       {
         category: "Загальна хірургія",
         path: "/services/general",
         services: [
-          { name: "Видалення пухлин", path: "/services/tumor-removal" },
-          { name: "Карпальний канал", path: "/services/carpal-tunnel" },
-          { name: "Видалення гриж", path: "/services/hernia-removal" },
+          { id: "tumor-removal", name: "Видалення пухлин", path: "/services/tumor-removal" },
+          { id: "carpal-tunnel", name: "Карпальний канал", path: "/services/carpal-tunnel" },
+          { id: "hernia-removal", name: "Видалення гриж", path: "/services/hernia-removal" },
         ],
       },
     ],
@@ -99,7 +106,6 @@ export default function Header() {
                 <li key={item.path} className={styles.navItem}>
                   {item.hasSubmenu ? (
                     <div className={styles.submenuContainer}>
-                      {/* 👈 Змінено button на Link для основного посилання */}
                       <Link
                         href={item.path}
                         className={`${styles.navLink} ${pathname.startsWith("/services") ? styles.active : ""}`}
@@ -119,7 +125,7 @@ export default function Header() {
                                 </Link>
                                 <ul className={styles.servicesList}>
                                   {category.services.map(service => (
-                                    <li key={service.path}>
+                                    <li key={service.id}>
                                       <Link href={service.path} className={styles.serviceLink} onClick={closeMenus}>
                                         {service.name}
                                       </Link>
@@ -160,19 +166,16 @@ export default function Header() {
                 <li key={item.path}>
                   {item.hasSubmenu ? (
                     <div>
-                      {/* 👈 Змінено button на Link для мобільного меню */}
                       <Link
                         href={item.path}
                         className={`${styles.mobileNavLink} ${pathname.startsWith("/services") ? styles.active : ""}`}
                         onClick={() => {
-                          // Закриваємо меню при переході на основну сторінку послуг
                           closeMenus()
                         }}
                       >
                         {item.name}
                       </Link>
 
-                      {/* 👈 Додаткова кнопка для розгортання підменю */}
                       <button className={styles.submenuToggle} onClick={toggleSubmenu} aria-label="Розгорнути підменю">
                         <ChevronDown size={16} className={styles.chevron} />
                       </button>
@@ -186,7 +189,7 @@ export default function Header() {
                               </Link>
                               <ul className={styles.mobileServicesList}>
                                 {category.services.map(service => (
-                                  <li key={service.path}>
+                                  <li key={service.id}>
                                     <Link href={service.path} className={styles.mobileServiceLink} onClick={closeMenus}>
                                       {service.name}
                                     </Link>
