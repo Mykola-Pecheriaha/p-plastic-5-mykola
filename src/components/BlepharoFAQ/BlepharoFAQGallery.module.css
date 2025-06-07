@@ -7,7 +7,7 @@
 .gallery {
   position: relative;
   width: 100%;
-  height: 600px;
+  height: 500px;
   background-color: #ffffff;
   border-radius: 8px;
   overflow: hidden;
@@ -40,7 +40,7 @@
 
 .noImages {
   width: 100%;
-  height: 400px;
+  height: 700px;
   display: flex;
   align-items: center;
   justify-content: center;

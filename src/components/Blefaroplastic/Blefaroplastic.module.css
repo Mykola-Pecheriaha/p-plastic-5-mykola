@@ -1,0 +1,142 @@
+.wrapper {
+  width: 100%;
+  padding: 60px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.topSection {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.textContent {
+  flex: 1;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #2d3748 !important;
+  margin-bottom: 50px;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: 2.1rem;
+  color: #52a40e !important;
+  font-weight: 500;
+}
+
+.benefitsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.benefitItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+  color: #2d3748 !important;
+}
+
+.emoji {
+  margin-right: 15px;
+  font-size: 1.5rem;
+}
+
+.imageContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainImage {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.bottomSection {
+  margin-top: 40px;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #2d3748 !important;
+  margin-bottom: 20px;
+}
+
+/* Адаптивність для планшетів */
+@media (max-width: 992px) {
+  .title {
+    font-size: 2.2rem;
+  }
+  .subtitle {
+    font-size: 1.8rem;
+  }
+  .benefitItem {
+    font-size: 1.1rem;
+  }
+}
+
+/* Адаптивність для мобільних */
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 40px 0;
+  }
+  .topSection {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .title {
+    font-size: 2rem;
+    text-align: center;
+    padding-bottom: 40px;
+  }
+  .subtitle {
+    font-size: 1.6rem;
+  }
+  .benefitsList {
+    margin-bottom: 40px;
+  }
+  .description {
+    font-size: 1rem;
+  }
+}
+
+/* Додаткова адаптивність для маленьких смартфонів */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 15px;
+  }
+  .title {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+  }
+  .subtitle {
+    font-size: 1.4rem;
+  }
+  .benefitItem {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+  .emoji {
+    margin-right: 10px;
+    font-size: 1.3rem;
+  }
+  .description {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+  }
+}
