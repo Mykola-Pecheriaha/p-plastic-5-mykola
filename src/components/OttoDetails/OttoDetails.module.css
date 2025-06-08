@@ -1,0 +1,177 @@
+.wrapper {
+  width: 100%;
+  padding: 60px 0;
+  transition: background-color 0.3s ease;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #2d3748 !important;
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+.subTitle {
+  font-size: 2rem;
+  color: #52a40e !important;
+  margin: 40px 0 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.sectionTitle {
+  font-size: 1.8rem;
+  color: #52a40e !important;
+  margin-bottom: 20px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.textContent {
+  flex: 1;
+}
+
+.galleryContent {
+  flex: 1;
+}
+
+.fullWidthText {
+  margin-bottom: 30px;
+}
+
+.fullWidthText p {
+  font-size: 1.1rem;
+  color: #2d3748 !important;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.bulletList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.bulletList li {
+  position: relative;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  color: #2d3748 !important;
+  line-height: 1.5;
+  display: flex;
+  align-items: flex-start;
+}
+
+.emoji {
+  margin-right: 10px;
+  font-size: 1.2rem;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.note {
+  background-color: rgba(82, 164, 14, 0.1);
+  border-left: 4px solid #52a40e;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 0 8px 8px 0;
+}
+
+.note p {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #2d3748 !important;
+  line-height: 1.6;
+}
+
+/* Адаптивність для планшетів */
+@media (max-width: 992px) {
+  .section {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .title {
+    font-size: 2.2rem;
+  }
+  .subTitle {
+    font-size: 1.8rem;
+  }
+  .sectionTitle {
+    font-size: 1.6rem;
+  }
+}
+
+/* Адаптивність для мобільних */
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 40px 0;
+  }
+  .container {
+    padding: 0 15px;
+  }
+  .title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  .subTitle {
+    font-size: 1.6rem;
+    margin: 30px 0 15px;
+  }
+  .sectionTitle {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+  }
+  .fullWidthText p,
+  .bulletList li,
+  .note p {
+    font-size: 1rem;
+  }
+  .emoji {
+    font-size: 1.1rem;
+  }
+}
+
+/* Адаптивність для маленьких смартфонів */
+@media (max-width: 480px) {
+  .wrapper {
+    padding: 30px 0;
+  }
+  .container {
+    padding: 0 10px;
+  }
+  .title {
+    font-size: 1.8rem;
+  }
+  .subTitle {
+    font-size: 1.4rem;
+  }
+  .sectionTitle {
+    font-size: 1.3rem;
+  }
+  .fullWidthText p,
+  .bulletList li,
+  .note p {
+    font-size: 0.95rem;
+  }
+  .emoji {
+    font-size: 1rem;
+  }
+  .note {
+    padding: 12px;
+  }
+}

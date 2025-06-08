@@ -22,8 +22,7 @@ const navItems = [
           { id: "facelift", name: "Підтяжка обличчя та шиї", path: "/services/facelift-section" },
           { id: "blepharoplasty", name: "Блефаропластика", path: "/services/blepharoplasty" },
           { id: "chin-surgery", name: "Пластика підборіддя", path: "/services/chin-surgery" },
-          { id: "ear-correction", name: "Корекція клаповухості", path: "/services/ear-correction" },
-          { id: "earlobe-surgery", name: "Пластика дольки вуха", path: "/services/earlobe-surgery" },
+          { id: "ottoplastic", name: "Корекція  вух", path: "/services/ottoplastic" },
         ],
       },
       {

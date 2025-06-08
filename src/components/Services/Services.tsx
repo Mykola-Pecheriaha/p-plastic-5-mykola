@@ -20,8 +20,8 @@ const Services: React.FC<ServicesProps> = ({ backgroundColor }) => {
         { name: "Підтяжка обличчя та шиї", path: "/services/facelift-section" },
         { name: "Блефаропластика", path: "/services/blepharoplasty" },
         { name: "Пластика підборіддя", path: "/services/chin-surgery" },
-        { name: "Корекція клаповухості", path: "/services/ear-correction" },
-        { name: "Пластика дольки вуха", path: "/services/earlobe-surgery" },
+
+        { name: "Корекція вух", path: "/services/ottoplastic" },
       ],
       link: "/services/face",
     },
