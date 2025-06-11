@@ -1,0 +1,209 @@
+.carpalSection {
+  width: 100%;
+  background-color: #f0f9ff;
+  padding: 3rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.segment {
+  margin: 3rem 0;
+}
+
+.segmentTitle {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #52a40e;
+}
+
+.subTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 1.5rem 0 1rem;
+  color: #2d3748;
+}
+
+.text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+.introText {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #2d3748;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.twoColumnSection {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.textColumn {
+  flex: 1;
+}
+
+.galleryColumn {
+  flex: 1;
+}
+
+.infoBlock {
+  margin-bottom: 2rem;
+}
+
+.bulletList {
+  list-style-type: none;
+  padding-left: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.bulletList li {
+  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 2rem;
+  font-size: 1.1rem;
+  color: #2d3748;
+  line-height: 1.6;
+}
+
+.emoji {
+  margin-right: 0.5rem;
+  display: inline-block;
+}
+
+.conclusion {
+  background-color: #e8f5e8;
+  border: 2px solid #52a40e;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #2d3748;
+}
+
+.divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, #52a40e, transparent);
+  margin: 3rem 0;
+}
+
+.ctaSection {
+  margin-top: 3rem;
+  text-align: center;
+  padding: 2.5rem;
+  background-color: #e8f5e8;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(82, 164, 14, 0.1);
+}
+
+.ctaText {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: #2d3748;
+  font-weight: 500;
+}
+
+.contactButton {
+  background-color: #52a40e;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(82, 164, 14, 0.2);
+}
+
+.contactButton:hover {
+  background-color: #3d7a0a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(82, 164, 14, 0.3);
+}
+
+/* Адаптивний дизайн */
+@media (max-width: 992px) {
+  .twoColumnSection {
+    flex-direction: column;
+  }
+
+  .segmentTitle {
+    font-size: 2rem;
+  }
+
+  .subTitle {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .carpalSection {
+    padding: 2rem 0;
+  }
+
+  .container {
+    padding: 0 0.75rem;
+  }
+
+  .segmentTitle {
+    font-size: 1.8rem;
+  }
+
+  .subTitle {
+    font-size: 1.2rem;
+  }
+
+  .text,
+  .introText,
+  .bulletList li {
+    font-size: 1rem;
+  }
+
+  .ctaSection {
+    padding: 2rem 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .segmentTitle {
+    font-size: 1.6rem;
+  }
+
+  .subTitle {
+    font-size: 1.1rem;
+  }
+
+  .text,
+  .introText,
+  .bulletList li {
+    font-size: 0.95rem;
+  }
+
+  .conclusion {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  .ctaText {
+    font-size: 1.1rem;
+  }
+
+  .contactButton {
+    padding: 10px 24px;
+    font-size: 1rem;
+  }
+}
