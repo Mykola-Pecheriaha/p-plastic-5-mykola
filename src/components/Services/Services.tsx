@@ -34,8 +34,7 @@ const Services: React.FC<ServicesProps> = ({ backgroundColor }) => {
         { name: "Збільшення грудей", path: "/services/breast-surgery" },
         { name: "Заміна або видалення імплантів", path: "/services/implant-removal-replacement" },
         { name: "Підтяжка грудей, корекція соска та ареоли ", path: "/services/mastopexy-with-nipple-correction" },
-        { name: "Корекція соска та ареоли", path: "/services/nipple-correction" },
-        { name: "Заміна імплантів грудей", path: "/services/implant-replacement" },
+
         { name: "Гінекомастія", path: "/services/ginecomastiya" },
       ],
       link: "/services/breast",
@@ -48,7 +47,7 @@ const Services: React.FC<ServicesProps> = ({ backgroundColor }) => {
       services: [
         { name: "Абдомінопластика", path: "/services/abdominoplasty" },
         { name: "Ліпосакція", path: "/services/liposuction" },
-        { name: "Пластика ніг", path: "/services/leg-surgery" },
+        { name: "Пластика ніг", path: "/services/led-surgery" },
         { name: "Видалення шийного горба", path: "/services/liposuction" },
         { name: "Збільшення сідниць", path: "/services/buttock-augmentation" },
       ],
@@ -61,8 +60,8 @@ const Services: React.FC<ServicesProps> = ({ backgroundColor }) => {
       icon: Stethoscope, // 👈 Іконка для наведення
       services: [
         { name: "Видалення пухлин", path: "/services/tumor-removal" },
-        { name: "Карпальний канал", path: "/services/carpal-tunnel" },
-        { name: "Видалення гриж", path: "/services/hernia-removal" },
+        { name: "Карпальний канал", path: "/services/carpal-syndrome" },
+        { name: "Видалення гриж", path: "/services/gerniotomiya" },
       ],
       link: "/services/general",
     },

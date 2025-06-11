@@ -1,0 +1,139 @@
+.carpalSection {
+  width: 100%;
+  padding: 3rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.mainTitle {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.segmentTitle {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.subTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 1.5rem 0 1rem;
+}
+
+.text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.twoColumnSection {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.textColumn {
+  flex: 1;
+}
+
+.galleryColumn {
+  flex: 1;
+}
+
+.segment {
+  margin: 3rem 0;
+}
+
+.divider {
+  height: 2px;
+  margin: 3rem 0;
+  border-radius: 1px;
+}
+
+.bulletList {
+  list-style-type: none;
+  padding-left: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.bulletList li {
+  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.emoji {
+  margin-right: 0.5rem;
+  display: inline-block;
+  font-size: 1.2rem;
+}
+
+/* Адаптивність для планшетів */
+@media (max-width: 992px) {
+  .twoColumnSection {
+    flex-direction: column;
+  }
+
+  .mainTitle {
+    font-size: 2rem;
+  }
+
+  .segmentTitle {
+    font-size: 1.8rem;
+  }
+
+  .subTitle {
+    font-size: 1.3rem;
+  }
+}
+
+/* Адаптивність для мобільних */
+@media (max-width: 576px) {
+  .carpalSection {
+    padding: 2rem 0;
+  }
+
+  .container {
+    padding: 0 0.75rem;
+  }
+
+  .mainTitle {
+    font-size: 1.8rem;
+  }
+
+  .segmentTitle {
+    font-size: 1.5rem;
+  }
+
+  .subTitle {
+    font-size: 1.2rem;
+  }
+
+  .text,
+  .bulletList li {
+    font-size: 1rem;
+  }
+
+  .segment {
+    margin: 2rem 0;
+  }
+
+  .bulletList li {
+    padding-left: 1.5rem;
+  }
+
+  .emoji {
+    font-size: 1rem;
+  }
+}

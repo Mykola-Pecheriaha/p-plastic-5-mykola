@@ -1,0 +1,185 @@
+.container {
+  width: 100%;
+  padding: 60px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px; /* Збільшено з 20px до 40px */
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2d3748;
+}
+
+.description {
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2d3748;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.note {
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #52a40e;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.divider {
+  height: 1px;
+  background-color: #ddd;
+  margin: 40px 0;
+  width: 100%;
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.textSection {
+  flex: 1;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #2d3748;
+}
+
+.textSection p {
+  margin-bottom: 20px;
+}
+
+.gallerySection {
+  flex: 1;
+}
+
+.faqSection {
+  margin-top: 50px;
+}
+
+.accordionContent {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  padding: 20px 0;
+}
+
+.textContent {
+  flex: 1;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #2d3748;
+}
+
+.textContent p {
+  margin-bottom: 15px;
+}
+
+.textContent ul {
+  margin-bottom: 15px;
+  padding-left: 20px;
+}
+
+.textContent li {
+  margin-bottom: 8px;
+}
+
+.galleryContent {
+  flex: 1;
+}
+
+.ctaSection {
+  margin-top: 20px;
+  text-align: center;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.ctaText {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #2d3748;
+}
+
+.contactButton {
+  background-color: #52a40e; /* Зелений колір кнопки */
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contactButton:hover {
+  background-color: #468c0c;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 992px) {
+  .mainContent {
+    flex-direction: column;
+  }
+  .accordionContent {
+    flex-direction: column;
+  }
+  .title {
+    font-size: 30px;
+  }
+  .description,
+  .note {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 26px;
+  }
+  .content {
+    padding: 0 25px; /* Збільшено з 15px до 25px */
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 40px 0;
+  }
+  .title {
+    font-size: 22px;
+  }
+  .description,
+  .note {
+    font-size: 14px;
+  }
+  .ctaText {
+    font-size: 1rem;
+  }
+  .content {
+    padding: 0 20px; /* Додано для мобільних */
+  }
+}

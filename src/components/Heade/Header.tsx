@@ -49,7 +49,7 @@ const navItems = [
         services: [
           { id: "abdominoplasty", name: "Абдомінопластика", path: "/services/abdominoplasty" },
           { id: "liposuction", name: "Ліпосакція", path: "/services/liposuction" },
-          { id: "leg-surgery", name: "Пластика ніг", path: "/services/leg-surgery" },
+          { id: "leg-surgery", name: "Пластика ніг", path: "/services/led-surgery" },
           { id: "neck-hump-removal", name: "Видалення шийного горба", path: "/services/liposuction" },
           { id: "buttock-augmentation", name: "Збільшення сідниць", path: "/services/buttock-augmentation" },
         ],
@@ -59,8 +59,8 @@ const navItems = [
         path: "/services/general",
         services: [
           { id: "tumor-removal", name: "Видалення пухлин", path: "/services/tumor-removal" },
-          { id: "carpal-tunnel", name: "Карпальний канал", path: "/services/carpal-tunnel" },
-          { id: "hernia-removal", name: "Видалення гриж", path: "/services/hernia-removal" },
+          { id: "carpal-tunnel", name: "Карпальний канал", path: "/services/carpal-syndrome" },
+          { id: "gerniotomiya", name: "Видалення гриж", path: "/services/gerniotomiya" },
         ],
       },
     ],

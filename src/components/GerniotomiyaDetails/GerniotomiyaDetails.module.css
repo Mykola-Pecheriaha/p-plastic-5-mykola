@@ -1,0 +1,323 @@
+.gerniotomiyaDetails {
+  width: 100%;
+  min-height: 100vh;
+  padding: 80px 0;
+  transition: background-color 0.3s ease;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.contentWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.textContent {
+  padding-right: 20px;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  line-height: 1.2;
+  position: relative;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background-color: currentColor;
+  border-radius: 2px;
+}
+
+.segment {
+  margin-bottom: 50px;
+}
+
+.subtitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  line-height: 1.3;
+}
+
+.paragraph {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 25px 0;
+}
+
+.listItem {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  margin-bottom: 12px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.listItem::before {
+  content: "•";
+  color: #52a40e;
+  font-weight: bold;
+  font-size: 1.2em;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.methodsContainer {
+  margin-top: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.method {
+  border-left: 5px solid;
+  padding: 25px;
+  border-radius: 0 12px 12px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.method:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.methodTitle {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.methodList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.methodItem {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.methodItem.positive::before {
+  content: "✓";
+  font-weight: bold;
+  font-size: 1.1em;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.methodItem.negative::before {
+  content: "⚠";
+  font-weight: bold;
+  font-size: 1.1em;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.galleriesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  position: sticky;
+  top: 20px;
+  align-self: flex-start;
+}
+
+.galleryContainer {
+  width: 100%;
+}
+
+/* Планшети */
+@media (max-width: 1024px) {
+  .gerniotomiyaDetails {
+    padding: 60px 0;
+  }
+
+  .contentWrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .textContent {
+    padding-right: 0;
+  }
+
+  .galleriesContainer {
+    position: static;
+    gap: 30px;
+  }
+
+  .title {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+  }
+
+  .subtitle {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+
+  .paragraph,
+  .listItem {
+    font-size: 1.1rem;
+  }
+
+  .methodTitle {
+    font-size: 1.3rem;
+  }
+}
+
+/* Мобільні пристрої */
+@media (max-width: 768px) {
+  .gerniotomiyaDetails {
+    padding: 40px 0;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .contentWrapper {
+    gap: 30px;
+  }
+
+  .title {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+
+  .title::after {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+  }
+
+  .subtitle {
+    font-size: 1.4rem;
+    margin-bottom: 18px;
+  }
+
+  .paragraph,
+  .listItem {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .segment {
+    margin-bottom: 35px;
+  }
+
+  .method {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .methodTitle {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+
+  .methodItem {
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+  }
+
+  .galleriesContainer {
+    gap: 25px;
+  }
+}
+
+/* Малі мобільні пристрої */
+@media (max-width: 480px) {
+  .gerniotomiyaDetails {
+    padding: 30px 0;
+  }
+
+  .container {
+    padding: 0 12px;
+  }
+
+  .title {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+
+  .title::after {
+    width: 50px;
+  }
+
+  .subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+
+  .paragraph,
+  .listItem {
+    font-size: 0.95rem;
+  }
+
+  .method {
+    padding: 16px;
+  }
+
+  .methodTitle {
+    font-size: 1.1rem;
+  }
+
+  .methodItem {
+    font-size: 0.9rem;
+  }
+
+  .galleriesContainer {
+    gap: 20px;
+  }
+}
+
+/* Дуже малі екрани */
+@media (max-width: 360px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .method {
+    padding: 14px;
+  }
+}

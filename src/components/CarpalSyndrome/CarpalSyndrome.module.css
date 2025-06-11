@@ -1,0 +1,241 @@
+.carpalSection {
+  width: 100%;
+  padding: 4rem 0;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Перша секція: текст зліва, зображення справа */
+.topSection {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  margin-bottom: 4rem;
+  align-items: center;
+}
+
+.leftColumn {
+  flex: 1;
+}
+
+.rightColumn {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.mainTitle {
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 2.5rem;
+  line-height: 1.3;
+}
+
+.benefitsList {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 2rem;
+}
+
+.benefitsList li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 1.2rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.4;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+}
+
+.benefitsList li span {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-top: -0.1rem;
+}
+
+.imageWrapper {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.mainImage {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.mainImage:hover {
+  transform: scale(1.02);
+}
+
+/* Друга секція: повний текст на всю ширину */
+.fullWidthSection {
+  margin-bottom: 4rem;
+}
+
+.descriptionText {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  text-align: justify;
+}
+
+/* Третя секція: текст зліва, галерея справа */
+.gallerySection {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  margin-bottom: 3rem;
+  align-items: flex-start;
+}
+
+.sectionTitle {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+}
+
+.anatomyText {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.anatomyList {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 1.5rem;
+}
+
+.anatomyList li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+}
+
+.anatomyList li span {
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin-top: -0.1rem;
+}
+
+/* Адаптивність для планшетів */
+@media (max-width: 992px) {
+  .carpalSection {
+    padding: 3rem 0;
+  }
+
+  .topSection,
+  .gallerySection {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .rightColumn {
+    margin-top: 1rem;
+  }
+
+  .mainTitle {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.9rem;
+  }
+}
+
+/* Адаптивність для мобільних */
+@media (max-width: 768px) {
+  .carpalSection {
+    padding: 2rem 0;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .topSection {
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .mainTitle {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1.3rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.6rem;
+  }
+
+  .descriptionText,
+  .anatomyText {
+    font-size: 1rem;
+  }
+
+  .benefitsList li,
+  .anatomyList li {
+    font-size: 1rem;
+    padding-left: 1.5rem;
+    gap: 0.6rem;
+  }
+
+  .gallerySection {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 0.75rem;
+  }
+
+  .mainTitle {
+    font-size: 1.8rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.4rem;
+  }
+
+  .benefitsList li,
+  .anatomyList li {
+    font-size: 0.95rem;
+  }
+}

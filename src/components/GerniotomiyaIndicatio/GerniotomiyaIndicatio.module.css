@@ -1,0 +1,205 @@
+.gerniotomiyaIndicatio {
+  width: 100%;
+  padding: 3rem 0;
+  color: #2d3748;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.mainTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #2d3748;
+  text-align: center;
+}
+
+.sector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.sector:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.textContent {
+  flex: 2;
+  min-width: 300px;
+}
+
+.galleryContainer {
+  flex: 1;
+  min-width: 600px;
+  height: 600px;
+}
+
+.mainPoint {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #2d3748;
+}
+
+.subsection {
+  margin-bottom: 1.5rem;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #2d3748;
+}
+
+.point {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.checkmark {
+  color: #52a40e;
+  margin-right: 0.5rem;
+}
+
+.alert {
+  color: #e74c3c;
+  margin-right: 0.5rem;
+}
+
+.symptomsList,
+.contraindicationsList,
+.urgentContraindicationsList {
+  list-style-type: none;
+  padding-left: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.symptomsList li,
+.contraindicationsList li,
+.urgentContraindicationsList li {
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1.5rem;
+  line-height: 1.5;
+}
+
+.symptomsList li:before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  color: #52a40e;
+}
+
+.contraindicationsList li:before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  color: #52a40e;
+}
+
+.urgentContraindicationsList li:before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  color: #52a40e;
+}
+
+.contraTitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #c0392b;
+}
+
+.warning {
+  color: #e67e22;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.note {
+  color: #e74c3c;
+  font-style: italic;
+  font-size: 0.9rem;
+  display: block;
+  margin-top: 0.25rem;
+  margin-left: 1rem;
+}
+
+@media (max-width: 768px) {
+  .gerniotomiyaIndicatio {
+    padding: 2rem 0;
+  }
+
+  .sector {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .textContent {
+    min-width: auto;
+  }
+
+  .galleryContainer {
+    min-width: auto;
+    width: 100%;
+    height: 350px;
+  }
+
+  .mainTitle {
+    font-size: 1.75rem;
+  }
+
+  .mainPoint,
+  .contraTitle {
+    font-size: 1.1rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .gerniotomiyaIndicatio {
+    padding: 1.5rem 0;
+  }
+
+  .container {
+    padding: 0 0.75rem;
+  }
+
+  .mainTitle {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .galleryContainer {
+    height: 300px;
+  }
+
+  .mainPoint {
+    font-size: 1rem;
+  }
+
+  .contraTitle {
+    font-size: 1.2rem;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+  }
+}

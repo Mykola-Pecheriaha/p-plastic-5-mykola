@@ -1,0 +1,295 @@
+.gernioPreparation {
+  width: 100%;
+  padding: 3rem 0;
+  color: #2d3748;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #2d3748;
+  font-weight: 700;
+}
+
+.introText {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  text-align: justify;
+  color: #2d3748;
+}
+
+.contentWrapper {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.textContent {
+  flex: 1;
+}
+
+.galleryContainer {
+  flex: 1;
+}
+
+.consultationSection {
+  margin-bottom: 1.5rem;
+}
+
+.sectionIcon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.consultationTitle,
+.preparationTitle {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #52a40e;
+}
+
+.consultationList,
+.preparationList {
+  list-style-type: none;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.consultationList li,
+.preparationList li {
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1.5rem;
+  color: #2d3748;
+}
+
+.consultationList li:before,
+.preparationList li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #52a40e;
+}
+
+.travelInfo {
+  font-weight: bold;
+  margin-top: 1rem;
+  color: #2d3748;
+}
+
+.travelFormat {
+  font-weight: bold;
+  color: #52a40e;
+  margin-top: 0.5rem;
+}
+
+.fullWidthSection {
+  margin: 2rem 0;
+}
+
+.importantNote,
+.conclusionNote {
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 1rem;
+  background-color: rgba(82, 164, 14, 0.1);
+  border-radius: 8px;
+  margin: 1.5rem 0;
+  color: #2d3748;
+  border-left: 4px solid #52a40e;
+}
+
+.divider {
+  height: 1px;
+  background-color: rgba(82, 164, 14, 0.3);
+  margin: 2rem 0;
+}
+
+.surgeryTypesTitle {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #2d3748;
+  font-weight: 700;
+}
+
+.surgeryTypesDescription {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #2d3748;
+}
+
+.accordionContainer {
+  margin: 2rem 0;
+}
+
+.accordionItem {
+  margin-bottom: 1rem;
+  border: 1px solid rgba(82, 164, 14, 0.3);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.accordionButton {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #f0f9ff;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.accordionButton:hover {
+  background-color: #e8f5e8;
+}
+
+.accordionTitle {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #2d3748;
+}
+
+.accordionArrow {
+  font-size: 0.8rem;
+  transition: transform 0.3s;
+  color: #52a40e;
+}
+
+.accordionArrowOpen {
+  transform: rotate(180deg);
+}
+
+.accordionContent {
+  display: flex;
+  padding: 1rem;
+  background-color: #fff;
+  gap: 2rem;
+}
+
+.accordionTextContent {
+  flex: 1;
+}
+
+.accordionGallery {
+  flex: 1;
+}
+
+.indicationTitle,
+.techniqueTitle,
+.resultTitle,
+.featureTitle,
+.advantagesTitle,
+.suitableForTitle {
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: #52a40e;
+}
+
+.techniqueList,
+.advantagesList {
+  list-style-type: none;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.techniqueList li,
+.advantagesList li {
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1.5rem;
+  color: #2d3748;
+}
+
+.techniqueList li:before,
+.advantagesList li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #52a40e;
+}
+
+@media (max-width: 992px) {
+  .contentWrapper {
+    flex-direction: column;
+  }
+
+  .textContent,
+  .galleryContainer {
+    flex: 1;
+    width: 100%;
+  }
+
+  .accordionContent {
+    flex-direction: column;
+  }
+
+  .accordionTextContent,
+  .accordionGallery {
+    flex: 1;
+    width: 100%;
+  }
+
+  .accordionGallery {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .gernioPreparation {
+    padding: 2rem 0;
+  }
+
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .introText,
+  .surgeryTypesDescription {
+    font-size: 1rem;
+  }
+
+  .importantNote,
+  .conclusionNote {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .introText,
+  .surgeryTypesDescription {
+    font-size: 0.95rem;
+  }
+
+  .importantNote,
+  .conclusionNote {
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+
+  .accordionButton {
+    padding: 0.75rem;
+  }
+
+  .accordionContent {
+    padding: 0.75rem;
+    gap: 1rem;
+  }
+}

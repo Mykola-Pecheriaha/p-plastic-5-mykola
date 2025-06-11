@@ -1,0 +1,416 @@
+.galleryContainer {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.gallery {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-color: var(--gerniotomiyadetails-gallery-bg, #ffffff);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.imageContainer {
+  position: relative;
+  width: calc(100% - 8px);
+  height: calc(100% - 48px);
+  margin: 4px 4px 44px 4px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.imageLoader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--gerniotomiyadetails-loader-bg, rgba(0, 0, 0, 0.1));
+  color: var(--gerniotomiyadetails-loader-text, #333);
+  font-size: 1rem;
+  z-index: 1;
+}
+
+.noImages {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--gerniotomiyadetails-no-images-bg, #f0f0f0);
+  border-radius: 8px;
+  color: var(--gerniotomiyadetails-no-images-text, #666);
+  font-size: 1.2rem;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.image:hover {
+  transform: scale(1.02);
+}
+
+.navButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 35px;
+  height: 35px;
+  background-color: var(--gerniotomiyadetails-nav-bg, rgba(255, 255, 255, 0.9));
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 3;
+  color: var(--gerniotomiyadetails-accent, #52a40e);
+}
+
+.navButton:hover {
+  background-color: var(--gerniotomiyadetails-nav-hover, rgba(255, 255, 255, 1));
+  transform: translateY(-50%) scale(1.1);
+}
+
+.navButton:first-of-type {
+  left: 15px;
+}
+
+.navButton:last-of-type {
+  right: 15px;
+}
+
+.bottomPanel {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 44px;
+  background-color: var(--gerniotomiyadetails-panel-bg, #ffffff);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  z-index: 2;
+}
+
+.indicators {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--gerniotomiyadetails-indicator, #ccc);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.activeIndicator {
+  background-color: var(--gerniotomiyadetails-accent, #52a40e);
+  transform: scale(1.2);
+}
+
+.fullscreenButton {
+  width: 28px;
+  height: 28px;
+  background-color: transparent;
+  border: 1px solid var(--gerniotomiyadetails-border, #ccc);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--gerniotomiyadetails-accent, #52a40e);
+  font-weight: bold;
+}
+
+.fullscreenButton:hover {
+  background-color: var(--gerniotomiyadetails-accent, #52a40e);
+  color: var(--gerniotomiyadetails-button-text, #ffffff);
+  border-color: var(--gerniotomiyadetails-accent, #52a40e);
+}
+
+/* ПОВНОЕКРАННИЙ РЕЖИМ */
+.fullscreenOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50000;
+}
+
+.fullscreenContent {
+  position: relative;
+  width: 90%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fullscreenImageContainer {
+  position: relative;
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fullscreenImage {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.imageTitle {
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  border-radius: 0 0 8px 8px;
+}
+
+.closeButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 99999;
+}
+
+.closeButton:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.thumbnailsButton {
+  position: absolute;
+  top: 20px;
+  right: 70px;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 99999;
+}
+
+.thumbnailsButton:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.fullscreenNavButton {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 20px;
+  transition: all 0.3s ease;
+  z-index: 10001;
+}
+
+.fullscreenNavButton:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-color: rgba(255, 255, 255, 0.8);
+  transform: scale(1.1);
+}
+
+.thumbnailsContainer {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow-x: auto;
+  z-index: 10000;
+}
+
+.thumbnail {
+  width: 100px;
+  height: 75px;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.activeThumbnail {
+  border-color: white;
+}
+
+.thumbnailImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fullscreenIndicators {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  z-index: 10000;
+}
+
+.fullscreenIndicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 0 3px;
+}
+
+.activeFullscreenIndicator {
+  background-color: white;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+  .gallery {
+    height: 300px;
+  }
+  .imageContainer {
+    height: calc(100% - 40px);
+    margin: 3px 3px 37px 3px;
+  }
+  .bottomPanel {
+    height: 37px;
+    padding: 0 10px;
+  }
+  .indicator {
+    width: 6px;
+    height: 6px;
+  }
+  .fullscreenButton {
+    width: 24px;
+    height: 24px;
+    font-size: 14px;
+  }
+  .navButton {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+  .navButton:first-of-type {
+    left: 10px;
+  }
+  .navButton:last-of-type {
+    right: 10px;
+  }
+  .fullscreenNavButton {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    height: 250px;
+  }
+  .imageContainer {
+    height: calc(100% - 35px);
+    margin: 2px 2px 33px 2px;
+  }
+  .bottomPanel {
+    height: 33px;
+    padding: 0 8px;
+  }
+  .indicator {
+    width: 5px;
+    height: 5px;
+  }
+  .fullscreenButton {
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+  }
+  .navButton {
+    width: 25px;
+    height: 25px;
+    font-size: 14px;
+  }
+  .navButton:first-of-type {
+    left: 8px;
+  }
+  .navButton:last-of-type {
+    right: 8px;
+  }
+  .thumbnailsContainer {
+    gap: 5px;
+  }
+  .thumbnail {
+    width: 60px;
+    height: 45px;
+  }
+  .fullscreenIndicator {
+    width: 5px;
+    height: 5px;
+  }
+}

@@ -1,0 +1,90 @@
+.accordion {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.accordionItem {
+  margin-bottom: 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.accordionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s ease;
+}
+
+.accordionHeader:hover {
+  background-color: #f0f0f0;
+}
+
+.accordionHeader.active {
+  background-color: #e8f5e8; /* Світло-зелений фон для активного елемента */
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.accordionTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 0;
+}
+
+.accordionIcon {
+  font-size: 24px;
+  color: #52a40e; /* Зелений колір для іконки */
+  transition: transform 0.3s ease;
+}
+
+.accordionHeader.active .accordionIcon {
+  transform: rotate(180deg);
+}
+
+.accordionBody {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  padding: 0 20px; /* Додаємо горизонтальні відступи */
+}
+
+.accordionBody.open {
+  max-height: 2000px; /* Достатньо велике значення для відображення контенту */
+  transition: max-height 1s ease;
+  padding: 20px; /* Додаємо відступи з усіх сторін коли відкрито */
+}
+
+@media (max-width: 768px) {
+  .accordionHeader {
+    padding: 15px;
+  }
+  .accordionTitle {
+    font-size: 16px;
+  }
+  .accordionBody.open {
+    padding: 15px; /* Менші відступи на мобільних */
+  }
+}
+
+@media (max-width: 480px) {
+  .accordionHeader {
+    padding: 12px;
+  }
+  .accordionTitle {
+    font-size: 15px;
+  }
+  .accordionIcon {
+    font-size: 20px;
+  }
+  .accordionBody.open {
+    padding: 12px; /* Ще менші відступи для маленьких екранів */
+  }
+}
