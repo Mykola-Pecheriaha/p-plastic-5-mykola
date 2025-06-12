@@ -61,6 +61,8 @@ const navItems = [
           { id: "tumor-removal", name: "Видалення пухлин", path: "/services/tumor-removal" },
           { id: "carpal-tunnel", name: "Карпальний канал", path: "/services/carpal-syndrome" },
           { id: "gerniotomiya", name: "Видалення гриж", path: "/services/gerniotomiya" },
+          { id: "varicose", name: "Лікування варикозу", path: "/services/varicose" },
+          { id: "proctology", name: "Проктологія", path: "/services/proctology" },
         ],
       },
     ],

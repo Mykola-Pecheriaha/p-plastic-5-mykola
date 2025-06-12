@@ -1,0 +1,456 @@
+.pageWrapper {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+.container {
+  width: 100%;
+  position: relative;
+  background: transparent;
+}
+
+.fullWidthBackground {
+  width: 100%;
+  position: relative;
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contentContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  background: transparent;
+  position: relative;
+}
+
+.sectionContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 3rem 0;
+  align-items: flex-start;
+  background: transparent;
+  border: none;
+  margin: 0;
+}
+
+.compactSection {
+  padding: 2rem 0;
+  background: transparent;
+  border: none;
+  margin: 0;
+}
+
+.textSection {
+  flex: 1;
+  min-width: 300px;
+  padding: 0 2rem 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.gallerySection {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 0 2rem;
+}
+
+/* Декоративні розділювачі */
+.sectionDivider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+  background: transparent;
+  border: none;
+  margin: 0;
+  position: relative;
+}
+
+.dividerLine {
+  height: 1px;
+  flex: 1;
+  max-width: 200px;
+  opacity: 0.3;
+}
+
+.dividerDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.dividerDotInner {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+/* Виділені блоки */
+.highlightBox {
+  background: rgba(255, 255, 255, 0.7);
+  border: 2px solid;
+  border-radius: 12px;
+  padding: 2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(10px);
+}
+
+.highlightIcon {
+  font-size: 2rem;
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+.highlightText {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.finalSection {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.finalTitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.finalContent {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.expandableText {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.textContent {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.expandButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+  border-radius: 6px;
+  border: 2px solid #52a40e;
+  background-color: transparent;
+  font-weight: 500;
+  min-height: 44px;
+  min-width: 120px;
+}
+
+.expandButton:hover {
+  background-color: #52a40e;
+  color: #ffffff !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(82, 164, 14, 0.2);
+}
+
+.expandButton:active {
+  transform: translateY(0);
+}
+
+.stageTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stageTable th,
+.stageTable td {
+  border: 1px solid rgba(82, 164, 14, 0.2);
+  padding: 1rem 0.75rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.stageTable th {
+  font-weight: 600;
+  text-align: center;
+}
+
+.stageTable td:first-child {
+  text-align: center;
+  font-weight: 600;
+  width: 80px;
+}
+
+.warningText {
+  color: #d32f2f;
+  font-weight: 500;
+  margin: 1.5rem 0;
+  text-align: left;
+}
+
+.importantText {
+  font-weight: 600;
+  margin: 1.5rem 0 0.5rem 0;
+  text-align: left;
+}
+
+.bulletList {
+  list-style-type: none;
+  padding-left: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.bulletItem {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.bulletItem::before {
+  content: "🔸";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.bulletItemBlue::before {
+  content: "🔹";
+}
+
+/* Мобільна адаптація */
+@media (max-width: 768px) {
+  .pageWrapper {
+    min-height: 100vh;
+  }
+
+  .fullWidthBackground {
+    border: none;
+    outline: none;
+  }
+
+  .contentContainer {
+    padding: 0 1rem;
+    background: transparent;
+  }
+
+  .sectionContainer {
+    flex-direction: column;
+    padding: 2rem 0;
+    background: transparent;
+    border: none;
+  }
+
+  .compactSection {
+    padding: 1.5rem 0;
+    background: transparent;
+    border: none;
+  }
+
+  .contentContainer {
+    padding: 0 1rem;
+  }
+
+  .sectionContainer {
+    flex-direction: column;
+    padding: 2rem 0;
+  }
+
+  .compactSection {
+    padding: 1.5rem 0;
+  }
+
+  .textSection,
+  .gallerySection {
+    width: 100%;
+    padding: 0;
+    min-width: unset;
+  }
+
+  .textSection {
+    margin-bottom: 2rem;
+  }
+
+  .gallerySection {
+    margin-top: 1rem;
+    justify-content: center;
+  }
+
+  .sectionTitle {
+    font-size: 1.3rem;
+    text-align: left;
+  }
+
+  .finalTitle {
+    font-size: 1.5rem;
+  }
+
+  .expandableText {
+    margin-bottom: 1.5rem;
+  }
+
+  .expandButton {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.95rem;
+    min-height: 48px;
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .highlightBox {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .highlightIcon {
+    align-self: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .sectionDivider {
+    padding: 0.5rem 0;
+  }
+
+  .dividerLine {
+    max-width: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contentContainer {
+    padding: 0 0.75rem;
+  }
+
+  .sectionContainer {
+    padding: 1.5rem 0;
+  }
+
+  .compactSection {
+    padding: 1rem 0;
+  }
+
+  .sectionTitle {
+    font-size: 1.2rem;
+  }
+
+  .finalTitle {
+    font-size: 1.3rem;
+  }
+
+  .textContent {
+    font-size: 1rem;
+  }
+
+  .finalContent {
+    font-size: 1rem;
+  }
+
+  .stageTable th,
+  .stageTable td {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .bulletList {
+    padding-left: 1rem;
+  }
+
+  .bulletItem {
+    padding-left: 1.2rem;
+    margin-bottom: 0.6rem;
+    font-size: 0.95rem;
+  }
+
+  .expandButton {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    min-height: 50px;
+    width: 100%;
+    max-width: 180px;
+  }
+
+  .highlightBox {
+    padding: 1rem;
+  }
+
+  .highlightText {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .contentContainer {
+    padding: 0 0.5rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.1rem;
+  }
+
+  .finalTitle {
+    font-size: 1.2rem;
+  }
+
+  .textContent {
+    font-size: 0.95rem;
+  }
+
+  .finalContent {
+    font-size: 0.95rem;
+  }
+
+  .bulletItem {
+    font-size: 0.9rem;
+  }
+
+  .expandButton {
+    font-size: 0.85rem;
+    padding: 0.7rem 0.8rem;
+    min-height: 48px;
+  }
+
+  .highlightText {
+    font-size: 0.95rem;
+  }
+}

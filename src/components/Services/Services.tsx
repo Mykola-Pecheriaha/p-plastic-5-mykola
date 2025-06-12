@@ -62,6 +62,8 @@ const Services: React.FC<ServicesProps> = ({ backgroundColor }) => {
         { name: "Видалення пухлин", path: "/services/tumor-removal" },
         { name: "Карпальний канал", path: "/services/carpal-syndrome" },
         { name: "Видалення гриж", path: "/services/gerniotomiya" },
+        { name: "Лікування варикозу", path: "/services/varicose" },
+        { name: "Проктологія", path: "/services/proctology" },
       ],
       link: "/services/general",
     },

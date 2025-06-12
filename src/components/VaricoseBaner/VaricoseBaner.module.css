@@ -1,0 +1,258 @@
+.banerContainer {
+  width: 100%;
+  padding: 3rem 0;
+}
+
+.contentContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.topSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  gap: 2rem;
+}
+
+.leftContent {
+  flex: 1;
+}
+
+.rightContent {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainTitle {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.benefitsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.benefitItem {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: flex-start;
+  line-height: 1.5;
+}
+
+.benefitItem::before {
+  content: "🔹";
+  margin-right: 0.5rem;
+  flex-shrink: 0;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.bottomSection {
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: rgba(232, 245, 232, 0.3);
+  border-radius: 12px;
+  border-left: 4px solid #52a40e;
+}
+
+.warningTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.warningText {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.complicationsList {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.complicationItem {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: flex-start;
+  line-height: 1.5;
+}
+
+.complicationItem::before {
+  content: "🔸";
+  margin-right: 0.5rem;
+  flex-shrink: 0;
+}
+
+.dangerItem {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: flex-start;
+  line-height: 1.5;
+  padding: 1rem;
+  background-color: rgba(255, 235, 235, 0.5);
+  border-radius: 8px;
+  border-left: 3px solid #d32f2f;
+}
+
+.dangerItem::before {
+  content: "⚠️";
+  margin-right: 0.5rem;
+  flex-shrink: 0;
+}
+
+.callToAction {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 1.5rem 0;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: rgba(82, 164, 14, 0.1);
+  border-radius: 8px;
+}
+
+.callToAction::before {
+  content: "❗";
+  margin-right: 0.5rem;
+}
+
+.conclusion {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: center;
+  font-weight: 500;
+}
+
+.highlight {
+  font-weight: 700;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+  .banerContainer {
+    padding: 2rem 0;
+  }
+
+  .contentContainer {
+    padding: 0 1rem;
+  }
+
+  .topSection {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .mainTitle {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.3rem;
+  }
+
+  .rightContent {
+    margin-top: 1.5rem;
+  }
+
+  .bottomSection {
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .warningTitle {
+    font-size: 1.3rem;
+  }
+
+  .benefitItem,
+  .complicationItem,
+  .dangerItem {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .banerContainer {
+    padding: 1.5rem 0;
+  }
+
+  .contentContainer {
+    padding: 0 0.75rem;
+  }
+
+  .mainTitle {
+    font-size: 1.8rem;
+  }
+
+  .title {
+    font-size: 1.3rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .bottomSection {
+    padding: 1rem;
+  }
+
+  .warningTitle {
+    font-size: 1.2rem;
+  }
+
+  .benefitItem,
+  .complicationItem,
+  .dangerItem,
+  .warningText,
+  .conclusion {
+    font-size: 0.95rem;
+  }
+
+  .callToAction {
+    font-size: 1.1rem;
+  }
+}

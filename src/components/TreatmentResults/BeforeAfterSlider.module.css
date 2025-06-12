@@ -1,0 +1,242 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 2rem 0;
+  background: transparent;
+}
+
+.sliderContainer {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(45, 55, 72, 0.15);
+  user-select: none;
+  touch-action: none;
+  border: 3px solid #52a40e;
+}
+
+.imageContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.beforeImageContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.sliderLine {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: #52a40e;
+  cursor: ew-resize;
+  z-index: 2;
+  box-shadow: 0 0 8px rgba(82, 164, 14, 0.5);
+}
+
+.sliderHandle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 44px;
+  height: 44px;
+  background-color: #52a40e;
+  border: 3px solid #e8f5e8;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: ew-resize;
+  box-shadow: 0 4px 16px rgba(45, 55, 72, 0.2);
+  transition: all 0.2s ease;
+}
+
+.sliderHandle:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+  box-shadow: 0 6px 20px rgba(45, 55, 72, 0.3);
+}
+
+.chevronLeft,
+.chevronRight {
+  color: #e8f5e8;
+  filter: drop-shadow(0 1px 2px rgba(45, 55, 72, 0.3));
+}
+
+.chevronLeft {
+  margin-right: -4px;
+}
+
+.chevronRight {
+  margin-left: -4px;
+}
+
+.controlButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(232, 245, 232, 0.9);
+  border: 2px solid #52a40e;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 3;
+  opacity: 0;
+  transition: all 0.3s ease;
+  color: #52a40e;
+}
+
+.controlButton:hover {
+  background-color: #52a40e;
+  color: #e8f5e8;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.sliderContainer:hover .controlButton {
+  opacity: 1;
+}
+
+.leftButton {
+  left: 15px;
+}
+
+.rightButton {
+  right: 15px;
+}
+
+.labels {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.beforeLabel {
+  background-color: rgba(45, 55, 72, 0.8);
+  color: #e8f5e8;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid #52a40e;
+  backdrop-filter: blur(4px);
+  flex-shrink: 0;
+}
+
+.afterLabel {
+  background-color: rgba(45, 55, 72, 0.8);
+  color: #e8f5e8;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid #52a40e;
+  backdrop-filter: blur(4px);
+  flex-shrink: 0;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+  .sliderContainer {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 4 / 3;
+    border-radius: 8px;
+  }
+
+  .sliderHandle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .controlButton {
+    width: 36px;
+    height: 36px;
+  }
+
+  .leftButton {
+    left: 10px;
+  }
+
+  .rightButton {
+    right: 10px;
+  }
+
+  .labels {
+    padding: 0 10px;
+    bottom: 10px;
+  }
+
+  .beforeLabel,
+  .afterLabel {
+    font-size: 12px;
+    padding: 4px 8px;
+    min-width: fit-content;
+  }
+}
+
+@media (max-width: 480px) {
+  .sliderContainer {
+    border-radius: 6px;
+    border-width: 2px;
+  }
+
+  .sliderHandle {
+    width: 36px;
+    height: 36px;
+  }
+
+  .controlButton {
+    width: 32px;
+    height: 32px;
+  }
+
+  .chevronLeft,
+  .chevronRight {
+    width: 14px;
+    height: 14px;
+  }
+
+  .labels {
+    padding: 0 8px;
+    bottom: 8px;
+  }
+
+  .beforeLabel,
+  .afterLabel {
+    font-size: 11px;
+    padding: 3px 6px;
+    white-space: nowrap;
+  }
+}
