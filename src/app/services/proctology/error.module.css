@@ -1,0 +1,120 @@
+.errorContainer {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e8f5e8;
+  padding: 2rem;
+}
+
+.errorContent {
+  text-align: center;
+  max-width: 500px;
+  padding: 3rem 2rem;
+  background-color: #f0f9ff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(82, 164, 14, 0.1);
+}
+
+.errorIcon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.errorTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+.errorDescription {
+  font-size: 1.1rem;
+  color: #2d3748;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.errorActions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.retryButton,
+.homeButton {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  font-size: 1rem;
+}
+
+.retryButton {
+  background-color: #52a40e;
+  color: white;
+}
+
+.retryButton:hover {
+  background-color: #458a0c;
+  transform: translateY(-2px);
+}
+
+.homeButton {
+  background-color: transparent;
+  color: #52a40e;
+  border: 2px solid #52a40e;
+}
+
+.homeButton:hover {
+  background-color: #52a40e;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.errorDigest {
+  font-size: 0.875rem;
+  color: #2d3748;
+  opacity: 0.6;
+  font-family: monospace;
+}
+
+/* Мобільна адаптація */
+@media (max-width: 768px) {
+  .errorContainer {
+    padding: 1rem;
+  }
+
+  .errorContent {
+    padding: 2rem 1.5rem;
+  }
+
+  .errorTitle {
+    font-size: 1.5rem;
+  }
+
+  .errorDescription {
+    font-size: 1rem;
+  }
+
+  .errorActions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .retryButton,
+  .homeButton {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .errorIcon {
+    font-size: 3rem;
+  }
+}

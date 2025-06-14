@@ -1,0 +1,278 @@
+.pageWrapper {
+  width: 100%;
+  position: relative;
+  background: transparent;
+}
+
+.proctologySection {
+  width: 100%;
+  padding: 3rem 0;
+  background: transparent;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  background: transparent;
+}
+
+.mainTitle {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #52a40e;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.subtitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #2d3748;
+  background-color: rgba(240, 249, 255, 0.8);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  display: inline-block;
+  backdrop-filter: blur(10px);
+}
+
+.subTitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #52a40e;
+}
+
+.text {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: #2d3748;
+  margin-bottom: 1.5rem;
+}
+
+.highlightBox {
+  background-color: #f0f9ff;
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 2rem 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #52a40e;
+}
+
+.highlightText {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #2d3748;
+  font-weight: 600;
+  margin: 0;
+  text-align: center;
+}
+
+.twoColumnSection {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  margin: 3rem 0;
+  align-items: flex-start;
+}
+
+.textColumn {
+  flex: 1;
+  background: transparent;
+}
+
+.imageColumn,
+.galleryColumn {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.mainImage {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.mainImage:hover {
+  transform: scale(1.02);
+}
+
+.benefitsList {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 1.5rem 0;
+  background-color: rgba(240, 249, 255, 0.5);
+  padding: 1.5rem;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+.benefitsList li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #2d3748;
+  transition: color 0.3s ease;
+}
+
+.benefitsList li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #52a40e;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.benefitsList li:hover {
+  color: #52a40e;
+}
+
+.diseasesList {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 1.5rem 0;
+}
+
+.diseasesList li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  color: #2d3748;
+  line-height: 1.5;
+}
+
+.diseasesList li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #52a40e;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.fullWidthSection {
+  margin: 3rem 0;
+  background: transparent;
+}
+
+/* Декоративні елементи */
+.twoColumnSection:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #52a40e, transparent);
+  margin-top: 2rem;
+}
+
+/* Адаптивність */
+@media (max-width: 992px) {
+  .twoColumnSection {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .mainTitle {
+    font-size: 2.2rem;
+  }
+
+  .subTitle {
+    font-size: 1.6rem;
+  }
+
+  .subtitle {
+    font-size: 1.4rem;
+  }
+
+  .highlightText {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .proctologySection {
+    padding: 2rem 0;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .mainTitle {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .subTitle {
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+    text-align: center;
+    display: block;
+  }
+
+  .highlightBox {
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+  }
+
+  .highlightText {
+    font-size: 1.2rem;
+  }
+
+  .twoColumnSection {
+    margin: 2rem 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .mainTitle {
+    font-size: 1.8rem;
+  }
+
+  .subTitle {
+    font-size: 1.3rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .text,
+  .benefitsList li,
+  .diseasesList li {
+    font-size: 1.1rem;
+  }
+
+  .highlightText {
+    font-size: 1.1rem;
+  }
+
+  .benefitsList,
+  .highlightBox {
+    padding: 1rem;
+  }
+
+  .twoColumnSection {
+    gap: 1.5rem;
+  }
+}

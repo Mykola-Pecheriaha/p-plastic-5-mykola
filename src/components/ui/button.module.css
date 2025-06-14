@@ -1,0 +1,220 @@
+/* Базова структура кнопки */
+.button {
+  /* Основні властивості */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  /* Розміри та відступи за замовчуванням */
+  padding: 0.5rem 1rem;
+
+  /* Типографіка */
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.5;
+
+  /* Форма */
+  border-radius: 0.375rem;
+  border: 2px solid transparent;
+
+  /* Поведінка */
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  /* Доступність */
+  outline: none;
+}
+
+/* Стани кнопки */
+.button:focus {
+  box-shadow: 0 0 0 2px rgba(23, 191, 233, 0.5);
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.button:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.button:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+/* Варіанти кнопок */
+.default {
+  background-color: #c2d5fa;
+  color: #1f2937;
+  border-color: #6e9efd;
+}
+
+.default:hover:not(:disabled) {
+  background-color: #adc5f5;
+}
+
+.primary {
+  background-color: #2563eb;
+  color: rgb(144, 184, 243);
+  border-color: transparent;
+}
+
+.primary:hover:not(:disabled) {
+  background-color: #1d4ed8;
+}
+
+.secondary {
+  background-color: #7c3aed;
+  color: rgb(29, 208, 231);
+  border-color: transparent;
+}
+
+.secondary:hover:not(:disabled) {
+  background-color: #6d28d9;
+}
+
+.outline {
+  background-color: transparent;
+  color: #1f2937;
+  border-color: #d1d5db;
+}
+
+.outline:hover:not(:disabled) {
+  background-color: #cadef1;
+}
+
+.danger {
+  background-color: #dc2626;
+  color: white;
+  border-color: transparent;
+}
+
+.danger:hover:not(:disabled) {
+  background-color: #b91c1c;
+}
+
+.success {
+  background-color: #10b981;
+  color: white;
+  border-color: transparent;
+}
+
+.success:hover:not(:disabled) {
+  background-color: #059669;
+}
+
+.ghost {
+  background-color: transparent;
+  color: #1f2937;
+  border-color: transparent;
+}
+
+.ghost:hover:not(:disabled) {
+  background-color: #f3f4f6;
+}
+
+/* Розміри кнопок */
+.sm {
+  font-size: 0.75rem;
+  padding: 0.375rem 0.625rem;
+}
+
+.md {
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+}
+
+.lg {
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+}
+
+.icon {
+  padding: 0.5rem;
+}
+
+/* Повна ширина */
+.fullWidth {
+  width: 100%;
+}
+
+/* Стан завантаження */
+.loading {
+  position: relative;
+  color: transparent;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid;
+  border-radius: 50%;
+  border-color: currentColor transparent currentColor transparent;
+  animation: button-loading-spinner 1.2s linear infinite;
+}
+
+@keyframes button-loading-spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Додаткові стилі для іконок */
+.withIcon {
+  display: inline-flex;
+  align-items: center;
+}
+
+.iconLeft {
+  margin-right: 0.5rem;
+}
+
+.iconRight {
+  margin-left: 0.5rem;
+}
+
+/* Анімації */
+.ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  border-radius: 100%;
+  transform: scale(1, 1) translate(-50%, -50%);
+  transform-origin: 50% 50%;
+}
+
+.ripple:focus:not(:active)::after {
+  animation: ripple 0.6s ease-out;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0, 0);
+    opacity: 0.5;
+  }
+  20% {
+    transform: scale(25, 25);
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(40, 40);
+  }
+}

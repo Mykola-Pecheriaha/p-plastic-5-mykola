@@ -1,0 +1,419 @@
+/* Обгортка сторінки на всю ширину */
+.pageWrapper {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #e8f5e8;
+  padding: 0;
+}
+
+/* Контейнер */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Заголовки */
+.headerSection {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.mainTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.subTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 0 0 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  line-height: 1.3;
+}
+
+.listTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 0 0 0.75rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  line-height: 1.3;
+}
+
+/* Текст */
+.text {
+  color: #2d3748;
+  line-height: 1.6;
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+}
+
+.alertText {
+  color: #2d3748;
+  font-weight: 600;
+  line-height: 1.6;
+  margin: 1rem 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+/* Секції контенту */
+.introSection {
+  margin-bottom: 3rem;
+}
+
+.contentSection {
+  margin-bottom: 3rem;
+}
+
+.treatmentHeaderSection {
+  margin-bottom: 2rem;
+}
+
+.conclusionSection {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Картки */
+.introCard,
+.contentCard,
+.treatmentHeader,
+.conclusionCard {
+  background-color: transparent;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+  border: none;
+}
+
+.contentCardAlt {
+  background-color: transparent;
+}
+
+/* Блок попередження */
+.alertBox {
+  background-color: rgba(82, 164, 14, 0.1);
+  border-left: 4px solid #52a40e;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+/* Двоколонкова секція */
+.twoColumnLayout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.textColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.galleryColumn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Блоки контенту */
+.contentBlock {
+  margin-bottom: 1.5rem;
+}
+
+.contentBlock:last-child {
+  margin-bottom: 0;
+}
+
+.expandedContent {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Секції типів та лікування */
+.typeSection,
+.treatmentSection,
+.symptomsSection {
+  margin-bottom: 2rem;
+}
+
+.typeSection:last-child,
+.treatmentSection:last-child,
+.symptomsSection:last-child {
+  margin-bottom: 0;
+}
+
+/* Списки */
+.bulletList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+}
+
+.bulletList li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #2d3748;
+  line-height: 1.5;
+}
+
+.bulletList li::before {
+  content: "•";
+  color: #52a40e;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: bold;
+}
+
+.nestedList {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0 1rem;
+}
+
+.nestedList li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.25rem;
+  color: #2d3748;
+  line-height: 1.5;
+}
+
+.nestedList li::before {
+  content: "◦";
+  color: #52a40e;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.arrowList {
+  margin: 1rem 0;
+}
+
+.arrowItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: #2d3748;
+  line-height: 1.5;
+}
+
+/* Емодзі */
+.emoji {
+  font-size: 1em;
+  line-height: 1;
+}
+
+/* Кнопка розгортання */
+.expandButton {
+  background-color: transparent;
+  border: 2px solid #52a40e;
+  color: #52a40e;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.expandButton:hover {
+  background-color: #52a40e;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.expandButton:active {
+  transform: translateY(0);
+}
+
+.chevron {
+  font-size: 0.875rem;
+  transition: transform 0.2s ease;
+}
+
+/* Розділова лінія */
+.divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(82, 164, 14, 0.2), transparent);
+  margin: 2rem 0;
+}
+
+/* Адаптивність для планшетів */
+@media (min-width: 768px) {
+  .container {
+    padding: 3rem 2rem;
+  }
+
+  .mainTitle {
+    font-size: 3rem;
+  }
+
+  .subTitle {
+    font-size: 1.75rem;
+  }
+
+  .listTitle {
+    font-size: 1.25rem;
+  }
+
+  .text {
+    font-size: 1.125rem;
+  }
+
+  .introCard,
+  .contentCard,
+  .contentCardAlt,
+  .treatmentHeader,
+  .conclusionCard {
+    padding: 0;
+  }
+}
+
+/* Адаптивність для десктопів */
+@media (min-width: 1024px) {
+  .twoColumnLayout {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+
+  .mainTitle {
+    font-size: 3.5rem;
+  }
+
+  .subTitle {
+    font-size: 2rem;
+  }
+
+  .listTitle {
+    font-size: 1.375rem;
+  }
+
+  .text {
+    font-size: 1.125rem;
+  }
+
+  .introCard,
+  .contentCard,
+  .contentCardAlt,
+  .treatmentHeader,
+  .conclusionCard {
+    padding: 0;
+  }
+}
+
+/* Адаптивність для мобільних пристроїв */
+@media (max-width: 767px) {
+  .container {
+    padding: 1.5rem 1rem;
+  }
+
+  .mainTitle {
+    font-size: 2rem;
+  }
+
+  .subTitle {
+    font-size: 1.25rem;
+  }
+
+  .listTitle {
+    font-size: 1rem;
+  }
+
+  .text {
+    font-size: 0.875rem;
+  }
+
+  .twoColumnLayout {
+    gap: 1.5rem;
+  }
+
+  .introCard,
+  .contentCard,
+  .contentCardAlt,
+  .treatmentHeader,
+  .conclusionCard {
+    padding: 0;
+  }
+
+  .expandButton {
+    width: 100%;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  .galleryColumn {
+    order: -1;
+  }
+}
+
+/* Дуже маленькі екрани */
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem 0.5rem;
+  }
+
+  .mainTitle {
+    font-size: 1.75rem;
+  }
+
+  .subTitle {
+    font-size: 1.125rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .listTitle {
+    font-size: 0.875rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .text {
+    font-size: 0.8rem;
+  }
+
+  .introCard,
+  .contentCard,
+  .contentCardAlt,
+  .treatmentHeader,
+  .conclusionCard {
+    padding: 0;
+  }
+
+  .emoji {
+    font-size: 1rem;
+  }
+}

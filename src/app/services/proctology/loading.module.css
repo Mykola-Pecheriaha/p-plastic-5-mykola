@@ -1,0 +1,75 @@
+.loadingContainer {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e8f5e8;
+  padding: 2rem;
+}
+
+.loadingContent {
+  text-align: center;
+  max-width: 400px;
+  padding: 3rem 2rem;
+  background-color: #f0f9ff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(82, 164, 14, 0.1);
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #e8f5e8;
+  border-top: 4px solid #52a40e;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1.5rem;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loadingTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.loadingText {
+  font-size: 1rem;
+  color: #2d3748;
+  opacity: 0.8;
+  line-height: 1.5;
+}
+
+/* Мобільна адаптація */
+@media (max-width: 768px) {
+  .loadingContainer {
+    padding: 1rem;
+  }
+
+  .loadingContent {
+    padding: 2rem 1.5rem;
+  }
+
+  .loadingTitle {
+    font-size: 1.25rem;
+  }
+
+  .loadingText {
+    font-size: 0.9rem;
+  }
+
+  .spinner {
+    width: 40px;
+    height: 40px;
+  }
+}

@@ -1,0 +1,266 @@
+.hemorrhoidSection {
+  width: 100%;
+  padding: 3rem 0;
+  background-color: #f0f9ff; /* Світло-блакитний фон */
+  color: #2d3748; /* Темний текст */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.mainTitle {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #52a40e; /* Зелений акцент */
+  position: relative;
+}
+
+.mainTitle::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: #52a40e; /* Зелений акцент */
+  border-radius: 2px;
+}
+
+.subTitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #52a40e; /* Зелений акцент */
+}
+
+.subSubTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 1.5rem 0 1rem;
+  color: #52a40e; /* Зелений акцент */
+}
+
+.listTitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 1.5rem 0 0.8rem;
+  color: #2d3748; /* Темний текст */
+}
+
+.text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #2d3748; /* Темний текст */
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+/* Прибираємо фонові блоки - залишаємо тільки текст на загальному фоні */
+.introText {
+  margin: 2rem 0;
+  padding: 0; /* Прибираємо padding */
+  background: transparent; /* Прибираємо фон */
+  border-radius: 0; /* Прибираємо заокруглення */
+  box-shadow: none; /* Прибираємо тінь */
+  border: none; /* Прибираємо бордер */
+}
+
+.alertText {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #e53e3e;
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background-color: rgba(229, 62, 62, 0.1);
+  border-radius: 8px;
+  border-left: 4px solid #e53e3e;
+  font-weight: 500;
+}
+
+.twoColumnSection {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin: 2rem 0;
+  padding: 1.5rem 0;
+  border-top: 1px solid rgba(82, 164, 14, 0.2);
+}
+
+.textColumn {
+  flex: 1;
+}
+
+.galleryColumn {
+  flex: 1;
+}
+
+/* Прибираємо фонові блоки з текстових секцій */
+.contentBlock {
+  margin-bottom: 2rem;
+  padding: 0; /* Прибираємо padding */
+  background: transparent; /* Прибираємо фон */
+  border-radius: 0; /* Прибираємо заокруглення */
+  box-shadow: none; /* Прибираємо тінь */
+  border: none; /* Прибираємо бордер */
+  height: fit-content;
+}
+
+.treatmentHeader {
+  margin: 3rem 0 2rem;
+  padding: 0; /* Прибираємо padding */
+  background: transparent; /* Прибираємо фон */
+  border-radius: 0; /* Прибираємо заокруглення */
+  box-shadow: none; /* Прибираємо тінь */
+  border: none; /* Прибираємо бордер */
+  text-align: center;
+}
+
+.conclusionSection {
+  margin: 3rem 0 1rem;
+  padding: 0; /* Прибираємо padding */
+  background: transparent; /* Прибираємо фон */
+  border-radius: 0; /* Прибираємо заокруглення */
+  box-shadow: none; /* Прибираємо тінь */
+  border: none; /* Прибираємо бордер */
+  text-align: center;
+}
+
+.collapsibleText {
+  position: relative;
+  transition: all 0.5s ease;
+  overflow: hidden;
+  max-height: 100px;
+}
+
+.collapsibleText.expanded {
+  max-height: 2000px; /* Достатньо велике значення для розгорнутого стану */
+}
+
+.expandButton {
+  background: linear-gradient(135deg, #52a40e 0%, #68d391 100%);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+  box-shadow: 0 4px 15px rgba(82, 164, 14, 0.3);
+}
+
+.expandButton:hover {
+  background: linear-gradient(135deg, #68d391 0%, #52a40e 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(82, 164, 14, 0.4);
+}
+
+.bulletList {
+  list-style: none;
+  padding-left: 0;
+  margin: 15px 0;
+}
+
+.bulletList li {
+  padding: 8px 0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #2d3748; /* Темний текст */
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.checkList {
+  list-style: none;
+  padding-left: 0;
+  margin: 15px 0;
+}
+
+.checkList li {
+  padding: 8px 0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #2d3748; /* Темний текст */
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.emoji {
+  font-size: 1.2em;
+  margin-right: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .twoColumnSection {
+    flex-direction: column;
+  }
+
+  .mainTitle {
+    font-size: 2rem;
+  }
+
+  .subTitle {
+    font-size: 1.5rem;
+  }
+
+  .subSubTitle {
+    font-size: 1.3rem;
+  }
+
+  .listTitle {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .mainTitle {
+    font-size: 2rem;
+  }
+
+  .subTitle {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hemorrhoidSection {
+    padding: 40px 0;
+  }
+
+  .mainTitle {
+    font-size: 1.8rem;
+  }
+
+  .text {
+    font-size: 1rem;
+  }
+
+  .expandButton {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  .mainTitle {
+    font-size: 1.6rem;
+  }
+}
