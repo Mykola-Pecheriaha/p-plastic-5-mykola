@@ -59,7 +59,7 @@ const Services: React.FC<ServicesProps> = ({ backgroundColor }) => {
       image: "/images/plastic-list/general.jpg",
       icon: Stethoscope, // 👈 Іконка для наведення
       services: [
-        { name: "Видалення пухлин", path: "/services/tumor-removal" },
+        { name: "Видалення доброякісних  пухлин", path: "/services/skintumors" },
         { name: "Карпальний канал", path: "/services/carpal-syndrome" },
         { name: "Видалення гриж", path: "/services/gerniotomiya" },
         { name: "Лікування варикозу", path: "/services/varicose" },

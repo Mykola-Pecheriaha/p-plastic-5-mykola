@@ -58,7 +58,7 @@ const navItems = [
         category: "Загальна хірургія",
         path: "/services/general",
         services: [
-          { id: "tumor-removal", name: "Видалення пухлин", path: "/services/tumor-removal" },
+          { id: "skintumors", name: "Видалення доброякісних пухлин", path: "/services/skintumors" },
           { id: "carpal-tunnel", name: "Карпальний канал", path: "/services/carpal-syndrome" },
           { id: "gerniotomiya", name: "Видалення гриж", path: "/services/gerniotomiya" },
           { id: "varicose", name: "Лікування варикозу", path: "/services/varicose" },

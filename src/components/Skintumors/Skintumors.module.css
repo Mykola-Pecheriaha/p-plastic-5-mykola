@@ -1,0 +1,282 @@
+/* Основні кольори компонента */
+/* primary: "#e8f5e8" - Світло-зелений фон */
+/* secondary: "#f0f9ff" - Світло-блакитний */
+/* accent: "#52a40e" - Зелений акцент */
+/* text: "#2d3748" - Темний текст */
+
+/* Секція на всю ширину */
+.skintumorsSection {
+  width: 100%;
+  padding: 3rem 0;
+  min-height: 60vh;
+}
+
+/* Контейнер з обмеженою шириною */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* Заголовки */
+.mainTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #2d3748;
+  text-align: left;
+  line-height: 1.2;
+}
+
+/* Двоколонкова секція */
+.twoColumnSection {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  margin: 2rem 0;
+  align-items: flex-start;
+}
+
+.textColumn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.imageColumn {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Повна ширина секція */
+.fullWidthSection {
+  margin: 3rem 0;
+}
+
+/* Текстові елементи */
+.introText {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  color: #2d3748;
+  line-height: 1.6;
+}
+
+.descriptionText {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: #2d3748;
+  text-align: center;
+  font-weight: 500;
+  margin: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.warningIcon {
+  font-size: 1.5em;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+/* Виділений блок */
+.highlightBox {
+  background-color: rgba(82, 164, 14, 0.1);
+  border-left: 4px solid #52a40e;
+  border-radius: 0 0.5rem 0.5rem 0;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(82, 164, 14, 0.1);
+}
+
+/* Списки */
+.bulletList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+
+.bulletList li {
+  margin-bottom: 0.75rem;
+  font-size: 1.125rem;
+  color: #2d3748;
+  line-height: 1.6;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.listMarker {
+  font-size: 1.25em;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+/* Зображення */
+.imageWrapper {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(82, 164, 14, 0.15);
+}
+
+.mainImage {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.mainImage:hover {
+  transform: scale(1.02);
+}
+
+/* Адаптивність для планшетів */
+@media (min-width: 768px) {
+  .container {
+    padding: 0 2rem;
+  }
+
+  .mainTitle {
+    font-size: 3rem;
+  }
+
+  .introText,
+  .descriptionText {
+    font-size: 1.375rem;
+  }
+
+  .bulletList li {
+    font-size: 1.25rem;
+  }
+}
+
+/* Адаптивність для десктопів */
+@media (min-width: 1024px) {
+  .mainTitle {
+    font-size: 3.5rem;
+  }
+
+  .twoColumnSection {
+    gap: 4rem;
+  }
+}
+
+/* Адаптивність для планшетів та менших екранів */
+@media (max-width: 992px) {
+  .twoColumnSection {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .mainTitle {
+    font-size: 2.25rem;
+    text-align: center;
+  }
+
+  .imageColumn {
+    order: -1; /* Зображення вгорі на планшетах */
+  }
+}
+
+/* Адаптивність для мобільних пристроїв */
+@media (max-width: 767px) {
+  .skintumorsSection {
+    padding: 2rem 0;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .mainTitle {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .introText,
+  .descriptionText {
+    font-size: 1.125rem;
+  }
+
+  .bulletList li {
+    font-size: 1rem;
+  }
+
+  .twoColumnSection {
+    margin: 1.5rem 0;
+    gap: 1.5rem;
+  }
+
+  .fullWidthSection {
+    margin: 2rem 0;
+  }
+
+  .highlightBox {
+    padding: 1rem;
+  }
+
+  .descriptionText {
+    text-align: left;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .warningIcon {
+    align-self: flex-start;
+  }
+}
+
+/* Дуже маленькі екрани */
+@media (max-width: 480px) {
+  .skintumorsSection {
+    padding: 1.5rem 0;
+  }
+
+  .mainTitle {
+    font-size: 1.75rem;
+  }
+
+  .introText,
+  .descriptionText {
+    font-size: 1rem;
+  }
+
+  .bulletList li {
+    font-size: 0.9375rem;
+  }
+
+  .listMarker,
+  .warningIcon {
+    font-size: 1.125em;
+  }
+
+  .highlightBox {
+    padding: 0.75rem;
+  }
+}
+
+/* Покращення доступності */
+@media (prefers-reduced-motion: reduce) {
+  .mainImage {
+    transition: none;
+  }
+}
+
+/* Високий контраст для кращої читабельності */
+@media (prefers-contrast: high) {
+  .mainTitle,
+  .introText,
+  .descriptionText,
+  .bulletList li {
+    color: #1a202c;
+  }
+
+  .highlightBox {
+    border-left-width: 6px;
+    background-color: rgba(82, 164, 14, 0.15);
+  }
+}
