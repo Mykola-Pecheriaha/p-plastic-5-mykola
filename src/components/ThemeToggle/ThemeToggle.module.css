@@ -13,11 +13,11 @@
 }
 
 .themeToggle:hover {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(35, 33, 33, 0.726);
 }
 
 .dark .themeToggle:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(51, 47, 47, 0.1);
 }
 
 .icon {

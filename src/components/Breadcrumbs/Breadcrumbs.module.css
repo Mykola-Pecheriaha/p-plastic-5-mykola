@@ -1,6 +1,6 @@
 /* 🎯 BREADCRUMBS З БІЛИМ ФОНОМ */
 .breadcrumbs {
-  background-color: #ffffff; /* 👈 Білий фон для всіх тем */
+  background-color: #ffffffb4; /* 👈 Білий фон для всіх тем */
   border-bottom: none; /* 👈 Прибираємо нижню границю */
   padding: 0.75rem 0;
   position: sticky; /* 👈 Переконуємося що sticky працює */

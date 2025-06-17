@@ -63,8 +63,8 @@ const BreastAugmentation: React.FC<BreastAugmentationProps> = ({
           {/* Права частина - зображення */}
           <div className={styles.imageSection}>
             <BeforeAfterSlider
-              beforeImage="/images/before-after/breast/breast-augmentation-before..png"
-              afterImage="/images/before-after/breast/breastbreast-augmentation-after.png"
+              beforeImage="/images/breast-augmento/implant24-removebg-preview.png"
+              afterImage="/images/breast-augmento/implant25-removebg-preview.png"
               beforeAlt="До збільшення грудей"
               afterAlt="Після збільшення грудей"
               width={500}
@@ -77,9 +77,9 @@ const BreastAugmentation: React.FC<BreastAugmentationProps> = ({
         <div className={styles.descriptionSection}>
           <div className={styles.descriptionContent}>
             <p className={styles.descriptionParagraph}>
-              <strong>Збільшення грудей (мамопластика)</strong> — це сучасна хірургічна процедура, що дозволяє досягти
-              бажаного об`єму та форми грудей за допомогою високоякісних імплантатів. Завдяки новітнім технологіям і
-              матеріалам результат виглядає максимально природно та зберігається на довгі роки.
+              Збільшення грудей (мамопластика) — це сучасна хірургічна процедура, що дозволяє досягти бажаного об`єму та
+              форми грудей за допомогою високоякісних імплантатів. Завдяки новітнім технологіям і матеріалам результат
+              виглядає максимально природно та зберігається на довгі роки.
             </p>
 
             <p className={styles.descriptionParagraph}>

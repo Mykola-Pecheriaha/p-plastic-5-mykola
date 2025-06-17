@@ -67,7 +67,22 @@ const navItems = [
       },
     ],
   },
-  { name: "Про нас", path: "/about" },
+  {
+    name: "Про лікаря",
+    path: "/about",
+    hasSubmenu: true,
+    submenu: [
+      {
+        category: "Інформація про лікаря",
+        path: "/about",
+        services: [
+          { id: "about-doctor", name: "Про лікаря", path: "/about" },
+          { id: "team", name: "Команда", path: "/team" },
+          { id: "ask-doctor", name: "Запитати лікаря", path: "/ask-doctor" },
+        ],
+      },
+    ],
+  },
   { name: "Портфоліо", path: "/portfolio" },
   { name: "Контакти", path: "/contacts" },
   { name: "Блог", path: "/blog" },
@@ -77,19 +92,41 @@ const navItems = [
 export default function Header() {
   const pathname = usePathname()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [submenuOpen, setSubmenuOpen] = useState(false)
+  const [submenuOpen, setSubmenuOpen] = useState<Record<string, boolean>>({})
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen)
   }
 
-  const toggleSubmenu = () => {
-    setSubmenuOpen(!submenuOpen)
+  const toggleSubmenu = (menuKey: string) => {
+    setSubmenuOpen(prev => ({
+      ...prev,
+      [menuKey]: !prev[menuKey],
+    }))
+  }
+
+  const openSubmenu = (menuKey: string) => {
+    setSubmenuOpen({ [menuKey]: true }) // Закриваємо всі інші та відкриваємо тільки поточне
+  }
+
+  const closeSubmenu = (menuKey: string) => {
+    setSubmenuOpen(prev => ({
+      ...prev,
+      [menuKey]: false,
+    }))
   }
 
   const closeMenus = () => {
     setMobileMenuOpen(false)
-    setSubmenuOpen(false)
+    setSubmenuOpen({})
+  }
+
+  const handleDesktopMenuClick = (menuKey: string) => {
+    if (submenuOpen[menuKey]) {
+      closeSubmenu(menuKey)
+    } else {
+      openSubmenu(menuKey)
+    }
   }
 
   return (
@@ -109,15 +146,23 @@ export default function Header() {
                     <div className={styles.submenuContainer}>
                       <Link
                         href={item.path}
-                        className={`${styles.navLink} ${pathname.startsWith("/services") ? styles.active : ""}`}
-                        onMouseEnter={() => setSubmenuOpen(true)}
+                        className={`${styles.navLink} ${pathname.startsWith(item.path === "/about" ? "/about" : "/services") ? styles.active : ""}`}
+                        onClick={e => {
+                          e.preventDefault()
+                          handleDesktopMenuClick(item.path)
+                        }}
                       >
                         {item.name}
                         <ChevronDown size={16} className={styles.chevron} />
                       </Link>
 
-                      {submenuOpen && (
-                        <div className={styles.submenu} onMouseLeave={() => setSubmenuOpen(false)}>
+                      {(submenuOpen[item.path] || false) && (
+                        <div
+                          className={styles.submenu}
+                          onMouseLeave={() => {
+                            setTimeout(() => closeSubmenu(item.path), 200)
+                          }}
+                        >
                           <div className={styles.submenuGrid}>
                             {item.submenu?.map(category => (
                               <div key={category.path} className={styles.submenuColumn}>
@@ -161,7 +206,7 @@ export default function Header() {
         </div>
 
         {mobileMenuOpen && (
-          <div className={styles.mobileNav}>
+          <div className={`${styles.mobileNav} ${mobileMenuOpen ? styles.navOpen : ""}`}>
             <ul className={styles.mobileNavList}>
               {navItems.map(item => (
                 <li key={item.path}>
@@ -169,7 +214,7 @@ export default function Header() {
                     <div>
                       <Link
                         href={item.path}
-                        className={`${styles.mobileNavLink} ${pathname.startsWith("/services") ? styles.active : ""}`}
+                        className={`${styles.mobileNavLink} ${pathname.startsWith(item.path === "/about" ? "/about" : "/services") ? styles.active : ""}`}
                         onClick={() => {
                           closeMenus()
                         }}
@@ -177,11 +222,15 @@ export default function Header() {
                         {item.name}
                       </Link>
 
-                      <button className={styles.submenuToggle} onClick={toggleSubmenu} aria-label="Розгорнути підменю">
+                      <button
+                        className={styles.submenuToggle}
+                        onClick={() => toggleSubmenu(item.path)}
+                        aria-label="Розгорнути підменю"
+                      >
                         <ChevronDown size={16} className={styles.chevron} />
                       </button>
 
-                      {submenuOpen && (
+                      {(submenuOpen[item.path] || false) && (
                         <div className={styles.mobileSubmenu}>
                           {item.submenu?.map(category => (
                             <div key={category.path} className={styles.mobileSubmenuSection}>
