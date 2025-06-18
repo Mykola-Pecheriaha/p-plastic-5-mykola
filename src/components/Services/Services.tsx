@@ -14,7 +14,7 @@ const Services: React.FC<ServicesProps> = ({ backgroundColor }) => {
     {
       id: "face",
       title: "Пластика обличчя",
-      image: "/images/plastic-list/plastic-lift8.jpg",
+      image: "/images/Services/plastic-lift8.jpg",
       icon: User, // 👈 Іконка для наведення
       services: [
         { name: "Підтяжка обличчя та шиї", path: "/services/facelift-section" },
@@ -28,7 +28,7 @@ const Services: React.FC<ServicesProps> = ({ backgroundColor }) => {
     {
       id: "breast",
       title: "Пластика грудей",
-      image: "/images/plastic-list/plastic-lift.jpg",
+      image: "/images/Services/plastic-lift.jpg",
       icon: Heart, // 👈 Іконка для наведення
       services: [
         { name: "Збільшення грудей", path: "/services/breast-surgery" },
@@ -42,7 +42,7 @@ const Services: React.FC<ServicesProps> = ({ backgroundColor }) => {
     {
       id: "body",
       title: "Пластика тіла",
-      image: "/images/plastic-list/bodiContur6.jpg",
+      image: "/images/Services/abdominoplastic2.jpg",
       icon: Activity, // 👈 Іконка для наведення
       services: [
         { name: "Абдомінопластика", path: "/services/abdominoplasty" },
@@ -56,7 +56,7 @@ const Services: React.FC<ServicesProps> = ({ backgroundColor }) => {
     {
       id: "general",
       title: "Загальна хірургія",
-      image: "/images/plastic-list/general.jpg",
+      image: "/images/Services/general.jpg",
       icon: Stethoscope, // 👈 Іконка для наведення
       services: [
         { name: "Видалення доброякісних  пухлин", path: "/services/skintumors" },

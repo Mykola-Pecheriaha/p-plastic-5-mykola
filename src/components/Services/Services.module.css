@@ -30,7 +30,7 @@
 }
 
 .subtitle {
-  font-size: 1.125rem;
+  font-size: 1.5rem;
   line-height: 1.6;
   color: var(--services-text-secondary); /* 👈 Сірий колір тексту */
   margin: 0;
@@ -57,6 +57,7 @@
   flex-direction: column;
   height: 500px; /* 👈 Змінено з auto на фіксовану висоту */
   margin-bottom: 1rem;
+  font-size: 1.3rem;
 }
 
 .card:hover {
@@ -148,6 +149,7 @@
 /* 🎯 КОНТЕНТ КАРТОЧКИ */
 .cardContent {
   flex-grow: 1;
+  font-size: 1.3rem;
 }
 
 .servicesList {
@@ -160,6 +162,7 @@
   margin-bottom: 0.75rem;
   padding-left: 1.25rem;
   position: relative;
+  font-size: 1.5rem;
 }
 
 .serviceItem::before {
@@ -168,7 +171,7 @@
   font-weight: bold;
   position: absolute;
   left: 0;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 /* 👈 АКТИВНІ ПОСИЛАННЯ НА ПОСЛУГИ */
@@ -200,7 +203,7 @@
 }
 
 .infoText {
-  font-size: 1rem;
+  font-size: 1.3rem;
   line-height: 1.6;
   color: var(--services-text-secondary);
   margin: 0;

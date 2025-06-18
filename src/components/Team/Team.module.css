@@ -1,0 +1,493 @@
+/* Кольори компонента Team */
+/* Світла та темна тема однакові */
+/* primary: "#e8f5e8" - Світло-зелений (фон) */
+/* secondary: "#f0f9ff" - Світло-блакитний */
+/* accent: "#52a40e" - Зелений акцент */
+/* text: "#2d3748" - Темний текст */
+
+/* Секція на всю ширину зі світло-зеленим фоном */
+.teamSection {
+  width: 100%;
+  background-color: #e8f5e8;
+  padding: 4rem 0;
+  min-height: 100vh;
+}
+
+/* Контейнер з обмеженою шириною */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* Головний заголовок */
+.mainTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  line-height: 1.2;
+}
+
+.mainTitle::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background-color: #52a40e;
+  border-radius: 2px;
+}
+
+/* Список лікарів */
+.doctorsList {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+/* Картка лікаря */
+.doctorCard {
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(82, 164, 14, 0.15);
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(82, 164, 14, 0.2);
+}
+
+.doctorCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(82, 164, 14, 0.25);
+}
+
+/* Контейнер зображення лікаря */
+.doctorImageContainer {
+  width: 350px;
+  min-width: 350px;
+  height: 450px;
+  overflow: hidden;
+  position: relative;
+  margin: 12px; /* Відступ від країв картки */
+  border-radius: 8px; /* Заокруглення контейнера */
+}
+
+.doctorImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  border-radius: 8px; /* Додаємо заокруглення кутів фото */
+}
+
+.doctorCard:hover .doctorImage {
+  transform: scale(1.05);
+}
+
+/* Інформація про лікаря */
+.doctorInfo {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Ім'я лікаря */
+.doctorName {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #52a40e;
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+
+/* Посада лікаря */
+.doctorPosition {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+/* Досвід роботи */
+.doctorExperience {
+  font-size: 1.1rem;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+/* Наукове звання */
+.doctorScientificTitle {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #52a40e;
+  margin-bottom: 0.75rem;
+}
+
+/* Категорія */
+.doctorCategory {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #52a40e;
+  margin-bottom: 1rem;
+}
+
+/* Спеціалізації */
+.doctorSpecializations {
+  margin-bottom: 1.25rem;
+}
+
+.specializationsTitle,
+.contactSectionTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 0.75rem;
+  border-bottom: 2px solid #52a40e;
+  padding-bottom: 0.25rem;
+  display: inline-block;
+}
+
+.specializationsList,
+.contactList {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.specializationItem,
+.contactItem {
+  font-size: 1rem;
+  color: #2d3748;
+  padding: 0.3rem 0;
+  position: relative;
+  padding-left: 1.5rem;
+  line-height: 1.4;
+}
+
+.specializationItem::before {
+  content: "•";
+  color: #52a40e;
+  font-weight: bold;
+  position: absolute;
+  left: 0.5rem;
+}
+
+/* Контактна інформація */
+.doctorPhones,
+.doctorEmails {
+  margin-bottom: 1.25rem;
+}
+
+.contactIcon {
+  margin-right: 0.5rem;
+}
+
+.contactLink {
+  color: #52a40e;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  font-weight: 500;
+}
+
+.contactLink:hover {
+  color: #2d5016;
+  text-decoration: underline;
+}
+
+/* Соціальні мережі */
+.socialMedia {
+  margin-bottom: 1.25rem;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.socialIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.socialIcon:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+.facebookIcon {
+  background-color: #1877f2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.telegramIcon {
+  background-color: #0088cc;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.messengerIcon {
+  background-color: #00b2ff;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.youtubeIcon {
+  background-color: #ff0000;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.instagramIcon {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+/* Додаткова інформація */
+.doctorOther {
+  font-size: 1rem;
+  color: #52a40e;
+  font-style: italic;
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: rgba(82, 164, 14, 0.1);
+  border-radius: 8px;
+  border-left: 4px solid #52a40e;
+}
+
+/* Обгортка для галереї на всю ширину з новим фоном */
+.galleryWrapper {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background-color: #f0f9ff; /* Світло-блакитний фон */
+  padding: 3rem 0;
+}
+
+/* Адаптивність для планшетів */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    padding: 0 2rem;
+  }
+
+  .mainTitle {
+    font-size: 2.25rem;
+  }
+
+  .doctorCard {
+    max-width: 100%;
+  }
+
+  .doctorImageContainer {
+    width: 280px;
+    min-width: 280px;
+    height: 380px;
+    margin: 10px;
+  }
+
+  .doctorInfo {
+    padding: 1.5rem;
+  }
+
+  .doctorName {
+    font-size: 1.5rem;
+  }
+
+  .doctorPosition {
+    font-size: 1.125rem;
+  }
+
+  .galleryWrapper {
+    padding: 2.5rem 0;
+  }
+}
+
+/* Адаптивність для мобільних пристроїв */
+@media (max-width: 767px) {
+  .teamSection {
+    padding: 2.5rem 0;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .mainTitle {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .doctorsList {
+    gap: 2rem;
+  }
+
+  .doctorCard {
+    flex-direction: column;
+  }
+
+  .doctorImageContainer {
+    width: calc(100% - 24px);
+    height: 380px;
+    margin: 12px;
+  }
+
+  .doctorInfo {
+    padding: 1.5rem;
+  }
+
+  .doctorName {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .doctorPosition {
+    font-size: 1.125rem;
+    text-align: center;
+  }
+
+  .doctorExperience {
+    text-align: center;
+  }
+
+  .galleryWrapper {
+    padding: 2rem 0;
+  }
+}
+
+/* Дуже маленькі екрани */
+@media (max-width: 480px) {
+  .teamSection {
+    padding: 2rem 0;
+  }
+
+  .mainTitle {
+    font-size: 1.75rem;
+  }
+
+  .doctorsList {
+    gap: 1.5rem;
+  }
+
+  .doctorImageContainer {
+    height: 320px;
+    margin: 8px;
+    width: calc(100% - 16px);
+  }
+
+  .doctorInfo {
+    padding: 1.25rem;
+  }
+
+  .doctorName {
+    font-size: 1.375rem;
+  }
+
+  .doctorPosition {
+    font-size: 1rem;
+  }
+
+  .specializationsTitle,
+  .contactSectionTitle {
+    font-size: 1rem;
+  }
+
+  .specializationItem,
+  .contactItem {
+    font-size: 0.9375rem;
+  }
+
+  .galleryWrapper {
+    padding: 1.5rem 0;
+  }
+}
+
+/* Покращення доступності */
+@media (prefers-reduced-motion: reduce) {
+  .doctorCard,
+  .doctorImage,
+  .socialIcon {
+    transition: none;
+  }
+}
+
+/* Високий контраст для кращої читабельності */
+@media (prefers-contrast: high) {
+  .mainTitle,
+  .doctorName,
+  .doctorPosition,
+  .doctorExperience,
+  .specializationsTitle,
+  .contactSectionTitle {
+    color: #1a202c;
+  }
+
+  .doctorCategory,
+  .doctorScientificTitle,
+  .contactLink,
+  .doctorOther {
+    color: #2d5016;
+  }
+
+  .doctorCard {
+    border-width: 2px;
+    background-color: rgba(255, 255, 255, 0.95);
+  }
+
+  .specializationItem::before {
+    color: #2d5016;
+  }
+
+  .doctorOther {
+    border-left-width: 6px;
+    background-color: rgba(45, 80, 22, 0.1);
+  }
+}

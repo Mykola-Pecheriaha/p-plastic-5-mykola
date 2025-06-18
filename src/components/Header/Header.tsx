@@ -76,8 +76,8 @@ const navItems = [
         category: "Інформація про лікаря",
         path: "/about",
         services: [
-          { id: "about-doctor", name: "Про лікаря", path: "/about" },
-          { id: "team", name: "Команда", path: "/team" },
+          { id: "about-doctor", name: "Про лікаря", path: "/about/about" },
+          { id: "team", name: "Команда", path: "/about/team" },
           { id: "ask-doctor", name: "Запитати лікаря", path: "/ask-doctor" },
         ],
       },
@@ -106,7 +106,7 @@ export default function Header() {
   }
 
   const openSubmenu = (menuKey: string) => {
-    setSubmenuOpen({ [menuKey]: true }) // Закриваємо всі інші та відкриваємо тільки поточне
+    setSubmenuOpen({ [menuKey]: true })
   }
 
   const closeSubmenu = (menuKey: string) => {
@@ -119,14 +119,6 @@ export default function Header() {
   const closeMenus = () => {
     setMobileMenuOpen(false)
     setSubmenuOpen({})
-  }
-
-  const handleDesktopMenuClick = (menuKey: string) => {
-    if (submenuOpen[menuKey]) {
-      closeSubmenu(menuKey)
-    } else {
-      openSubmenu(menuKey)
-    }
   }
 
   return (
@@ -143,26 +135,23 @@ export default function Header() {
               {navItems.map(item => (
                 <li key={item.path} className={styles.navItem}>
                   {item.hasSubmenu ? (
-                    <div className={styles.submenuContainer}>
+                    <div
+                      className={styles.submenuContainer}
+                      onMouseEnter={() => openSubmenu(item.path)}
+                      onMouseLeave={() => closeSubmenu(item.path)}
+                    >
+                      {/* Основне посилання - переходить на сторінку */}
                       <Link
                         href={item.path}
                         className={`${styles.navLink} ${pathname.startsWith(item.path === "/about" ? "/about" : "/services") ? styles.active : ""}`}
-                        onClick={e => {
-                          e.preventDefault()
-                          handleDesktopMenuClick(item.path)
-                        }}
                       >
                         {item.name}
                         <ChevronDown size={16} className={styles.chevron} />
                       </Link>
 
+                      {/* Підменю з'являється при наведенні */}
                       {(submenuOpen[item.path] || false) && (
-                        <div
-                          className={styles.submenu}
-                          onMouseLeave={() => {
-                            setTimeout(() => closeSubmenu(item.path), 200)
-                          }}
-                        >
+                        <div className={styles.submenu}>
                           <div className={styles.submenuGrid}>
                             {item.submenu?.map(category => (
                               <div key={category.path} className={styles.submenuColumn}>
@@ -212,16 +201,16 @@ export default function Header() {
                 <li key={item.path}>
                   {item.hasSubmenu ? (
                     <div>
+                      {/* На мобільному - основне посилання переходить на сторінку */}
                       <Link
                         href={item.path}
                         className={`${styles.mobileNavLink} ${pathname.startsWith(item.path === "/about" ? "/about" : "/services") ? styles.active : ""}`}
-                        onClick={() => {
-                          closeMenus()
-                        }}
+                        onClick={closeMenus}
                       >
                         {item.name}
                       </Link>
 
+                      {/* Кнопка для розкриття підменю */}
                       <button
                         className={styles.submenuToggle}
                         onClick={() => toggleSubmenu(item.path)}
@@ -230,6 +219,7 @@ export default function Header() {
                         <ChevronDown size={16} className={styles.chevron} />
                       </button>
 
+                      {/* Підменю */}
                       {(submenuOpen[item.path] || false) && (
                         <div className={styles.mobileSubmenu}>
                           {item.submenu?.map(category => (

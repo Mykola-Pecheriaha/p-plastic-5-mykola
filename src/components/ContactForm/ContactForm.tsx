@@ -4,6 +4,7 @@ import type React from "react"
 import { useState } from "react"
 import styles from "./ContactForm.module.css"
 import { X, Check } from "lucide-react"
+import { submitConsultation } from "@/src/lib/actions/actions"
 
 interface ContactFormProps {
   isOpen: boolean
@@ -26,15 +27,31 @@ const ContactForm: React.FC<ContactFormProps> = ({ isOpen, onClose }) => {
     setFormData(prev => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Імітація відправки форми
-    setTimeout(() => {
+    try {
+      const result = await submitConsultation({
+        name: formData.name,
+        phone: formData.phone,
+        email: formData.email,
+        service: formData.service,
+        message: formData.message,
+      })
+
+      if (result.success) {
+        setIsSubmitted(true)
+      } else {
+        console.error("Помилка при відправці:", result.message)
+        alert("Виникла помилка при відправці. Спробуйте ще раз.")
+      }
+    } catch (error) {
+      console.error("Помилка при відправці:", error)
+      alert("Виникла помилка. Спробуйте ще раз.")
+    } finally {
       setIsSubmitting(false)
-      setIsSubmitted(true)
-    }, 1500)
+    }
   }
 
   const handleClose = () => {

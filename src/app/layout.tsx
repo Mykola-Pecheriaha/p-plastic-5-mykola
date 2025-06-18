@@ -3,9 +3,10 @@ import { Inter } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "next-themes"
 import Contacts from "../components/Сontacts/Сontacts"
-import Header from "../components/Heade/Header"
+import Header from "../components/Header/Header"
 import Breadcrumbs from "../components/Breadcrumbs/Breadcrumbs"
 import Footer from "../components/Footer/Footer"
+import { AdminAccess } from "../components/AdminAccess/AdminAccess"
 
 const inter = Inter({ subsets: ["latin", "cyrillic"] })
 
@@ -32,6 +33,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Footer />
           </div>
         </ThemeProvider>
+        <AdminAccess />
       </body>
     </html>
   )
