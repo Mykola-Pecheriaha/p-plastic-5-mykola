@@ -76,7 +76,7 @@ const navItems = [
         category: "Інформація про лікаря",
         path: "/about",
         services: [
-          { id: "about-doctor", name: "Про лікаря", path: "/about/about" },
+          { id: "about-doctor", name: "Про лікаря", path: "/about" },
           { id: "team", name: "Команда", path: "/about/team" },
           { id: "ask-doctor", name: "Запитати лікаря", path: "/ask-doctor" },
         ],

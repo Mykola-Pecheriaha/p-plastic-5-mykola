@@ -10,6 +10,35 @@ export function Diplomcertificates({ className }: DiplomcertificatesProps) {
   // Зображення для галереї дипломів та сертифікатів
   const galleryImages = [
     {
+      src: "/images/sertificats/Diplom.jpg",
+      alt: "Освіта лікаря",
+      width: 800,
+      height: 600,
+      title: "Диплом з відзнакою",
+    },
+    {
+      src: "/images/sertificats/SertifPlastici.jpg",
+      alt: "Освіта лікаря",
+      width: 800,
+      height: 600,
+      title: "Сертифікат до Диплому з відзнакою",
+    },
+    {
+      src: "/images/sertificats/Categori.jpg",
+      alt: "Освіта лікаря",
+      width: 800,
+      height: 600,
+      title: "Category",
+    },
+    {
+      src: "/images/sertificats/Sertificat10.jpg",
+      alt: "Освіта лікаря",
+      width: 800,
+      height: 600,
+      title: "Диплом з відзнакою",
+    },
+
+    {
       src: "/images/sertificats/Sertificat1.jpg",
       alt: "Освіта лікаря",
       width: 800,
@@ -25,6 +54,48 @@ export function Diplomcertificates({ className }: DiplomcertificatesProps) {
     },
     {
       src: "/images/sertificats/Sertificat3.jpg",
+      alt: "Медичні курси",
+      width: 800,
+      height: 600,
+      title: "Підвищення кваліфікації",
+    },
+    {
+      src: "/images/sertificats/Sertificat5.jpg",
+      alt: "Медичні курси",
+      width: 800,
+      height: 600,
+      title: "Підвищення кваліфікації",
+    },
+    {
+      src: "/images/sertificats/Sertificat8.jpg",
+      alt: "Медичні курси",
+      width: 800,
+      height: 600,
+      title: "Підвищення кваліфікації",
+    },
+    {
+      src: "/images/sertificats/Sertificat9.jpg",
+      alt: "Медичні курси",
+      width: 800,
+      height: 600,
+      title: "Підвищення кваліфікації",
+    },
+    {
+      src: "/images/sertificats/Sertificat6.jpg",
+      alt: "Медичні курси",
+      width: 800,
+      height: 600,
+      title: "Підвищення кваліфікації",
+    },
+    {
+      src: "/images/sertificats/Sertificat11.jpg",
+      alt: "Медичні курси",
+      width: 800,
+      height: 600,
+      title: "Підвищення кваліфікації",
+    },
+    {
+      src: "/images/sertificats/Sertificat12.jpg",
       alt: "Медичні курси",
       width: 800,
       height: 600,

@@ -25,28 +25,42 @@ export function Educationcareer({ backgroundImage }: EducationcareerProps) {
   // Зображення для галереї
   const galleryImages = [
     {
-      src: "/images/sertificats/Sertificat1.jpg",
+      src: "/images/sertificats/Diplom.jpg",
       alt: "Освіта лікаря",
       width: 800,
       height: 600,
       title: "Диплом з відзнакою",
     },
     {
-      src: "/images/sertificats/Sertificat2.jpg",
+      src: "/images/sertificats/Sertificat13.jpg",
       alt: "Кар'єра лікаря",
       width: 800,
       height: 600,
       title: "Професійна діяльність",
     },
     {
-      src: "/images/sertificats/Sertificat3.jpg",
+      src: "/images/sertificats/Sertificat14.jpg",
       alt: "Медичні курси",
       width: 800,
       height: 600,
       title: "Підвищення кваліфікації",
     },
     {
-      src: "/images/sertificats/Sertificat4.jpg",
+      src: "/images/sertificats/SertifPlastici.jpg",
+      alt: "Хірургічна практика",
+      width: 800,
+      height: 600,
+      title: "Хірургічна практика",
+    },
+    {
+      src: "/images/sertificats/Oncologiya.jpg",
+      alt: "Хірургічна практика",
+      width: 800,
+      height: 600,
+      title: "Хірургічна практика",
+    },
+    {
+      src: "/images/sertificats/Categori.jpg",
       alt: "Хірургічна практика",
       width: 800,
       height: 600,

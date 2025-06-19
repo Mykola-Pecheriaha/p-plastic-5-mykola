@@ -196,7 +196,7 @@ export function SkintumorsDetails({ backgroundColor = "#f0f9ff", className }: Sk
                 </ul>
                 <div className={styles.highlightBox}>
                   <p className={styles.highlight}>
-                    <span className={styles.highlightIcon}>🔹</span>
+                    <span className={styles.highlightIcon}></span>
                     Зображення виводиться на екран комп`ютера для точнішої діагностики.
                   </p>
                 </div>

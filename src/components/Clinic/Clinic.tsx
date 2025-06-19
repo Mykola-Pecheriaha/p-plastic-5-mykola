@@ -23,32 +23,32 @@ export function Clinic({ className }: ClinicProps) {
   // Зображення для галереї клініки
   const galleryImages = [
     {
-      src: "/images/sertificats/Sertificat1.jpg",
-      alt: "Освіта лікаря",
+      src: "/images/surgical-department/surgdepartm26.jpg",
+      alt: "Відділення хірургії",
       width: 800,
       height: 600,
-      title: "Диплом з відзнакою",
+      title: "Пост медсестри",
     },
     {
-      src: "/images/sertificats/Sertificat2.jpg",
-      alt: "Кар'єра лікаря",
+      src: "/images/surgical-department/surgdepartm2.jpg",
+      alt: "Відділення хірургії",
       width: 800,
       height: 600,
-      title: "Професійна діяльність",
+      title: "Перев`язочний кабінет",
     },
     {
-      src: "/images/sertificats/Sertificat3.jpg",
-      alt: "Медичні курси",
+      src: "/images/surgical-department/surgdepartm25.jpg",
+      alt: "Відділення хірургії",
       width: 800,
       height: 600,
-      title: "Підвищення кваліфікації",
+      title: "Палати для пацієнтів",
     },
     {
-      src: "/images/sertificats/Sertificat4.jpg",
-      alt: "Хірургічна практика",
+      src: "/images/surgical-department/surgdepartm16.jpg",
+      alt: "Відділення хірургії",
       width: 800,
       height: 600,
-      title: "Хірургічна практика",
+      title: "Післяопераційна палата",
     },
   ]
 
