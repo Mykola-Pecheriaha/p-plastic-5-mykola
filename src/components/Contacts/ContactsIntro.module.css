@@ -1,0 +1,55 @@
+.section {
+  width: 100%;
+  padding: 48px 16px;
+  color: #2d3748;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.description {
+  font-size: 1.125rem;
+  margin-bottom: 24px;
+}
+
+.contactList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.contactList li {
+  margin-bottom: 12px;
+}
+
+.contactList a {
+  color: #52a40e;
+  text-decoration: none;
+}
+
+.contactList a:hover {
+  text-decoration: underline;
+}
+
+/* 📱 Mobile-first адаптація */
+@media (min-width: 640px) {
+  .title {
+    font-size: 2.25rem;
+  }
+
+  .description {
+    font-size: 1.25rem;
+  }
+}

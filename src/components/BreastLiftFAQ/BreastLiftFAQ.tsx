@@ -161,7 +161,7 @@ const BreastLiftFAQ: React.FC<BreastLiftFAQProps> = ({ backgroundColor = "#f0f9f
                   Маєте додаткові запитання? Наші спеціалісти готові надати вам детальну консультацію та підтримку на
                   всіх етапах лікування.
                 </p>
-                <Link href="/about-doctor/contacts" className={styles.contactLink}>
+                <Link href="/ask-doctor" className={styles.contactLink}>
                   <button className={styles.contactButton}>
                     <span className={styles.buttonText}>Зв`язатися з нами</span>
                     <span className={styles.buttonArrow}>→</span>

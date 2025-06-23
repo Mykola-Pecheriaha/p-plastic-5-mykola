@@ -82,7 +82,7 @@ const BreastImplantRevision: React.FC<BreastImplantRevisionProps> = ({
     <section className={styles.wrapper} style={colorStyles}>
       <div className={styles.container}>
         <div className={styles.content}>
-          <h2 className={styles.title}>Показання до заміни імплантів грудей</h2>
+          <h2 className={styles.title}>Покази до видалення чи заміні імплантів грудей</h2>
 
           <p className={styles.introduction}>
             Реендопротезування (повторна заміна грудних імплантів) виконується як із <strong>естетичних</strong>, так і
@@ -105,6 +105,7 @@ const BreastImplantRevision: React.FC<BreastImplantRevisionProps> = ({
                     зміна форми грудей після різкого схуднення або різкого набору ваги, вагітності, грудного
                     вигодовування, а також внаслідок вікових змін.
                   </li>
+                  <li>явне контурування ендопротезу на поверхні шкіри.</li>
                 </ul>
               </div>
               <div className={styles.galleryColumn}>
@@ -114,7 +115,7 @@ const BreastImplantRevision: React.FC<BreastImplantRevisionProps> = ({
           </div>
 
           <div className={styles.section}>
-            <h3 className={styles.sectionTitle}>Медичні показання:</h3>
+            <h3 className={styles.sectionTitle}>Медичні покази:</h3>
             <div className={styles.sectionContent}>
               <div className={styles.textColumn}>
                 <ul className={styles.indicationsList}>
@@ -123,8 +124,11 @@ const BreastImplantRevision: React.FC<BreastImplantRevisionProps> = ({
                     формування капсулярної контрактури. Поява фіброзної оболонки (капсули), яка стає щільною,
                     промацується та викликає хворобливі відчуття;
                   </li>
-                  <li>деформація та асиметрія грудей внаслідок зміщення імпланту;</li>
-                  <li>явне контурування ендопротезу на поверхні шкіри, з зміною шкіри.</li>
+                  <li>деформація та асиметрія грудей внаслідок зміщення імпланту з утворенням сером;</li>
+                  <li>
+                    Будь які септичні захворювання молочної залози з поширенням на імплант, при неефективності
+                    консервативної терапії. .
+                  </li>
                 </ul>
               </div>
               <div className={styles.galleryColumn}>
@@ -137,7 +141,10 @@ const BreastImplantRevision: React.FC<BreastImplantRevisionProps> = ({
             <h3 className={styles.sectionTitle}>Протипокази:</h3>
             <div className={styles.sectionContent}>
               <div className={styles.textColumn}>
-                <p>Операція із заміни імплантів, як будь-яке хірургічне втручання, має низку певних протипоказань:</p>
+                <p>
+                  Операція із заміни імплантів по естетичним показам, як будь-яке хірургічне втручання, має низку певних
+                  протипоказань. :
+                </p>
                 <ul className={styles.indicationsList}>
                   <li>
                     тяжкі хронічні захворювання серцево-судинної та легеневої систем, особливо на стадії загострення;

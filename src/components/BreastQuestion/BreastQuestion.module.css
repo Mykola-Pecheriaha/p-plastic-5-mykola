@@ -1,7 +1,7 @@
 /* 🎯 BREAST QUESTION КОМПОНЕНТ */
 .breastQuestionSection {
   width: 100%;
-  background-color: var(--breast-question-bg);
+  background-color: #f0f9ff;
   padding: 4rem 0;
   margin: 0;
   position: relative;
@@ -36,7 +36,7 @@
 }
 
 .accordionItem {
-  background-color: var(--breast-question-container-bg);
+  background-color: #52a40e;
   border-radius: 0.75rem;
   overflow: hidden;
   box-shadow: 0 4px 12px var(--breast-question-container-shadow);
@@ -248,7 +248,7 @@
   margin-top: 3rem;
   text-align: center;
   padding: 2.5rem;
-  background-color: var(--breast-question-cta-bg);
+  background-color: #52a40e;
   border-radius: 1rem;
   box-shadow: 0 4px 12px var(--breast-question-cta-shadow);
 }
@@ -256,7 +256,7 @@
 .ctaText {
   font-size: 1.125rem;
   margin-bottom: 1.5rem;
-  color: var(--breast-question-cta-text);
+  color: #edf0eb;
   line-height: 1.6;
 }
 

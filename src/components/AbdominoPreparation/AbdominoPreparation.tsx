@@ -180,17 +180,17 @@ export const AbdominoPreparation: React.FC<AbdominoPreparationProps> = ({ backgr
               <h3 className={styles.sectionTitle}>
                 <span className={styles.icon}></span>
               </h3>
-              <h4 className={styles.subTitle}>📋 На консультації в клініці:</h4>
+              <h4 className={styles.subTitle}>✅ На консультації в клініці:</h4>
               <ul className={styles.bulletList}>
                 <li>Обговорюються побажання пацієнта</li>
                 <li>Уточнюються деталі та нюанси операції</li>
                 <li>Призначається передопераційне обстеження, яке займає лише 1 день</li>
               </ul>
               <h4 className={styles.subTitle}>
-                🧳 Для пацієнтів з інших міст пропонується максимально зручний формат:
+                ✅ Для пацієнтів з інших міст пропонується максимально зручний формат:
               </h4>
               <p className={styles.highlightedText}>Консультація + обстеження + операція — в 1 візит!</p>
-              <h4 className={styles.subTitle}>⏳ Передопераційна підготовка:</h4>
+              <h4 className={styles.subTitle}>✅ Передопераційна підготовка:</h4>
               <ul className={styles.bulletList}>
                 <li>
                   <span className={styles.redText}></span> За 10 днів — припинити прийом медикаментів, які розріджують
@@ -248,7 +248,7 @@ export const AbdominoPreparation: React.FC<AbdominoPreparationProps> = ({ backgr
                 }
               }}
             >
-              <h3 className={styles.accordionTitle}>🔹 Класична абдомінопластика</h3>
+              <h3 className={styles.accordionTitle}>✅ Класична абдомінопластика</h3>
               <span className={`${styles.arrow} ${openSection === "classic" ? styles.arrowDown : ""}`}>&#9654;</span>
             </div>
             {openSection === "classic" && (
@@ -292,7 +292,7 @@ export const AbdominoPreparation: React.FC<AbdominoPreparationProps> = ({ backgr
                 }
               }}
             >
-              <h3 className={styles.accordionTitle}>🔸 Абдомінопластика з вертикальним розрізом</h3>
+              <h3 className={styles.accordionTitle}>✅ Абдомінопластика з вертикальним розрізом</h3>
               <span className={`${styles.arrow} ${openSection === "vertical" ? styles.arrowDown : ""}`}>&#9654;</span>
             </div>
             {openSection === "vertical" && (
@@ -334,7 +334,7 @@ export const AbdominoPreparation: React.FC<AbdominoPreparationProps> = ({ backgr
                 }
               }}
             >
-              <h3 className={styles.accordionTitle}>🟢 Мініабдомінопластика</h3>
+              <h3 className={styles.accordionTitle}>✅ Мініабдомінопластика</h3>
               <span className={`${styles.arrow} ${openSection === "mini" ? styles.arrowDown : ""}`}>&#9654;</span>
             </div>
             {openSection === "mini" && (

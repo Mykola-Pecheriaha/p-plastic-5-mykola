@@ -83,7 +83,7 @@ const navItems = [
       },
     ],
   },
-  { name: "Портфоліо", path: "/portfolio" },
+  // { name: "Портфоліо", path: "/portfolio" },
   { name: "Контакти", path: "/contacts" },
   { name: "Блог", path: "/blog" },
   { name: "Відгуки", path: "/reviews" },
@@ -126,8 +126,8 @@ export default function Header() {
       <div className="container mx-auto">
         <div className={styles.headerWrapper}>
           <Link href="/" className={styles.logo}>
-            <span className={styles.logoText}>Модульний</span>
-            <span className={styles.logoAccent}>Проєкт</span>
+            <span className={styles.logoText}>Plastic</span>
+            <span className={styles.logoAccent}>P</span>
           </Link>
 
           <nav className={styles.desktopNav}>

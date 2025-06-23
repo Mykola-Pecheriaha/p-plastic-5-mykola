@@ -19,7 +19,7 @@ const AbdominoDetails: React.FC<AbdominoDetailsProps> = ({ backgroundColor = "#f
   // Зображення для першої галереї (показання)
   const indicationImages: GalleryImage[] = [
     {
-      src: "/images/abdominoplastyDetalis/abdominoDetalis.jpg",
+      src: "/images/abdominoplastyDetalis/abdominoDetalis15.jpg",
       alt: "Абдомінопластика: показання",
       width: 700,
       height: 800,
@@ -74,7 +74,7 @@ const AbdominoDetails: React.FC<AbdominoDetailsProps> = ({ backgroundColor = "#f
         {/* Перша секція: показання - 50/50 розподіл */}
         <div className={styles.section}>
           <div className={styles.textColumn}>
-            <div className={styles.doctorIcon}>👨‍⚕️</div>
+            <div className={styles.doctorIcon}>✅</div>
             <p className={styles.sectionText}>Абдомінопластика живота рекомендована у випадках:</p>
             <div className={styles.indicationsList}>
               <h3 className={styles.listTitle}>🔹 Основні показання:</h3>
@@ -116,7 +116,7 @@ const AbdominoDetails: React.FC<AbdominoDetailsProps> = ({ backgroundColor = "#f
         {/* Середні секції: додаткова інформація - повна ширина */}
         <div className={styles.fullWidthSection}>
           <div className={styles.infoBlock}>
-            <h3 className={styles.infoTitle}>🤱 Після пологів</h3>
+            <h3 className={styles.infoTitle}>✅ Після пологів</h3>
             <p className={styles.infoText}>
               Операція часто виконується після народження дітей, коли жінка вже не планує вагітність. Повторні пологи
               можуть вплинути на результати, тому доцільно робити операцію після остаточного формування сім`ї. Водночас
@@ -130,7 +130,7 @@ const AbdominoDetails: React.FC<AbdominoDetailsProps> = ({ backgroundColor = "#f
           </div>
 
           <div className={styles.infoBlock}>
-            <h3 className={styles.infoTitle}>🔄 Комбіновані операції</h3>
+            <h3 className={styles.infoTitle}>✅ Комбіновані операції</h3>
             <p className={styles.infoText}>Абдомінопластику часто поєднують з:</p>
             <ul className={styles.infoList}>
               <li>збільшенням грудей</li>
@@ -143,7 +143,7 @@ const AbdominoDetails: React.FC<AbdominoDetailsProps> = ({ backgroundColor = "#f
           </div>
 
           <div className={styles.infoBlock}>
-            <h3 className={styles.infoTitle}>👨 Пластика живота у чоловіків</h3>
+            <h3 className={styles.infoTitle}>✅ Пластика живота у чоловіків</h3>
             <p className={styles.infoText}>
               Сучасна абдомінопластика затребувана і серед чоловіків, які прагнуть покращити контури тіла після
               інтенсивного схуднення або тренувань.
@@ -151,7 +151,7 @@ const AbdominoDetails: React.FC<AbdominoDetailsProps> = ({ backgroundColor = "#f
           </div>
 
           <div className={styles.infoBlock}>
-            <h3 className={styles.infoTitle}>⚖️ Важливий момент</h3>
+            <h3 className={styles.infoTitle}>✅ Важливий момент</h3>
             <p className={styles.infoText}>
               Операція виконується лише при стабільній вазі. Якщо пацієнт продовжить худнути після втручання, це може
               призвести до надлишку шкіри, що знову потребуватиме корекції.
@@ -160,7 +160,7 @@ const AbdominoDetails: React.FC<AbdominoDetailsProps> = ({ backgroundColor = "#f
         </div>
 
         {/* Заголовок протипоказань */}
-        <h2 className={styles.contraindicationsTitle}>🚫 Протипоказання до абдомінопластики</h2>
+        <h2 className={styles.contraindicationsTitle}> Протипоказання до абдомінопластики</h2>
         <p className={styles.contraindicationsIntro}>
           Абдомінопластика живота, як і будь-яке інше хірургічне втручання, має ряд медичних протипоказань, які
           необхідно враховувати перед плануванням операції.
@@ -170,7 +170,7 @@ const AbdominoDetails: React.FC<AbdominoDetailsProps> = ({ backgroundColor = "#f
         <div className={styles.section}>
           <div className={styles.textColumn}>
             <div className={styles.contraindicationsList}>
-              <h3 className={styles.listTitle}>🔍 До основних протипоказань належать:</h3>
+              <h3 className={styles.listTitle}>✅ До основних протипоказань належать:</h3>
               <ul className={styles.list}>
                 <li>
                   <span className={styles.bulletPoint}>❗</span> Хронічні захворювання:
@@ -196,7 +196,7 @@ const AbdominoDetails: React.FC<AbdominoDetailsProps> = ({ backgroundColor = "#f
               </ul>
 
               <div className={styles.individualApproach}>
-                <h3 className={styles.approachTitle}>🎯 Індивідуальний підхід</h3>
+                <h3 className={styles.approachTitle}>✅ Індивідуальний підхід</h3>
                 <p className={styles.approachText}>
                   Остаточне рішення щодо можливості проведення абдомінопластики приймає лікар, враховуючи:
                 </p>
@@ -217,7 +217,7 @@ const AbdominoDetails: React.FC<AbdominoDetailsProps> = ({ backgroundColor = "#f
         {/* Заключна примітка */}
         <div className={styles.conclusion}>
           <p className={styles.conclusionText}>
-            🧑‍⚕️ Рішення про хірургічне втручання приймає спеціаліст на основі стану здоров`я пацієнта та клінічних
+            Рішення про хірургічне втручання приймає спеціаліст на основі стану здоров`я пацієнта та клінічних
             досліджень.
           </p>
         </div>

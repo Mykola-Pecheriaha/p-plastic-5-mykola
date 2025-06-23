@@ -71,7 +71,7 @@ const AbdominoFAQ: React.FC<AbdominoFAQProps> = ({ backgroundColor = "#e8f5e8" }
       <div className={styles.container}>
         {/* Заголовок */}
         <h2 className={styles.title}>
-          <span className={styles.icon}>❓</span> Поширені запитання про абдомінопластику
+          <span className={styles.icon}></span> Поширені запитання про абдомінопластику
         </h2>
 
         {/* Вступний текст на всю ширину */}
@@ -88,7 +88,7 @@ const AbdominoFAQ: React.FC<AbdominoFAQProps> = ({ backgroundColor = "#e8f5e8" }
           <div className={styles.questionContainer}>
             <div className={styles.questionHeader} onClick={() => toggleQuestion(0)}>
               <h3 className={styles.question}>
-                <span className={styles.questionIcon}>🔹</span> Як проходить сама операція
+                <span className={styles.questionIcon}>✅</span> Як проходить сама операція
               </h3>
               <span className={`${styles.arrow} ${openQuestion === 0 ? styles.arrowUp : ""}`}>&#9660;</span>
             </div>
@@ -97,7 +97,7 @@ const AbdominoFAQ: React.FC<AbdominoFAQProps> = ({ backgroundColor = "#e8f5e8" }
                 <div className={styles.answerTextColumn}>
                   <div className={styles.answerContent}>
                     <h4 className={styles.answerTitle}>
-                      <span className={styles.answerIcon}>🩺</span> Етапи операції: абдомінопластика
+                      <span className={styles.answerIcon}></span> Етапи операції: абдомінопластика
                     </h4>
                     <p className={styles.answerSubtitle}>
                       <span className={styles.bulletPoint}>🔹</span> Анестезія:
@@ -108,14 +108,14 @@ const AbdominoFAQ: React.FC<AbdominoFAQProps> = ({ backgroundColor = "#e8f5e8" }
                       легке пробудження після операції.
                     </p>
                     <p className={styles.answerSubtitle}>
-                      <span className={styles.bulletPoint}>⏱</span> Тривалість втручання:
+                      <span className={styles.bulletPoint}>🔹</span> Тривалість втручання:
                     </p>
                     <p className={styles.answerText}>
                       В середньому <strong>1,5–2,5 години</strong>, залежно від індивідуальних особливостей пацієнта та
                       обсягу корекції.
                     </p>
                     <p className={styles.answerSubtitle}>
-                      <span className={styles.bulletPoint}>🔧</span> Хірургічний процес включає:
+                      <span className={styles.bulletPoint}>✅</span> Хірургічний процес включає:
                     </p>
                     <ul className={styles.answerList}>
                       <li>Висічення надлишків шкіри, жиру, розтяжок, рубців під пупком</li>
@@ -124,7 +124,7 @@ const AbdominoFAQ: React.FC<AbdominoFAQProps> = ({ backgroundColor = "#e8f5e8" }
                       <li>Індивідуально підібрану методику – в залежності від ступеня вираженості дефекту</li>
                     </ul>
                     <p className={styles.answerSubtitle}>
-                      <span className={styles.bulletPoint}>📍</span> Доступ:
+                      <span className={styles.bulletPoint}>🔹</span> Доступ:
                     </p>
                     <ul className={styles.answerList}>
                       <li>
@@ -135,7 +135,7 @@ const AbdominoFAQ: React.FC<AbdominoFAQProps> = ({ backgroundColor = "#e8f5e8" }
                       </li>
                     </ul>
                     <p className={styles.answerSubtitle}>
-                      <span className={styles.bulletPoint}>🪡</span> Робота з пупком:
+                      <span className={styles.bulletPoint}>🔹</span> Робота з пупком:
                     </p>
                     <p className={styles.answerText}>Корекція виконується одним із двох способів:</p>
                     <ul className={styles.answerList}>
@@ -143,7 +143,7 @@ const AbdominoFAQ: React.FC<AbdominoFAQProps> = ({ backgroundColor = "#e8f5e8" }
                       <li>Перенесення існуючого при видаленні великої ділянки шкіри</li>
                     </ul>
                     <p className={styles.answerSubtitle}>
-                      <span className={styles.bulletPoint}>🧵</span> Ушивання рани:
+                      <span className={styles.bulletPoint}>🔹</span> Ушивання рани:
                     </p>
                     <ul className={styles.answerList}>
                       <li>
@@ -164,7 +164,7 @@ const AbdominoFAQ: React.FC<AbdominoFAQProps> = ({ backgroundColor = "#e8f5e8" }
           <div className={styles.questionContainer}>
             <div className={styles.questionHeader} onClick={() => toggleQuestion(1)}>
               <h3 className={styles.question}>
-                <span className={styles.questionIcon}>🔸</span> Абдомінопластика: реабілітація після операції
+                <span className={styles.questionIcon}>✅</span> Абдомінопластика: реабілітація після операції
               </h3>
               <span className={`${styles.arrow} ${openQuestion === 1 ? styles.arrowUp : ""}`}>&#9660;</span>
             </div>
@@ -173,7 +173,7 @@ const AbdominoFAQ: React.FC<AbdominoFAQProps> = ({ backgroundColor = "#e8f5e8" }
                 <div className={styles.answerTextColumn}>
                   <div className={styles.answerContent}>
                     <p className={styles.answerSubtitle}>
-                      <span className={styles.bulletPoint}>🏥</span> Госпіталізація:
+                      <span className={styles.bulletPoint}>✅</span> Госпіталізація:
                     </p>
                     <p className={styles.answerText}>
                       Після операції пацієнт залишається в клініці на <strong>1 добу</strong> під наглядом хірурга та
@@ -184,7 +184,7 @@ const AbdominoFAQ: React.FC<AbdominoFAQProps> = ({ backgroundColor = "#e8f5e8" }
                       догляду.
                     </p>
                     <p className={styles.answerSubtitle}>
-                      <span className={styles.bulletPoint}>📅</span> Перші дні після операції:
+                      <span className={styles.bulletPoint}>✅</span> Перші дні після операції:
                     </p>
                     <ul className={styles.answerList}>
                       <li>
@@ -198,7 +198,7 @@ const AbdominoFAQ: React.FC<AbdominoFAQProps> = ({ backgroundColor = "#e8f5e8" }
                       </li>
                     </ul>
                     <p className={styles.answerSubtitle}>
-                      <span className={styles.bulletPoint}>🩹</span> Компресія та догляд:
+                      <span className={styles.bulletPoint}>✅</span> Компресія та догляд:
                     </p>
                     <ul className={styles.answerList}>
                       <li>
@@ -221,7 +221,7 @@ const AbdominoFAQ: React.FC<AbdominoFAQProps> = ({ backgroundColor = "#e8f5e8" }
                       </li>
                     </ul>
                     <p className={styles.answerSubtitle}>
-                      <span className={styles.bulletPoint}>🎯</span> Результат:
+                      <span className={styles.bulletPoint}>✨</span> Результат:
                     </p>
                     <p className={styles.answerText}>
                       Повну естетичну оцінку результату можна зробити <strong>через 2 місяці</strong> після операції.
@@ -241,7 +241,7 @@ const AbdominoFAQ: React.FC<AbdominoFAQProps> = ({ backgroundColor = "#e8f5e8" }
           <p className={styles.ctaText}>
             Маєте додаткові запитання? Наші спеціалісти готові надати вам детальну консультацію.
           </p>
-          <Link href="/about-doctor/contacts">
+          <Link href="/ask-doctor">
             <button className={styles.contactButton}>Зв&apos;язатися з нами</button>
           </Link>
         </div>

@@ -67,7 +67,7 @@ export function LiposuctionPreparation({ backgroundColor = "#e8f5e8" }: Liposuct
   // Зображення для третього сегменту
   const operationImages = [
     {
-      src: "/images/liposuction-preparation/lipoPreparatio6.jpg",
+      src: "/images/liposuction-preparation/lipoPreparatio16.jpg",
       alt: "Проведення ліпосакції",
       width: 800,
       height: 600,
@@ -164,7 +164,20 @@ export function LiposuctionPreparation({ backgroundColor = "#e8f5e8" }: Liposuct
                 не тільки України.
               </p>
               <p className={styles.text}>
-                <span className={styles.highlight}>📍 Консультація у Чернівцях</span> — щоденно крім вихідних.
+                <span className={styles.highlight}> Консультація у Чернівцях</span> — щоденно крім вихідних.
+              </p>
+              <h4 className={styles.subTitle}>На консультації в клініці:</h4>
+              <ul className={styles.list}>
+                <li>
+                  Обговорюються побажання пацієнта і пояснюємо за і протів різних сучасних оперативних методик
+                  герніотомій
+                </li>
+                <li>Уточнюються деталі та нюанси вибраної методики операції</li>
+                <li>Призначається передопераційне обстеження.</li>
+              </ul>
+              <p className={styles.text}>
+                <span className={styles.highlight}>Для пацієнтів з інших міст</span> пропонується максимально зручний
+                формат: Консультація + обстеження + операція — в 1 візит!
               </p>
             </div>
             <div className={styles.galleryColumn}>
@@ -221,6 +234,7 @@ export function LiposuctionPreparation({ backgroundColor = "#e8f5e8" }: Liposuct
                 операції.
               </p>
             </div>
+
             <div className={styles.galleryColumn}>
               <LiposuctionPreparationGallery images={preparationImages} />
             </div>
@@ -370,43 +384,6 @@ export function LiposuctionPreparation({ backgroundColor = "#e8f5e8" }: Liposuct
                   <span className={styles.dot}>🔸</span> регулярні фізичні навантаження.
                 </li>
               </ul>
-              <div className={styles.subsection}>
-                <h4 className={styles.subTitle}>На консультації в клініці:</h4>
-                <ul className={styles.list}>
-                  <li>
-                    Обговорюються побажання пацієнта і пояснюємо за і протів різних сучасних оперативних методик
-                    герніотомій
-                  </li>
-                  <li>Уточнюються деталі та нюанси вибраної методики операції</li>
-                  <li>Призначається передопераційне обстеження.</li>
-                </ul>
-              </div>
-              <p className={styles.text}>
-                <span className={styles.highlight}>Для пацієнтів з інших міст</span> пропонується максимально зручний
-                формат: Консультація + обстеження + операція — в 1 візит!
-              </p>
-              <div className={styles.subsection}>
-                <h4 className={styles.subTitle}>Передопераційна підготовка:</h4>
-                <ul className={styles.list}>
-                  <li>
-                    <span className={styles.highlight}>❌ За 10 днів</span> — припинити прийом медикаментів, які
-                    розріджують кров
-                  </li>
-                  <li>
-                    <span className={styles.highlight}>❌ За 10 днів до операції</span> — утриматися від куріння
-                  </li>
-                  <li>
-                    <span className={styles.highlight}>❌ Після операції</span> — не палити щонайменше 1–1,5 місяці
-                  </li>
-                  <li>
-                    <span className={styles.highlight}>За 2 дні до операції</span> — обмежити калорійність їжі, пити
-                    більше води
-                  </li>
-                  <li>
-                    <span className={styles.highlight}>❌ У день операції</span> — не можна їсти та пити
-                  </li>
-                </ul>
-              </div>
             </div>
             <div className={styles.galleryColumn}>
               <LiposuctionPreparationGallery images={rehabilitationImages} />

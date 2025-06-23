@@ -1,40 +1,15 @@
-/* 🎯 BREAST AUGMENTATION КОМПОНЕНТ */
 .breastAugmentation {
   width: 100%;
-  background-color: rgba(248, 246, 246, 0.3); /* 👈 Використовує змінну */
+  background-color: #f6fff0;
   padding: 4rem 0;
-  margin: 0;
-  position: relative;
-  /* Додаємо стилі для фонового зображення */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
-/* Змінюємо напівпрозорий оверлей для кращого відображення фонового зображення */
-.breastAugmentation::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(255, 255, 255, 0.3); /* 👈 Зменшено прозорість з 0.85 до 0.3 */
-  z-index: 1;
-  pointer-events: none;
-}
-
-/* Переконуємося, що контент знаходиться над оверлеєм */
 .container {
-  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
-  position: relative;
-  z-index: 2;
 }
 
-/* 🎯 ЗАГОЛОВОК */
 .titleSection {
   text-align: center;
   margin-bottom: 3rem;
@@ -43,21 +18,18 @@
 .mainTitle {
   font-size: 2.5rem;
   font-weight: 800;
-  color: var(--breast-augmentation-text-primary); /* 👈 Темний колір тексту */
+  color: #2d3748;
   margin: 0;
   line-height: 1.2;
 }
 
-/* 🎯 ОСНОВНИЙ КОНТЕНТ - ДВІ РІВНІ ЧАСТИНИ */
 .content {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* 👈 Рівні частини */
-  gap: 4rem;
-  align-items: center;
-  margin-bottom: 4rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
 }
 
-/* 🎯 ЛІВА ЧАСТИНА - СПИСОК ПЕРЕВАГ */
 .textSection {
   display: flex;
   flex-direction: column;
@@ -67,7 +39,7 @@
 .benefitsList {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .benefitItem {
@@ -78,23 +50,19 @@
 
 .benefitBullet {
   font-size: 2rem;
-  color: var(--breast-augmentation-accent); /* 👈 Акцентний колір */
+  color: #52a40e;
   font-weight: bold;
-  flex-shrink: 0;
 }
 
 .benefitText {
   font-size: 1.5rem;
   font-weight: 600;
-  color: var(--breast-augmentation-text-primary);
-  line-height: 1.4;
+  color: #2d3748;
 }
 
-/* 🎯 ПРАВА ЧАСТИНА - ЗОБРАЖЕННЯ */
 .imageSection {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .imageWrapper {
@@ -106,13 +74,10 @@
 }
 
 .mainImage {
-  width: 100%;
-  height: 100%;
   object-fit: cover;
   object-position: center;
 }
 
-/* 🎯 НИЖНЯ ЧАСТИНА - ОПИС */
 .descriptionSection {
   width: 100%;
 }
@@ -122,192 +87,55 @@
 }
 
 .descriptionParagraph {
-  font-size: 1.5rem;
-  line-height: 1.7;
-  color: var(--breast-augmentation-text-secondary);
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #2d3748;
   margin-bottom: 1.5rem;
   text-align: justify;
 }
 
-.descriptionParagraph:last-child {
-  margin-bottom: 0;
-}
-
-.descriptionParagraph strong {
-  color: var(--breast-augmentation-text-primary);
-  font-weight: 700;
-}
-
-/* 🎯 АДАПТИВНІСТЬ ДЛЯ ПЛАНШЕТІВ */
-@media (max-width: 992px) {
-  .breastAugmentation {
-    padding: 3rem 0;
-  }
-
-  .titleSection {
-    margin-bottom: 2.5rem;
+/* Адаптивність */
+@media (max-width: 768px) {
+  .content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
 
   .mainTitle {
     font-size: 2rem;
   }
 
-  .content {
-    gap: 3rem;
-    margin-bottom: 3rem;
-  }
-
   .benefitText {
     font-size: 1.25rem;
   }
 
-  .imageWrapper {
-    height: 500px;
-  }
-
-  .descriptionParagraph {
-    font-size: 1rem;
-  }
-}
-
-/* 🎯 АДАПТИВНІСТЬ ДЛЯ МОБІЛЬНИХ */
-@media (max-width: 768px) {
-  .breastAugmentation {
-    padding: 2.5rem 0;
-  }
-
-  .container {
-    padding: 0 0.75rem;
-  }
-
-  .titleSection {
-    margin-bottom: 2rem;
-  }
-
-  .mainTitle {
-    font-size: 1.75rem;
-  }
-
-  .content {
-    grid-template-columns: 1fr; /* 👈 Одна колонка на мобільних */
-    gap: 2rem;
-    margin-bottom: 2.5rem;
-  }
-
-  .benefitsList {
-    gap: 1.5rem;
-  }
-
   .benefitBullet {
     font-size: 1.5rem;
-  }
-
-  .benefitText {
-    font-size: 1.125rem;
   }
 
   .imageWrapper {
     height: 400px;
-    max-width: 350px;
-    margin: 0 auto;
   }
 
   .descriptionParagraph {
-    font-size: 0.95rem;
-    text-align: left;
+    font-size: 1rem;
   }
 }
 
-/* 🎯 ДУЖЕ МАЛІ ЕКРАНИ */
 @media (max-width: 480px) {
-  .breastAugmentation {
-    padding: 2rem 0;
-  }
-
-  .container {
-    padding: 0 0.5rem;
-  }
-
   .mainTitle {
     font-size: 1.5rem;
   }
 
-  .benefitsList {
-    gap: 1.25rem;
-  }
-
-  .benefitBullet {
-    font-size: 1.25rem;
-  }
-
   .benefitText {
-    font-size: 1rem;
-  }
-
-  .imageWrapper {
-    height: 350px;
-    max-width: 300px;
-  }
-
-  .descriptionParagraph {
-    font-size: 0.9rem;
-  }
-}
-
-/* 🎯 ЕКСТРА МАЛІ ЕКРАНИ */
-@media (max-width: 375px) {
-  .container {
-    padding: 0 0.25rem;
-  }
-
-  .mainTitle {
-    font-size: 1.25rem;
-  }
-
-  .benefitText {
-    font-size: 0.95rem;
+    font-size: 1.1rem;
   }
 
   .imageWrapper {
     height: 300px;
-    max-width: 250px;
   }
 
   .descriptionParagraph {
-    font-size: 0.85rem;
+    font-size: 0.95rem;
   }
-}
-
-/* 🎯 КЛАСИ ДЛЯ КОЛЬОРУ ТЕКСТУ */
-.whiteText .mainTitle,
-.whiteText .benefitText,
-.whiteText .descriptionParagraph {
-  color: #ffffff !important;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7) !important;
-}
-
-.darkText .mainTitle,
-.darkText .benefitText,
-.darkText .descriptionParagraph {
-  color: #1f2937 !important;
-  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7) !important;
-}
-
-/* 🎯 ПОКРАЩЕННЯ ЧИТАБЕЛЬНОСТІ НА ФОНОВИХ ЗОБРАЖЕННЯХ */
-.whiteText .benefitBullet {
-  color: #fbbf24 !important; /* 👈 Жовтий колір для кращої видимості */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8) !important;
-}
-
-.darkText .benefitBullet {
-  color: var(--breast-augmentation-accent) !important;
-}
-
-/* 🎯 ПОКРАЩЕННЯ ОВЕРЛЕЮ ДЛЯ КРАЩОЇ ЧИТАБЕЛЬНОСТІ */
-.whiteText::before {
-  background-color: rgba(0, 0, 0, 0.4) !important; /* 👈 Темніший оверлей для білого тексту */
-}
-
-.darkText::before {
-  background-color: rgba(255, 255, 255, 0.6) !important; /* 👈 Світліший оверлей для темного тексту */
 }

@@ -58,11 +58,11 @@ const ConsultationCTA: React.FC<ConsultationCTAProps> = ({ backgroundColor }) =>
                 <div className={styles.contactInfo}>
                   <div className={styles.contactItem}>
                     <Phone className={styles.contactIcon} size={16} />
-                    <span className={styles.contactText}>+380 (50) 123-45-67</span>
+                    <span className={styles.contactText}>+380 (50) 757-54-11</span>
                   </div>
                   <div className={styles.contactItem}>
                     <Clock className={styles.contactIcon} size={16} />
-                    <span className={styles.contactText}>Пн-Пт: 9:00-18:00</span>
+                    <span className={styles.contactText}>Пн-Пт: 9:00-16:00</span>
                   </div>
                 </div>
               </div>

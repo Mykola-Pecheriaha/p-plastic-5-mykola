@@ -11,7 +11,7 @@ import { AdminAccess } from "../components/AdminAccess/AdminAccess"
 const inter = Inter({ subsets: ["latin", "cyrillic"] })
 
 export const metadata = {
-  title: "Модульний проєкт",
+  title: "Plastic P",
   description: "Проєкт з модульною структурою та темною/світлою темами",
 }
 

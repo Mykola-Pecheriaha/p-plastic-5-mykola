@@ -14,7 +14,7 @@ export function LiposuctionDetails({ backgroundColor = "#f0f9ff" }: LiposuctionD
       alt: "Ілюстрація процедури ліпосакції",
       width: 800,
       height: 600,
-      title: "Процедура ліпосакції",
+      title: "Ділянки ліпосакції",
     },
     {
       src: "/images/liposuction/liposuction17.jpg",
@@ -28,14 +28,14 @@ export function LiposuctionDetails({ backgroundColor = "#f0f9ff" }: LiposuctionD
       alt: "Сучасні пристрої для ліпосакції",
       width: 800,
       height: 600,
-      title: "Сучасні пристрої для ліпосакції",
+      title: "Шийний горб",
     },
   ]
 
   // Зображення для галереї першого сегменту
   const firstSegmentGalleryImages = [
     {
-      src: "/images/liposuction/liposuction5.jpg",
+      src: "/images/liposuction/abdominoplastic2.jpg",
       alt: "Консультація перед ліпосакцією",
       width: 800,
       height: 600,
@@ -214,7 +214,7 @@ export function LiposuctionDetails({ backgroundColor = "#f0f9ff" }: LiposuctionD
               клініки пластичної хірургії застосовують такі технології:
             </p>
             <h4 className={styles.methodTitle}>
-              <span className={styles.methodIcon}>🌊</span> Тумесцентна ліпосакція
+              <span className={styles.methodIcon}>✅</span> Тумесцентна ліпосакція
             </h4>
             <p className={styles.segmentText}>
               Одна з найпоширеніших технік так званих вологих операцій. У зону втручання пластичний хірург вводить
@@ -234,7 +234,7 @@ export function LiposuctionDetails({ backgroundColor = "#f0f9ff" }: LiposuctionD
               Недолік тумесцентної ліпосакції — підвищений ризик набряків і синців.
             </div>
             <h4 className={styles.methodTitle}>
-              <span className={styles.methodIcon}>🌪️</span> Вакуумна ліпосакція
+              <span className={styles.methodIcon}>✅</span> Вакуумна ліпосакція
             </h4>
             <p className={styles.segmentText}>
               Найбільш популярний і ефективний метод боротьби з жировими відкладеннями. Через мікропроколи за допомогою
@@ -251,7 +251,7 @@ export function LiposuctionDetails({ backgroundColor = "#f0f9ff" }: LiposuctionD
           <div className={styles.twoColumnSection}>
             <div className={styles.textColumn}>
               <h4 className={styles.methodTitle}>
-                <span className={styles.methodIcon}>🔊</span> Ультразвукова ліпосакція
+                <span className={styles.methodIcon}>✅</span> Ультразвукова ліпосакція
               </h4>
               <p className={styles.segmentText}>На жирові відкладення спрямовується ультразвук, який:</p>
               <ul className={styles.bulletList}>
@@ -260,7 +260,7 @@ export function LiposuctionDetails({ backgroundColor = "#f0f9ff" }: LiposuctionD
               </ul>
               <p className={styles.segmentText}>Особливо ефективна при невеликих обсягах жиру.</p>
               <h4 className={styles.methodTitle}>
-                <span className={styles.methodIcon}>📡</span> Радіочастотна ліпосакція
+                <span className={styles.methodIcon}>✅</span> Радіочастотна ліпосакція
               </h4>
               <p className={styles.segmentText}>Процедура відбувається за допомогою електрода та випромінювача:</p>
               <ul className={styles.bulletList}>
@@ -268,11 +268,11 @@ export function LiposuctionDetails({ backgroundColor = "#f0f9ff" }: LiposuctionD
                 <li>випромінювач залишають на поверхні.</li>
               </ul>
               <div className={styles.benefitBox}>
-                <span className={styles.boxIcon}>⚡</span>
+                <span className={styles.boxIcon}>✔️</span>
                 Між ними створюється радіохвильова енергія, яка руйнує жирові клітини.
               </div>
               <h4 className={styles.methodTitle}>
-                <span className={styles.methodIcon}>✨</span> Лазерна ліпосакція
+                <span className={styles.methodIcon}>✅</span> Лазерна ліпосакція
               </h4>
               <p className={styles.segmentText}>
                 Одна з найсучасніших методик — використання лазерного зонда, який не лише:

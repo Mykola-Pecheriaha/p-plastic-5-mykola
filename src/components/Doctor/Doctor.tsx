@@ -21,7 +21,7 @@ const Doctor: React.FC<DoctorProps> = ({ backgroundColor }) => {
               <br />
               Pecheriaha
             </h1>
-            <Link href="/portfolio" className={styles.doctorButton}>
+            <Link href="/about" className={styles.doctorButton}>
               Дізнатись більше
             </Link>
           </div>

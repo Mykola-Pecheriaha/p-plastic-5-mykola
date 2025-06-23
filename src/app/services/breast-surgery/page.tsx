@@ -16,10 +16,7 @@ const SpecialistPage: React.FC = () => {
 
   return (
     <div>
-      <BreastAugmentation
-        backgroundImage="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/breast5.jpg-nQDUuyc79V5BgTKdbSarDzdGTRtC3W.jpeg"
-        textColor="white"
-      />
+      <BreastAugmentation />
 
       <BreastProblemSection />
       <AugmentationConsultation />

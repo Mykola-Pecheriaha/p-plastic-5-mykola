@@ -1,15 +1,6 @@
-import Link from 'next/link';
-import styles from './Footer.module.css';
-import {
-  Heart,
-  Phone,
-  Mail,
-  MapPin,
-  Facebook,
-  Instagram,
-  Twitter,
-  Linkedin,
-} from 'lucide-react';
+import Link from "next/link"
+import styles from "./Footer.module.css"
+import { Heart, Phone, Mail, MapPin, Facebook, Instagram, Twitter, Linkedin } from "lucide-react"
 
 const Footer = () => {
   return (
@@ -19,11 +10,10 @@ const Footer = () => {
           <div className={styles.column}>
             <Link href="/" className={styles.logo}>
               <Heart className={styles.logoIcon} />
-              <span>Пластична хірургія</span>
+              <span>PlasticP</span>
             </Link>
             <p className={styles.description}>
-              Професійна пластична хірургія з індивідуальним підходом до кожного
-              пацієнта.
+              Професійна пластична хірургія з індивідуальним підходом до кожного пацієнта.
             </p>
           </div>
 
@@ -36,9 +26,7 @@ const Footer = () => {
               <Link href="/about" className={styles.navLink}>
                 Про лікаря
               </Link>
-              <Link href="/portfolio" className={styles.navLink}>
-                До і Після
-              </Link>
+
               <Link href="/testimonials" className={styles.navLink}>
                 Відгуки
               </Link>
@@ -53,15 +41,15 @@ const Footer = () => {
             <div className={styles.contactDetails}>
               <div className={styles.contactItem}>
                 <Phone className={styles.icon} size={20} />
-                <span>+380 (44) 123-45-67</span>
+                <span>+380 (50) 757-54-11</span>
               </div>
               <div className={styles.contactItem}>
                 <Mail className={styles.icon} size={20} />
-                <span>info@plasticsurgery.ua</span>
+                <span>Pecheryag@gmail.com</span>
               </div>
               <div className={styles.contactItem}>
                 <MapPin className={styles.icon} size={20} />
-                <span>м. Київ, вул. Хрещатик, 10, офіс 5</span>
+                <span>м. Чернівці, вул. Героїв Майдану, 226, поверх 4</span>
               </div>
             </div>
           </div>
@@ -69,8 +57,13 @@ const Footer = () => {
           <div className={styles.column}>
             <h3 className={styles.columnTitle}>Соціальні мережі</h3>
             <div className={styles.socialLinks}>
-              <a href="#" className={styles.socialLink} aria-label="Facebook">
-                <Facebook size={20} />
+              <a
+                href="https://www.facebook.com/profile.php?id=100003098763675"
+                className={styles.socialLink}
+                aria-label="Facebook"
+                target="_blank"
+              >
+                <Facebook size={16} />
               </a>
               <a href="#" className={styles.socialLink} aria-label="Instagram">
                 <Instagram size={20} />
@@ -86,14 +79,11 @@ const Footer = () => {
         </div>
 
         <div className={styles.bottom}>
-          <p className={styles.copyright}>
-            © {new Date().getFullYear()} Пластична хірургія. Всі права
-            захищені.
-          </p>
+          <p className={styles.copyright}>© {new Date().getFullYear()} Пластична хірургія. Всі права захищені.</p>
         </div>
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer
