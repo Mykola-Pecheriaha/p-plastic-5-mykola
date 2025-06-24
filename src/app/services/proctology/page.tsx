@@ -9,16 +9,7 @@ const ProctologyPage: React.FC = () => {
   return (
     <div className="min-h-screen">
       {/* Компоненти будуть додані поступово */}
-      <div className="w-full" style={{ backgroundColor: "#e8f5e8" }}>
-        <div className="max-w-7xl mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-center mb-8" style={{ color: "#2d3748" }}>
-            Проктологія
-          </h1>
-          <p className="text-lg text-center max-w-3xl mx-auto" style={{ color: "#2d3748" }}>
-            Сучасні методи діагностики та лікування проктологічних захворювань
-          </p>
-        </div>
-      </div>
+      <div className="w-full" style={{ backgroundColor: "#e8f5e8" }}></div>
       <Proctology />
       <HemorrhoiSymptom />
       <AnalFissure />

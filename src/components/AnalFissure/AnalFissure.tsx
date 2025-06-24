@@ -106,7 +106,7 @@ export function AnalFissure({ className }: AnalFissureProps) {
 
                       <div className={styles.typeSection}>
                         <h3 className={styles.listTitle}>
-                          <span className={styles.emoji}>🔁</span>
+                          <span className={styles.emoji}>✅</span>
                           Хронічні тріщини
                         </h3>
                         <ul className={styles.bulletList}>

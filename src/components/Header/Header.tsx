@@ -86,7 +86,7 @@ const navItems = [
   // { name: "Портфоліо", path: "/portfolio" },
   { name: "Контакти", path: "/contacts" },
   { name: "Блог", path: "/blog" },
-  { name: "Відгуки", path: "/reviews" },
+  // { name: "Відгуки", path: "/reviews" },
 ]
 
 export default function Header() {

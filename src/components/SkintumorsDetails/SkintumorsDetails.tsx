@@ -2,6 +2,7 @@
 import Image from "next/image"
 import styles from "./SkintumorsDetails.module.css"
 import { SkintumorsGallery } from "./SkintumorsGallery"
+import Link from "next/link"
 
 interface SkintumorsDetailsProps {
   backgroundColor?: string
@@ -13,7 +14,7 @@ export function SkintumorsDetails({ backgroundColor = "#f0f9ff", className }: Sk
     {
       id: "nevus",
       title: "НЕВУС",
-      fullText: `це доброякісне новоу��ворення, яке виникає на шкірі у вигляді пігментної плями (родимки). Більшість невусів не становлять небезпеки, однак у певних випадках їх рекомендовано видаляти — зокрема, якщо вони:
+      fullText: `це доброякісне новоуворення, яке виникає на шкірі у вигляді пігментної плями (родимки). Більшість невусів не становлять небезпеки, однак у певних випадках їх рекомендовано видаляти — зокрема, якщо вони:
 • розташовані в місцях постійного тертя або травмування;
 • мають ознаки потенційного переродження у злоякісну пухлину.
 
@@ -207,6 +208,15 @@ export function SkintumorsDetails({ backgroundColor = "#f0f9ff", className }: Sk
               <SkintumorsGallery />
             </div>
           </div>
+        </div>
+        {/* Заклик до дії */}
+        <div className={styles.ctaSection}>
+          <p className={styles.ctaText}>
+            Маєте додаткові запитання? Наші спеціалісти готові надати вам детальну консультацію.
+          </p>
+          <Link href="/ask-doctor">
+            <button className={styles.contactButton}>Зв&apos;язатися з нами</button>
+          </Link>
         </div>
       </div>
     </div>

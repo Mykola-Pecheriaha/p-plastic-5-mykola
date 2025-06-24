@@ -4,6 +4,7 @@ import styles from "./PararectalFistulas.module.css"
 import { PararectalFistulasGallery } from "./PararectalFistulasGallery"
 import { PararectalSymptomGallery } from "./PararectalSymptomGallery"
 import { PararectalTerapyGallery } from "./PararectalTerapyGallery"
+import Link from "next/link"
 
 interface PararectalFistulasProps {
   className?: string
@@ -347,6 +348,15 @@ export function PararectalFistulas({ className }: PararectalFistulasProps) {
             щоб ви могли зробити усвідомлений вибір.
           </p>
         </section>
+        {/* Заклик до дії */}
+        <div className={styles.ctaSection}>
+          <p className={styles.ctaText}>
+            Маєте додаткові запитання? Наші спеціалісти готові надати вам детальну консультацію.
+          </p>
+          <Link href="/ask-doctor">
+            <button className={styles.contactButton}>Зв&apos;язатися з нами</button>
+          </Link>
+        </div>
       </div>
     </div>
   )

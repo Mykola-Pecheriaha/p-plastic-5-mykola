@@ -17,13 +17,13 @@ const ContactsIntro: React.FC<ContactsIntroProps> = ({ backgroundColor }) => {
         </p>
         <ul className={styles.contactList}>
           <li>
-            <strong>Телефон:</strong> <a href="tel:+380971234567">+38 (097) 123 45 67</a>
+            <strong>Телефон:</strong> <a href="tel:+380507575411">+38 (050) 757 54 11</a>
           </li>
           <li>
-            <strong>Email:</strong> <a href="mailto:info@clinic.ua">info@clinic.ua</a>
+            <strong>Email:</strong> <a href="mailto:Pecheryag@gmail.com">Pecheryag@gmail.com</a>
           </li>
           <li>
-            <strong>Адреса:</strong> м. Київ, вул. Медична, 12
+            <strong>Адреса:</strong> м. Чернівці, вул. Героїв Майдану, 226. 4 поверх. (вхід з вул.Рівенська)
           </li>
         </ul>
       </div>

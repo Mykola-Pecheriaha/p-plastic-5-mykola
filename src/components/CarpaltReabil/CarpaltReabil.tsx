@@ -135,7 +135,7 @@ export function CarpaltReabil() {
           <p className={styles.ctaText}>
             Маєте додаткові запитання? Наші спеціалісти готові надати вам детальну консультацію.
           </p>
-          <Link href="/about-doctor/contacts">
+          <Link href="/ask-doctor">
             <button className={styles.contactButton}>Зв&apos;язатися з нами</button>
           </Link>
         </div>

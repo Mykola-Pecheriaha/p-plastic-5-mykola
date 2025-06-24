@@ -28,8 +28,8 @@ const ButtockAugmentationPage: React.FC = () => {
         title="Збільшення сідниць"
         description="Ми працюємо над створенням детальної інформації про збільшення сідниць. Незабаром тут з'явиться повний опис процедури, фотогалерея результатів та відповіді на поширені запитання."
         backgroundColor="#e8f5e8"
-        expectedDate="Лютий 2025"
-        contactLink="/about-doctor/contacts"
+        expectedDate="Жовтень 2025"
+        contactLink="/ask-doctor"
       />
     </main>
   )
