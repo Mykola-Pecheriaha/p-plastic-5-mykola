@@ -11,8 +11,26 @@ import { AdminAccess } from "../components/AdminAccess/AdminAccess"
 const inter = Inter({ subsets: ["latin", "cyrillic"] })
 
 export const metadata = {
-  title: "Plastic P",
-  description: "Проєкт з модульною структурою та темною/світлою темами",
+  title: "Dr. Микола Печеряга – Пластичний хірург | plastic-p.com",
+  description: "Офіційний сайт пластичного хірурга Миколи Печеряги. Консультації, операції, портфоліо, відгуки.",
+  keywords: "пластичний хірург, Микола Печеряга, пластика обличчя, пластика грудей, пластика тіла, plastic-p.com",
+  authors: [{ name: "Dr. Микола Печеряга" }],
+  creator: "Dr. Микола Печеряга",
+  metadataBase: new URL("https://www.plastic-p.com"),
+  openGraph: {
+    title: "Dr. Микола Печеряга – Пластичний хірург | plastic-p.com",
+    description:
+      "Пластичний хірург з великим досвідом. Операції обличчя, тіла, грудей. Фото робіт, відгуки, консультації.",
+    url: "https://www.plastic-p.com",
+    siteName: "Plastic P",
+    locale: "uk_UA",
+    type: "website",
+  },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
