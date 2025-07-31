@@ -15,15 +15,14 @@ export const metadata: Metadata = {
     "anti-aging",
     "хірургічне омолодження",
   ],
+
   openGraph: {
-    title: "Підтяжка обличчя (Facelift) - Професійна пластична хірургія",
-    description: "Повернення молодості та краси з професійною підтяжкою обличчя. Досвідчені хірурги, сучасні методики.",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
     title: "Підтяжка обличчя (Facelift)",
     description: "Професійна підтяжка обличчя - повернення молодості та краси",
+    url: "https://www.plastic-p.com/operations/breast-augmentation",
+    siteName: "Plastic P",
+    locale: "uk_UA",
+    type: "article",
   },
 }
 

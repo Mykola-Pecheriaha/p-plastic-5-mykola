@@ -279,7 +279,7 @@ body {
   --breast-question-content-border: rgba(82, 164, 14, 0.1); /* Зелена рамка контенту */
   --breast-question-text-color: #64748b; /* Сірий колір основного тексту */
 
-  /* Блок питання (problemBlock) */
+  --breast-question-content-bg: rgba(82, 164, 14, 0.02); /* Світло-зелений фон контенту */
   --breast-question-problem-bg: #fef3c7; /* Жовтий фон для питання */
   --breast-question-problem-border: #f59e0b; /* Жовта рамка */
   --breast-question-problem-shadow: rgba(245, 158, 11, 0.1); /* Жовта тінь */

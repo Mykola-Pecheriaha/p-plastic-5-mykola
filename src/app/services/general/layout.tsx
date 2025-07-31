@@ -1,14 +1,21 @@
-import type React from "react"
+import SpecialistPage from "./page"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: {
-    template: "%s | Пластична хірургія обличчя",
-    default: "Пластична хірургія обличчя",
+  title: "Збільшення грудей у Чернівцях – Пластичний хірург Микола Печеряга",
+  description:
+    "Збільшення грудей у Чернівцях від досвідченого пластичного хірурга Миколи Печеряги. Безпечні методики, консультації, фото до та після.",
+  keywords: "збільшення грудей Чернівці, мамопластика, пластика грудей, Печеряга Микола, пластичний хірург Чернівці",
+  openGraph: {
+    title: "Збільшення грудей – Микола Печеряга",
+    description: "Пластика грудей у Чернівцях. Збільшення, підтяжка, імпланти. Безпечно та професійно.",
+    url: "https://www.plastic-p.com/operations/breast-augmentation",
+    siteName: "Plastic P",
+    locale: "uk_UA",
+    type: "article",
   },
-  description: "Професійні процедури  хірургії загальної ",
 }
 
-export default function FaceLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>
+export default function Page() {
+  return <SpecialistPage />
 }
